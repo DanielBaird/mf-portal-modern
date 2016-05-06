@@ -1,0 +1,98 @@
+
+@item-padding: 5px;
+@image-width: 140px;
+
+html {
+	font-family: Helvetica, sans-serif;
+}
+
+/* - a list of items ---------- */
+.mf-list-of-items {
+	padding: 0;
+	margin: 0;
+	margin-left: @item-padding;
+	width: 600px;
+}
+
+/* -- an item in a list ---------- */
+
+.mf-list-item {
+	position: relative;
+	display: block;
+	list-style: none;
+	background: rgba(250,250,250, 1);
+	height: (180px + (4 * @item-padding));
+	margin: (2 * @item-padding) 0;
+	padding: @item-padding;
+	padding-left: (@item-padding + @image-width + @item-padding + @item-padding + 10px);
+	border: 1px solid rgba(150,150,150, 1);
+	border-radius: @item-padding;
+}
+
+.mf-list-item-thumbnail {
+	position: absolute;
+	left: @item-padding;
+	top: @item-padding;
+	max-width: @image-width;
+	border: 3px solid #000;
+}
+
+.mf-list-item-heading {
+	padding: 0;
+	padding-top: @item-padding;
+	margin: 0;
+	color: rgba(255,0,255, 1);
+	font-size: 20px;
+	font-weight: inherit;
+}
+
+.mf-metadata-properties {
+	margin: @item-padding 0;
+	padding: 0;
+}
+.mf-metadata-properties dt {
+	font-weight: bold;
+	float: left;
+	clear: left;
+	min-width: 7em;
+}
+.mf-metadata-properties dt:after {
+	content: ":"
+}
+.mf-metadata-properties dd {
+	margin: 0;
+	float: left;
+}
+
+.mf-download-asset {
+	position: absolute;
+	left: @item-padding;
+	bottom: @item-padding;
+	padding: 2px (2 * @item-padding);
+	font-weight: bold;
+	font-size: 12px;
+	background: none;
+	border: 1px solid rgba(150,150,150, 1);
+	border-radius: (0.75 * @item-padding);
+	text-shadow: 0 1px 1px white;
+	font-family: inherit;
+}
+.mf-download-asset:hover {
+	border-color: rgb(100, 149, 237);
+}
+
+/* -- utilities ---------- */
+
+/* sizing */
+* {
+	box-sizing: border-box;
+}
+
+/* clearfix */
+.mf-list-item:after,
+.mf-metadata-properties:after
+{   content: " ";
+    display: table;
+    clear: both;     }
+
+

@@ -1,3 +1,10 @@
+
+echo 'compiling CSS'
+
+pushd components > /dev/null
+lessc styles.less > styles.css
+popd > /dev/null
+
 for SOURCE in *.source; do
 
 	echo 'processing: ' $SOURCE
