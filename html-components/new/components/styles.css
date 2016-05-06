@@ -1,0 +1,58 @@
+
+/* - a list of items ---------- */
+.mf-list-of-items {
+	padding: 0;
+	margin: 0;
+}
+.mf-list-of-items {
+	list-style: none;
+}
+
+/* -- an item in a list ---------- */
+
+.mf-list-item {
+	position: relative;
+	padding: 4px;
+	padding-left: 160px;
+	border: 1px solid rgba(150,150,150, 1);
+	border-radius: 4px;
+}
+
+.mf-list-item-thumbnail {
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-width: 140px;
+	border: 3px solid #000;
+}
+
+.mf-list-item-heading {
+	padding: 0;
+	margin: 0;
+}
+
+.mf-metadata-properties {
+}
+.mf-metadata-properties dt {
+	font-weight: bold;
+	float: left;
+	clear: left;
+	min-width: 5em;
+}
+.mf-metadata-properties dt:after {
+	content: ":"
+}
+.mf-metadata-properties dd {
+	float: left;
+}
+
+.mf-download-asset {
+
+}
+
+
+/* -- cleafix ---------- */
+.mf-list-item:after
+{   content: " ";
+    display: table;
+    clear: both;     }
