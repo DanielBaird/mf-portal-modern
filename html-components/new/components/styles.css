@@ -1,6 +1,27 @@
 html {
   font-family: Helvetica, sans-serif;
 }
+.mf-header {
+  height: 100px;
+}
+.mf-portal-logo {
+  float: left;
+  max-width: 90px;
+  max-height: 90px;
+  margin: 5px 5px;
+}
+.mf-portal-heading {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  padding: 0 20px;
+  font-size: 40px;
+  line-height: 100px;
+  color: #ffffff;
+  font-weight: inherit;
+  text-align: left;
+  background-color: #005a76;
+}
 /* - a list of items ---------- */
 .mf-list-of-items {
   padding: 0;
