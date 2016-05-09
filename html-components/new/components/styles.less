@@ -1,10 +1,12 @@
 
-@item-padding: 5px;
-@image-width: 140px;
-
 html {
 	font-family: Helvetica, sans-serif;
 }
+
+// variables used in lists and items
+@item-padding: 5px;
+@image-width: 160px;
+@image-height: @image-width;
 
 /* - a list of items ---------- */
 .mf-list-of-items {
@@ -21,10 +23,10 @@ html {
 	display: block;
 	list-style: none;
 	background: rgba(250,250,250, 1);
-	height: (180px + (4 * @item-padding));
+	min-height: (@image-height + (4 * @item-padding) + 20px);
 	margin: (2 * @item-padding) 0;
 	padding: @item-padding;
-	padding-left: (@item-padding + @image-width + @item-padding + @item-padding + 10px);
+	padding-left: (@item-padding + @image-width + @item-padding);
 	border: 1px solid rgba(150,150,150, 1);
 	border-radius: @item-padding;
 }
@@ -34,6 +36,7 @@ html {
 	left: @item-padding;
 	top: @item-padding;
 	max-width: @image-width;
+	max-height: @image-height;
 	border: 3px solid #000;
 }
 
