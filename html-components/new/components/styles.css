@@ -1,7 +1,7 @@
 html {
   font-family: Helvetica, sans-serif;
 }
-.mf-header {
+.mf-portal-header {
   height: 100px;
 }
 .mf-portal-logo {
@@ -21,6 +21,42 @@ html {
   font-weight: inherit;
   text-align: left;
   background-color: #005a76;
+}
+.mf-portal-footer {
+  height: 30px;
+  color: #ccdee3;
+  background-color: #005a76;
+  font-size: 15px;
+}
+.mf-portal-footer p {
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+  padding: 0 10px;
+}
+.mf-portal-navbar {
+  margin: 0;
+  padding: 0;
+  padding-right: 94px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #003546;
+  font-size: 15px;
+  font-weight: bold;
+}
+.mf-nav-list {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.mf-nav-item {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 13px;
+}
+.mf-nav-item a {
+  text-decoration: none;
+  color: inherit;
 }
 /* - a list of items ---------- */
 .mf-list-of-items {

@@ -493,35 +493,7 @@
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
-						<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1  style_22" style="height: 40px; width: 1143px;">
-							<tbody>
-								<tr>
-									<td align="left" style="vertical-align: top;">
-										<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 722px;"></div>
-									</td>
-									<td align="left" style="vertical-align: top;">
-										<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="height: 40px; margin-right: 94px;">
-											<tbody>
-												<tr>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Collections</div>
-													</td>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Breeds</div>
-													</td>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">FAQ</div>
-													</td>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">About</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+@menubar.html
 					</td>
 				</tr>
 				<tr>
@@ -856,9 +828,7 @@
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
-						<div class="arc_11_base_widget_1 arc_16_SectionPanel" style="height: 30px;">
-							<div class="arc_11_base_widget_1 style_23" style="cursor: default; width: 1143px; height: 30px;"><span>Powered by Mediaflux®</span></div>
-						</div>
+@footer.html
 					</td>
 				</tr>
 			</tbody>

@@ -471,7 +471,7 @@
 html {
   font-family: Helvetica, sans-serif;
 }
-.mf-header {
+.mf-portal-header {
   height: 100px;
 }
 .mf-portal-logo {
@@ -491,6 +491,42 @@ html {
   font-weight: inherit;
   text-align: left;
   background-color: #005a76;
+}
+.mf-portal-footer {
+  height: 30px;
+  color: #ccdee3;
+  background-color: #005a76;
+  font-size: 15px;
+}
+.mf-portal-footer p {
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+  padding: 0 10px;
+}
+.mf-portal-navbar {
+  margin: 0;
+  padding: 0;
+  padding-right: 94px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #003546;
+  font-size: 15px;
+  font-weight: bold;
+}
+.mf-nav-list {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.mf-nav-item {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 13px;
+}
+.mf-nav-item a {
+  text-decoration: none;
+  color: inherit;
 }
 /* - a list of items ---------- */
 .mf-list-of-items {
@@ -596,7 +632,7 @@ html {
 				<tr>
 					<td align="left" style="vertical-align: top;">
 
-<header class="mf-header">
+<header class="mf-portal-header">
 	<img class="mf-portal-logo" src="./cat-list_files/cats-logo.png">
 	<h1 class="mf-portal-heading">
 		International Cat Breeds
@@ -606,35 +642,14 @@ html {
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
-						<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1  style_22" style="height: 40px; width: 1143px;">
-							<tbody>
-								<tr>
-									<td align="left" style="vertical-align: top;">
-										<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 722px;"></div>
-									</td>
-									<td align="left" style="vertical-align: top;">
-										<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="height: 40px; margin-right: 94px;">
-											<tbody>
-												<tr>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Collections</div>
-													</td>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Breeds</div>
-													</td>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">FAQ</div>
-													</td>
-													<td align="left" style="vertical-align: middle;">
-														<div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">About</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+<nav class="mf-portal-navbar">
+	<ul class="mf-nav-list">
+		<li class="mf-nav-item"><a href="">Collections</a></li>
+		<li class="mf-nav-item"><a href="">Breeds</a></li>
+		<li class="mf-nav-item"><a href="">FAQ</a></li>
+		<li class="mf-nav-item"><a href="">About</a></li>
+	</ul>
+</nav>
 					</td>
 				</tr>
 				<tr>
@@ -898,63 +913,11 @@ html {
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
 
-	<h3 class="mf-list-item-heading">Abyssinian</h3>
-
-	<dl class="mf-metadata-properties">
-		<dt>Origin</dt>
-		<dd>Ethiopia</dd>
-
-		<dt>Source</dt>
-		<dd>Natural</dd>
-
-		<dt>Body Shape</dt>
-		<dd>Unspecified</dd>
-
-		<dt>Coat</dt>
-		<dd>Short</dd>
-
-		<dt>Pattern</dt>
-		<dd>Ticked</dd>
-	</dl>
-
-	<button class="mf-download-asset">Download</button>
-
-</li>
-
-<li class="mf-list-item">
-
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp" />
-
-	<h3 class="mf-list-item-heading">Bengal</h3>
-
-	<dl class="mf-metadata-properties">
-		<dt>Origin</dt>
-		<dd>United States</dd>
-
-		<dt>Source</dt>
-		<dd>Hybrid</dd>
-
-		<dt>Body Shape</dt>
-		<dd>Unspecified</dd>
-
-		<dt>Coat</dt>
-		<dd>Short</dd>
-
-		<dt>Pattern</dt>
-		<dd>Spotted</dd>
-	</dl>
-
-	<button class="mf-download-asset">Download</button>
-
-</li>
-
-<li class="mf-list-item">
-
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp" />
-
-	<h3 class="mf-list-item-heading">Abyssinian</h3>
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -973,15 +936,19 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
 
-	<h3 class="mf-list-item-heading">Bengal</h3>
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1000,15 +967,19 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
 
-	<h3 class="mf-list-item-heading">Abyssinian</h3>
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1027,15 +998,19 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
 
-	<h3 class="mf-list-item-heading">Bengal</h3>
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1054,15 +1029,19 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
 
-	<h3 class="mf-list-item-heading">Abyssinian</h3>
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1081,15 +1060,19 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
 
-	<h3 class="mf-list-item-heading">Bengal</h3>
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1108,15 +1091,19 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
 
-	<h3 class="mf-list-item-heading">Abyssinian</h3>
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1135,15 +1122,19 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
 
-	<h3 class="mf-list-item-heading">Bengal</h3>
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1162,15 +1153,19 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
 
-	<h3 class="mf-list-item-heading">Abyssinian</h3>
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1189,15 +1184,19 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
 <li class="mf-list-item">
 
-	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp" />
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
 
-	<h3 class="mf-list-item-heading">Bengal</h3>
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
 
 	<dl class="mf-metadata-properties">
 		<dt>Origin</dt>
@@ -1216,7 +1215,71 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">Download</button>
+	<button class="mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-download-asset">
+		Download
+	</button>
 
 </li>
 
@@ -1295,9 +1358,11 @@ html {
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
-						<div class="arc_11_base_widget_1 arc_16_SectionPanel" style="height: 30px;">
-							<div class="arc_11_base_widget_1 style_23" style="cursor: default; width: 1143px; height: 30px;"><span>Powered by Mediaflux®</span></div>
-						</div>
+<footer class="mf-portal-footer">
+	<p>
+		Powered by Mediaflux®
+	</p>
+</footer>
 					</td>
 				</tr>
 			</tbody>

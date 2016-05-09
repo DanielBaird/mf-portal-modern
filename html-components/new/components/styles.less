@@ -10,7 +10,7 @@ html {
 @header-height: 100px;
 @logo-size: 90px;
 
-.mf-header {
+.mf-portal-header {
 	height: 100px;
 }
 .mf-portal-logo {
@@ -30,6 +30,56 @@ html {
 	font-weight: inherit;
 	text-align: left;
 	background-color: rgb(0, 90, 118);
+}
+
+////////////////////////////////////////////////////////////////////
+// Footer
+////////////////////////////////////////////////////////////////////
+@footer-color: #ffffff;
+@footer-height: 30px;
+
+.mf-portal-footer {
+	height: @footer-height;
+	color: rgb(204, 222, 227);
+	background-color: rgb(0, 90, 118);
+	font-size: 15px;
+}
+.mf-portal-footer p {
+	line-height: @footer-height;
+	padding: 0;
+	margin: 0;
+	padding: 0 10px;
+}
+
+////////////////////////////////////////////////////////////////////
+// Navbar
+////////////////////////////////////////////////////////////////////
+@navbar-color: #ffffff;
+@navbar-height: 40px;
+
+.mf-portal-navbar {
+	margin: 0;
+	padding: 0;
+	padding-right: 94px;
+	height: @navbar-height;
+	color: @navbar-color;
+	background-color: rgb(0, 53, 70);
+	font-size: 15px;
+	font-weight: bold;
+}
+.mf-nav-list {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.mf-nav-item {
+	display: inline-block;
+	line-height: @navbar-height;
+	padding: 0 13px;
+}
+.mf-nav-item a {
+	text-decoration: none;
+	color: inherit;
 }
 
 ////////////////////////////////////////////////////////////////////
