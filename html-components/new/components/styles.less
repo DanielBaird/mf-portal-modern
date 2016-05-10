@@ -135,7 +135,10 @@ html {
 	display: inline-block;
 	line-height: @collection-bar-height;
 	padding: 0;
-	margin-left: (@collection-bar-height / 8);
+	margin: 0;
+}
+.mf-action i.fa { // make font-awesome icons a bit larger..
+	font-size: (@button-size * 0.6);
 }
 .mf-action.mf-action-search {
 	.mf-button;
@@ -164,6 +167,31 @@ html {
 	font-size: 14px;
 }
 
+
+////////////////////////////////////////////////////////////////////
+// Paging Toolbar
+////////////////////////////////////////////////////////////////////
+
+// reuses the mf-action class from the collection toolbar.
+// TODO: clean up that re-use.
+
+@paging-bar-height: 30px;
+
+.mf-page-actions {
+	margin: 0;
+	padding: 4px;
+	font-size: 20px;
+	height: @paging-bar-height;
+}
+.mf-button.mf-up-button {
+	margin-right: 10px;
+}
+.mf-button.mf-goto-page-button {
+	min-width: (1.5 * @button-size);
+}
+.mf-button.mf-current-page-button {
+	border-color: rgb(179,0,0);
+}
 
 ////////////////////////////////////////////////////////////////////
 // Facet Sidebar
@@ -197,10 +225,10 @@ html {
 }
 
 .mf-facet {
+	clear: left; // coz the legend is float-left
 	margin: 0;
-	padding: 0;
+	padding: 1px 0 0 0;
 	padding-left: 2px;
-	clear: left;
 	font-size: 10px;
 }
 
