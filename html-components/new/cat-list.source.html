@@ -470,6 +470,22 @@
 <style>
 html {
   font-family: Helvetica, sans-serif;
+  color: black;
+  background: white;
+}
+.mf-button {
+  border: 1px solid #969696;
+  height: 23px;
+  min-width: 23px;
+  border-radius: 4px;
+  background: inherit;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mf-button:hover {
+  color: #6495ed;
+  border-color: #6495ed;
 }
 .mf-portal-header {
   height: 100px;
@@ -527,6 +543,65 @@ html {
 .mf-nav-item a {
   text-decoration: none;
   color: inherit;
+}
+.mf-collection-bar {
+  margin: 0;
+  padding: 4px;
+  font-size: 20px;
+  height: 24px;
+}
+.mf-collection-title {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 24px;
+}
+.mf-collection-actions {
+  float: right;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.mf-action {
+  display: inline-block;
+  line-height: 24px;
+  padding: 0;
+  margin-left: 3px;
+}
+.mf-action.mf-action-search {
+  border: 1px solid #969696;
+  height: 23px;
+  min-width: 23px;
+  border-radius: 4px;
+  background: inherit;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 12px;
+  position: relative;
+  background: white;
+  margin-right: 18px;
+}
+.mf-action.mf-action-search:before {
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  content: url(cat-list_files/Search.png);
+}
+.mf-search {
+  padding: 0 6px 0 24px;
+  margin: 0;
+  border: none;
+  display: block;
+  background: none;
+  height: 24px;
+  width: 220px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #aaaaaa;
+  font-size: 14px;
 }
 /* - a list of items ---------- */
 .mf-list-of-items {
@@ -588,20 +663,11 @@ html {
   padding: 2px 10px;
   font-weight: bold;
   font-size: 12px;
-  background: none;
-  border: 1px solid #969696;
-  border-radius: 3.75px;
   text-shadow: 0 1px 1px white;
   font-family: inherit;
 }
-.mf-download-asset:hover {
-  border-color: #6495ed;
-}
 /* -- utilities ---------- */
 /* sizing */
-* {
-  box-sizing: border-box;
-}
 /* clearfix */
 .mf-list-item:after,
 .mf-metadata-properties:after {
@@ -661,56 +727,23 @@ html {
 										<tr>
 											<td align="left" style="vertical-align: top;">
 												<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px;">
-													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 943px; padding: 4px;">
-														<tbody>
-															<tr>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1" style="cursor: default;">Short Haired Cats</div>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 464px;"></div>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="padding-left: 2px; padding-right: 2px; height: 24px; border-radius: 8px; border-width: 1px; border-style: solid; border-color: rgb(102, 102, 102) rgb(102, 102, 102) rgb(136, 136, 136); overflow: hidden; line-height: 1%; background-color: rgb(255, 255, 255);">
-																		<tbody>
-																			<tr>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 2px; height: 1px;"></div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_113_CenteringPanel arc_112_PictureFrame" style="width: 14px; height: 14px;">
-																						<div class="arc_11_base_widget_1 arc_114_CenteringPanel_ContainerPanel both" style="width: 14px; height: 14px;">
-																							<div class="arc_11_base_widget_1 arc_115_CenteringPanel_ContainedPanel"><img src="./cat-list_files/Search.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 14px; height: 14px; opacity: 1;"></div>
-																						</div>
-																					</div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 2px; height: 1px;"></div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 20px; font-family: helvetica; width: 180px; border-style: none; font-weight: bold; color: rgb(170, 170, 170); font-size: 14px;">
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 2px; height: 1px;"></div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;"><img src="./cat-list_files/Clear.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 14px; height: 14px; display: block; opacity: 0;"></td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 10px; height: 1px;"></div>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_19_CollectionGUI_CreateButton">
-																		<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="display: inline-block;">
-																			<div class="arc_11_base_widget_1 fa fa-plus-square-o arc_116_FontAwesomeIcon" style="cursor: default; width: 22px; height: 22px; font-size: 22px; line-height: 22px;"></div>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-														</tbody>
-													</table>
+
+
+<div class="mf-collection-bar">
+	<h2 class="mf-collection-title">
+		Short Haired Cats
+	</h2>
+	<ul class="mf-collection-actions">
+		<li class="mf-action mf-action-search">
+			<input type="search" class="mf-search" title="search this collection" />
+		</li>
+		<li class="mf-action mf-action-button">
+			<button class="mf-button mf-new-item-button" title="new item">
+				<i class="fa fa-plus"></i>
+			</button>
+		</li>
+	</ul>
+</div>
 												</div>
 											</td>
 										</tr>
@@ -936,7 +969,7 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -967,7 +1000,7 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -998,7 +1031,7 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1029,7 +1062,7 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1060,7 +1093,7 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1091,7 +1124,7 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1122,7 +1155,7 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1153,7 +1186,7 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1184,7 +1217,7 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1215,7 +1248,7 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1246,7 +1279,7 @@ html {
 		<dd>Ticked</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 
@@ -1277,7 +1310,7 @@ html {
 		<dd>Spotted</dd>
 	</dl>
 
-	<button class="mf-download-asset">
+	<button class="mf-button mf-download-asset">
 		Download
 	</button>
 

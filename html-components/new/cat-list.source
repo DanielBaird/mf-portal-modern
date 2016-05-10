@@ -508,56 +508,9 @@
 										<tr>
 											<td align="left" style="vertical-align: top;">
 												<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px;">
-													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 943px; padding: 4px;">
-														<tbody>
-															<tr>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1" style="cursor: default;">Short Haired Cats</div>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 464px;"></div>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="padding-left: 2px; padding-right: 2px; height: 24px; border-radius: 8px; border-width: 1px; border-style: solid; border-color: rgb(102, 102, 102) rgb(102, 102, 102) rgb(136, 136, 136); overflow: hidden; line-height: 1%; background-color: rgb(255, 255, 255);">
-																		<tbody>
-																			<tr>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 2px; height: 1px;"></div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_113_CenteringPanel arc_112_PictureFrame" style="width: 14px; height: 14px;">
-																						<div class="arc_11_base_widget_1 arc_114_CenteringPanel_ContainerPanel both" style="width: 14px; height: 14px;">
-																							<div class="arc_11_base_widget_1 arc_115_CenteringPanel_ContainedPanel"><img src="./cat-list_files/Search.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 14px; height: 14px; opacity: 1;"></div>
-																						</div>
-																					</div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 2px; height: 1px;"></div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 20px; font-family: helvetica; width: 180px; border-style: none; font-weight: bold; color: rgb(170, 170, 170); font-size: 14px;">
-																				</td>
-																				<td align="left" style="vertical-align: middle;">
-																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 2px; height: 1px;"></div>
-																				</td>
-																				<td align="left" style="vertical-align: middle;"><img src="./cat-list_files/Clear.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 14px; height: 14px; display: block; opacity: 0;"></td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 10px; height: 1px;"></div>
-																</td>
-																<td align="left" style="vertical-align: middle;">
-																	<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_19_CollectionGUI_CreateButton">
-																		<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="display: inline-block;">
-																			<div class="arc_11_base_widget_1 fa fa-plus-square-o arc_116_FontAwesomeIcon" style="cursor: default; width: 22px; height: 22px; font-size: 22px; line-height: 22px;"></div>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-														</tbody>
-													</table>
+
+@collection-actions.html
+
 												</div>
 											</td>
 										</tr>

@@ -1,6 +1,30 @@
 
+////////////////////////////////////////////////////////////////////
+// General stuff
+////////////////////////////////////////////////////////////////////
+
+// start with helvetica in black on a white page
 html {
 	font-family: Helvetica, sans-serif;
+	color: black;
+	background: white;
+}
+
+// general class for button-like things
+@button-size: 23px;
+.mf-button {
+	border: 1px solid rgb(150,150,150);
+	height: @button-size;
+	min-width: @button-size;
+	border-radius: 4px;
+	background: inherit;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mf-button:hover {
+	color: rgb(100,149,237);
+	border-color: rgb(100,149,237);
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -83,6 +107,64 @@ html {
 }
 
 ////////////////////////////////////////////////////////////////////
+// Collection Toolbar
+////////////////////////////////////////////////////////////////////
+@collection-bar-height: 24px;
+
+.mf-collection-bar {
+	margin: 0;
+	padding: 4px;
+	font-size: 20px;
+	height: @collection-bar-height;
+}
+.mf-collection-title {
+	float: left;
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: @collection-bar-height;
+}
+.mf-collection-actions {
+	float: right;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.mf-action {
+	display: inline-block;
+	line-height: @collection-bar-height;
+	padding: 0;
+	margin-left: (@collection-bar-height / 8);
+}
+.mf-action.mf-action-search {
+	.mf-button;
+	border-radius: (@collection-bar-height / 2);
+	position: relative;
+	background: white;
+	margin-right: 18px;
+}
+.mf-action.mf-action-search:before {
+	position: absolute;
+	left: 7px;
+	top: 3px;
+	content: url(./cat-list_files/Search.png);
+}
+.mf-search {
+	padding: 0 6px 0 @collection-bar-height;
+	margin: 0;
+	border: none;
+	display: block;
+	background: none;
+	height: @collection-bar-height;
+	width: 220px;
+	font-family: inherit;
+	font-weight: bold;
+	color: rgb(170, 170, 170);
+	font-size: 14px;
+}
+
+////////////////////////////////////////////////////////////////////
 // Lists and Items
 ////////////////////////////////////////////////////////////////////
 // variables used in lists and items
@@ -156,22 +238,16 @@ html {
 	padding: 2px (2 * @item-padding);
 	font-weight: bold;
 	font-size: 12px;
-	background: none;
-	border: 1px solid rgba(150,150,150, 1);
-	border-radius: (0.75 * @item-padding);
 	text-shadow: 0 1px 1px white;
 	font-family: inherit;
-}
-.mf-download-asset:hover {
-	border-color: rgb(100, 149, 237);
 }
 
 /* -- utilities ---------- */
 
 /* sizing */
-* {
-	box-sizing: border-box;
-}
+// * {
+// 	box-sizing: border-box;
+// }
 
 /* clearfix */
 .mf-list-item:after,

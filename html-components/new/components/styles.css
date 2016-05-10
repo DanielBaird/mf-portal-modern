@@ -1,5 +1,21 @@
 html {
   font-family: Helvetica, sans-serif;
+  color: black;
+  background: white;
+}
+.mf-button {
+  border: 1px solid #969696;
+  height: 23px;
+  min-width: 23px;
+  border-radius: 4px;
+  background: inherit;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mf-button:hover {
+  color: #6495ed;
+  border-color: #6495ed;
 }
 .mf-portal-header {
   height: 100px;
@@ -57,6 +73,65 @@ html {
 .mf-nav-item a {
   text-decoration: none;
   color: inherit;
+}
+.mf-collection-bar {
+  margin: 0;
+  padding: 4px;
+  font-size: 20px;
+  height: 24px;
+}
+.mf-collection-title {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 24px;
+}
+.mf-collection-actions {
+  float: right;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.mf-action {
+  display: inline-block;
+  line-height: 24px;
+  padding: 0;
+  margin-left: 3px;
+}
+.mf-action.mf-action-search {
+  border: 1px solid #969696;
+  height: 23px;
+  min-width: 23px;
+  border-radius: 4px;
+  background: inherit;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 12px;
+  position: relative;
+  background: white;
+  margin-right: 18px;
+}
+.mf-action.mf-action-search:before {
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  content: url(cat-list_files/Search.png);
+}
+.mf-search {
+  padding: 0 6px 0 24px;
+  margin: 0;
+  border: none;
+  display: block;
+  background: none;
+  height: 24px;
+  width: 220px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #aaaaaa;
+  font-size: 14px;
 }
 /* - a list of items ---------- */
 .mf-list-of-items {
@@ -118,20 +193,11 @@ html {
   padding: 2px 10px;
   font-weight: bold;
   font-size: 12px;
-  background: none;
-  border: 1px solid #969696;
-  border-radius: 3.75px;
   text-shadow: 0 1px 1px white;
   font-family: inherit;
 }
-.mf-download-asset:hover {
-  border-color: #6495ed;
-}
 /* -- utilities ---------- */
 /* sizing */
-* {
-  box-sizing: border-box;
-}
 /* clearfix */
 .mf-list-item:after,
 .mf-metadata-properties:after {
