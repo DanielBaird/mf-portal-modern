@@ -15,16 +15,28 @@ html {
 .mf-button {
 	border: 1px solid rgb(150,150,150);
 	height: @button-size;
+	line-height: @button-size;
 	min-width: @button-size;
 	border-radius: 4px;
 	background: inherit;
+	font-family: inherit;
 	cursor: pointer;
 	display: inline-block;
 	vertical-align: middle;
+	padding: 0;
 }
 .mf-button:hover {
 	color: rgb(100,149,237);
 	border-color: rgb(100,149,237);
+}
+
+/* super tiny clearfix */
+.mf-list-item:after,
+.mf-metadata-properties:after
+{
+	content: " ";
+    display: table;
+    clear: both;
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -133,12 +145,12 @@ html {
 }
 .mf-action {
 	display: inline-block;
-	line-height: @collection-bar-height;
 	padding: 0;
 	margin: 0;
 }
 .mf-action i.fa { // make font-awesome icons a bit larger..
 	font-size: (@button-size * 0.6);
+	line-height: @button-size;
 }
 .mf-action.mf-action-search {
 	.mf-button;
@@ -179,7 +191,7 @@ html {
 
 .mf-page-actions {
 	margin: 0;
-	padding: 4px;
+	padding: 0 4px;
 	font-size: 20px;
 	height: @paging-bar-height;
 }
@@ -188,6 +200,8 @@ html {
 }
 .mf-button.mf-goto-page-button {
 	min-width: (1.5 * @button-size);
+	font-family: inherit;
+	font-size: 14px;
 }
 .mf-button.mf-current-page-button {
 	border-color: rgb(179,0,0);
@@ -310,18 +324,5 @@ html {
 	font-family: inherit;
 }
 
-/* -- utilities ---------- */
-
-/* sizing */
-// * {
-// 	box-sizing: border-box;
-// }
-
-/* clearfix */
-.mf-list-item:after,
-.mf-metadata-properties:after
-{   content: " ";
-    display: table;
-    clear: both;     }
 
 

@@ -491,12 +491,16 @@
 			<tbody>
 				<tr>
 					<td align="left" style="vertical-align: top;">
+
 @header.html
+
 					</td>
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
+
 @menubar.html
+
 					</td>
 				</tr>
 				<tr>
@@ -586,7 +590,9 @@
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
+
 @footer.html
+
 					</td>
 				</tr>
 			</tbody>

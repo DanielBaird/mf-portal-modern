@@ -476,16 +476,26 @@ html {
 .mf-button {
   border: 1px solid #969696;
   height: 23px;
+  line-height: 23px;
   min-width: 23px;
   border-radius: 4px;
   background: inherit;
+  font-family: inherit;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  padding: 0;
 }
 .mf-button:hover {
   color: #6495ed;
   border-color: #6495ed;
+}
+/* super tiny clearfix */
+.mf-list-item:after,
+.mf-metadata-properties:after {
+  content: " ";
+  display: table;
+  clear: both;
 }
 .mf-portal-header {
   height: 100px;
@@ -566,22 +576,25 @@ html {
 }
 .mf-action {
   display: inline-block;
-  line-height: 24px;
   padding: 0;
   margin: 0;
 }
 .mf-action i.fa {
   font-size: 13.8px;
+  line-height: 23px;
 }
 .mf-action.mf-action-search {
   border: 1px solid #969696;
   height: 23px;
+  line-height: 23px;
   min-width: 23px;
   border-radius: 4px;
   background: inherit;
+  font-family: inherit;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  padding: 0;
   border-radius: 12px;
   position: relative;
   background: white;
@@ -608,7 +621,7 @@ html {
 }
 .mf-page-actions {
   margin: 0;
-  padding: 4px;
+  padding: 0 4px;
   font-size: 20px;
   height: 30px;
 }
@@ -617,6 +630,8 @@ html {
 }
 .mf-button.mf-goto-page-button {
   min-width: 34.5px;
+  font-family: inherit;
+  font-size: 14px;
 }
 .mf-button.mf-current-page-button {
   border-color: #b30000;
@@ -712,15 +727,6 @@ html {
   text-shadow: 0 1px 1px white;
   font-family: inherit;
 }
-/* -- utilities ---------- */
-/* sizing */
-/* clearfix */
-.mf-list-item:after,
-.mf-metadata-properties:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
 </style>
 
 </head>
@@ -744,16 +750,19 @@ html {
 				<tr>
 					<td align="left" style="vertical-align: top;">
 
+
 <header class="mf-portal-header">
 	<img class="mf-portal-logo" src="./cat-list_files/cats-logo.png">
 	<h1 class="mf-portal-heading">
 		International Cat Breeds
 	</h1>
 </header>
+
 					</td>
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
+
 <nav class="mf-portal-navbar">
 	<ul class="mf-nav-list">
 		<li class="mf-nav-item"><a href="">Collections</a></li>
@@ -762,6 +771,7 @@ html {
 		<li class="mf-nav-item"><a href="">About</a></li>
 	</ul>
 </nav>
+
 					</td>
 				</tr>
 				<tr>
@@ -1310,11 +1320,13 @@ html {
 				</tr>
 				<tr>
 					<td align="left" style="vertical-align: top;">
+
 <footer class="mf-portal-footer">
 	<p>
 		Powered by Mediaflux®
 	</p>
 </footer>
+
 					</td>
 				</tr>
 			</tbody>
