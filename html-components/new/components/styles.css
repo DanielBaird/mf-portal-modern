@@ -133,6 +133,34 @@ html {
   color: #aaaaaa;
   font-size: 14px;
 }
+.mf-sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  padding: 4px 8px 0 0;
+}
+.mf-facet-selector {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 4px;
+}
+.mf-facet-selector legend {
+  float: left;
+  font-weight: bold;
+  font-size: 12px;
+}
+.mf-facet-selector legend:after {
+  content: ':';
+}
+.mf-facet {
+  margin: 0;
+  padding: 0;
+  padding-left: 2px;
+  clear: left;
+  font-size: 10px;
+}
 /* - a list of items ---------- */
 .mf-list-of-items {
   padding: 0;

@@ -78,15 +78,15 @@ html {
 ////////////////////////////////////////////////////////////////////
 // Navbar
 ////////////////////////////////////////////////////////////////////
-@navbar-color: #ffffff;
-@navbar-height: 40px;
+@nav-bar-color: #ffffff;
+@nav-bar-height: 40px;
 
 .mf-portal-navbar {
 	margin: 0;
 	padding: 0;
 	padding-right: 94px;
-	height: @navbar-height;
-	color: @navbar-color;
+	height: @nav-bar-height;
+	color: @nav-bar-color;
 	background-color: rgb(0, 53, 70);
 	font-size: 15px;
 	font-weight: bold;
@@ -98,7 +98,7 @@ html {
 }
 .mf-nav-item {
 	display: inline-block;
-	line-height: @navbar-height;
+	line-height: @nav-bar-height;
 	padding: 0 13px;
 }
 .mf-nav-item a {
@@ -162,6 +162,46 @@ html {
 	font-weight: bold;
 	color: rgb(170, 170, 170);
 	font-size: 14px;
+}
+
+
+////////////////////////////////////////////////////////////////////
+// Facet Sidebar
+////////////////////////////////////////////////////////////////////
+
+.mf-sidebar {
+	position: absolute;
+////  debug / todo: adjust positioning when working on the broader page layout
+//	top: (@header-height + @nav-bar-height + @collection-bar-height);
+//	bottom: @footer-height;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100px;
+	padding: 4px 8px 0 0;
+}
+
+.mf-facet-selector {
+	border: 1px solid rgb(204,204,204);
+	border-radius: 4px;
+	padding: 4px;
+}
+// legend for the facet selector fieldset
+.mf-facet-selector legend {
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+}
+.mf-facet-selector legend:after {
+	content: ':';
+}
+
+.mf-facet {
+	margin: 0;
+	padding: 0;
+	padding-left: 2px;
+	clear: left;
+	font-size: 10px;
 }
 
 ////////////////////////////////////////////////////////////////////
