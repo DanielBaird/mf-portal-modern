@@ -169,8 +169,6 @@ body {
   height: 24px;
   width: 220px;
   font-family: inherit;
-  font-weight: bold;
-  color: #aaaaaa;
   font-size: 14px;
 }
 .mf-page-actions {
@@ -244,18 +242,13 @@ body {
   display: block;
   list-style: none;
   background: #fafafa;
-  min-height: 200px;
-  min-height: 185px;
   margin: 10px 0;
   padding: 5px;
-  padding-left: 170px;
   border: 1px solid #969696;
   border-radius: 5px;
 }
 .mf-list-item-thumbnail {
-  position: absolute;
-  left: 5px;
-  top: 5px;
+  float: left;
   max-width: 160px;
   max-height: 160px;
   border: 3px solid #000;
@@ -267,15 +260,16 @@ body {
   color: #ff00ff;
   font-size: 20px;
   font-weight: inherit;
+  margin-left: 170px;
 }
 .mf-metadata-properties {
   margin: 5px 0;
   padding: 0;
+  margin-left: 170px;
 }
 .mf-metadata-properties dt {
   font-weight: bold;
   float: left;
-  clear: left;
   min-width: 7em;
 }
 .mf-metadata-properties dt:after {
@@ -283,10 +277,9 @@ body {
 }
 .mf-metadata-properties dd {
   margin: 0;
-  float: left;
 }
 .mf-download-asset {
-  position: absolute;
+  float: left;
   left: 5px;
   bottom: 5px;
   padding: 0 10px;

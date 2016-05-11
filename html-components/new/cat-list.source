@@ -4,28 +4,11 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!--                                                               -->
-	<!-- Consider inlining CSS to reduce the number of requested files -->
-	<!--                                                               -->
-	<link type="text/css" rel="stylesheet" href="./cat-list_files/MediafluxPortalGWT.css">
-	<!--                                           -->
-	<!-- Any title is fine                         -->
-	<!--                                           -->
 	<title>New Cat Breeds</title>
-	<!--                                           -->
-	<!-- This script loads your compiled module.   -->
-	<!-- If you add any GWT meta tags, they must   -->
-	<!-- be added before this line.                -->
-	<!--                                           -->
-	<script type="text/javascript" language="javascript" src="./cat-list_files/mediafluxportalgwt.nocache.js"></script>
-	<script defer="defer">
-	mediafluxportalgwt.onInjectionDone('mediafluxportalgwt')
-	</script>
 
 	<style type="text/css">
 		@import url("./font-awesome/css/font-awesome.min.css");
 	</style>
-
 	<style>
 
 @styles.css
@@ -33,21 +16,12 @@
 	</style>
 
 </head>
-<!--                                           -->
-<!-- The body can have arbitrary html, or      -->
-<!-- you can leave the body empty if you want  -->
-<!-- to create a completely dynamic UI.        -->
-<!--                                           -->
 
 <body>
-	<!-- OPTIONAL: include this if you want history support -->
-	<!-- <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe> -->
-	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
 	<noscript>
 		&lt;div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif"&gt; Your web browser must have JavaScript enabled in order for this application to display correctly. &lt;/div&gt;
 	</noscript>
 	<iframe src="javascript:&#39;&#39;" id="mediafluxportalgwt" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none;" src="./cat-list_files/saved_resource.html"></iframe>
-
 
 @header.html
 

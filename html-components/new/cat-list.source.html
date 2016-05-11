@@ -4,28 +4,11 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!--                                                               -->
-	<!-- Consider inlining CSS to reduce the number of requested files -->
-	<!--                                                               -->
-	<link type="text/css" rel="stylesheet" href="./cat-list_files/MediafluxPortalGWT.css">
-	<!--                                           -->
-	<!-- Any title is fine                         -->
-	<!--                                           -->
 	<title>New Cat Breeds</title>
-	<!--                                           -->
-	<!-- This script loads your compiled module.   -->
-	<!-- If you add any GWT meta tags, they must   -->
-	<!-- be added before this line.                -->
-	<!--                                           -->
-	<script type="text/javascript" language="javascript" src="./cat-list_files/mediafluxportalgwt.nocache.js"></script>
-	<script defer="defer">
-	mediafluxportalgwt.onInjectionDone('mediafluxportalgwt')
-	</script>
 
 	<style type="text/css">
 		@import url("./font-awesome/css/font-awesome.min.css");
 	</style>
-
 	<style>
 
 html,
@@ -199,8 +182,6 @@ body {
   height: 24px;
   width: 220px;
   font-family: inherit;
-  font-weight: bold;
-  color: #aaaaaa;
   font-size: 14px;
 }
 .mf-page-actions {
@@ -274,18 +255,13 @@ body {
   display: block;
   list-style: none;
   background: #fafafa;
-  min-height: 200px;
-  min-height: 185px;
   margin: 10px 0;
   padding: 5px;
-  padding-left: 170px;
   border: 1px solid #969696;
   border-radius: 5px;
 }
 .mf-list-item-thumbnail {
-  position: absolute;
-  left: 5px;
-  top: 5px;
+  float: left;
   max-width: 160px;
   max-height: 160px;
   border: 3px solid #000;
@@ -297,15 +273,16 @@ body {
   color: #ff00ff;
   font-size: 20px;
   font-weight: inherit;
+  margin-left: 170px;
 }
 .mf-metadata-properties {
   margin: 5px 0;
   padding: 0;
+  margin-left: 170px;
 }
 .mf-metadata-properties dt {
   font-weight: bold;
   float: left;
-  clear: left;
   min-width: 7em;
 }
 .mf-metadata-properties dt:after {
@@ -313,10 +290,9 @@ body {
 }
 .mf-metadata-properties dd {
   margin: 0;
-  float: left;
 }
 .mf-download-asset {
-  position: absolute;
+  float: left;
   left: 5px;
   bottom: 5px;
   padding: 0 10px;
@@ -329,21 +305,12 @@ body {
 	</style>
 
 </head>
-<!--                                           -->
-<!-- The body can have arbitrary html, or      -->
-<!-- you can leave the body empty if you want  -->
-<!-- to create a completely dynamic UI.        -->
-<!--                                           -->
 
 <body>
-	<!-- OPTIONAL: include this if you want history support -->
-	<!-- <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe> -->
-	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
 	<noscript>
 		&lt;div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif"&gt; Your web browser must have JavaScript enabled in order for this application to display correctly. &lt;/div&gt;
 	</noscript>
 	<iframe src="javascript:&#39;&#39;" id="mediafluxportalgwt" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none;" src="./cat-list_files/saved_resource.html"></iframe>
-
 
 
 <header class="mf-portal-header">
@@ -371,7 +338,7 @@ body {
 	</h2>
 	<ul class="mf-collection-actions">
 		<li class="mf-action mf-action-search">
-			<input type="search" class="mf-search" title="search this collection" />
+			<input type="search" class="mf-search" placeholder="search for cats..." title="search for cats..." />
 		</li>
 		<li class="mf-action mf-action-button">
 			<button class="mf-button mf-new-item-button" title="new item">

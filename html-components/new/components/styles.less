@@ -212,8 +212,6 @@ html, body {
 	height: @collection-bar-height;
 	width: 220px;
 	font-family: inherit;
-	font-weight: bold;
-	color: rgb(170, 170, 170);
 	font-size: 14px;
 }
 
@@ -326,19 +324,14 @@ html, body {
 	display: block;
 	list-style: none;
 	background: rgba(250,250,250, 1);
-	min-height: (@image-height + (4 * @item-padding) + 20px);
-	min-height: (@image-height + (5 * @item-padding));
 	margin: (2 * @item-padding) 0;
 	padding: @item-padding;
-	padding-left: (@item-padding + @image-width + @item-padding);
 	border: 1px solid rgba(150,150,150, 1);
 	border-radius: @item-padding;
 }
 
 .mf-list-item-thumbnail {
-	position: absolute;
-	left: @item-padding;
-	top: @item-padding;
+	float: left;
 	max-width: @image-width;
 	max-height: @image-height;
 	border: 3px solid #000;
@@ -351,16 +344,17 @@ html, body {
 	color: rgba(255,0,255, 1);
 	font-size: 20px;
 	font-weight: inherit;
+	margin-left: (@item-padding + @image-width + @item-padding);
 }
 
 .mf-metadata-properties {
 	margin: @item-padding 0;
 	padding: 0;
+	margin-left: (@item-padding + @image-width + @item-padding);
 }
 .mf-metadata-properties dt {
 	font-weight: bold;
 	float: left;
-	clear: left;
 	min-width: 7em;
 }
 .mf-metadata-properties dt:after {
@@ -368,11 +362,10 @@ html, body {
 }
 .mf-metadata-properties dd {
 	margin: 0;
-	float: left;
 }
 
 .mf-download-asset {
-	position: absolute;
+	float: left;
 	left: @item-padding;
 	bottom: @item-padding;
 	padding: 0 (2 * @item-padding);
