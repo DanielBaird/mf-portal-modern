@@ -3,11 +3,20 @@
 // General stuff
 ////////////////////////////////////////////////////////////////////
 
+@body-background-color: rgb(205, 231, 231);
+@content-width: 800px;
+
+@sidebar-width: 150px;
+@notsidebar-width: (@content-width - @sidebar-width - 20px);
+
 // start with helvetica in black on a white page
-html {
+html, body {
 	font-family: Helvetica, sans-serif;
 	color: black;
-	background: white;
+	background: @body-background-color;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
 }
 
 // general class for button-like things
@@ -23,6 +32,7 @@ html {
 	cursor: pointer;
 	display: inline-block;
 	vertical-align: middle;
+	text-align: center;
 	padding: 0;
 }
 .mf-button:hover {
@@ -48,6 +58,7 @@ html {
 
 .mf-portal-header {
 	height: 100px;
+	white-space: nowrap;
 }
 .mf-portal-logo {
 	float: left;
@@ -79,6 +90,12 @@ html {
 	color: rgb(204, 222, 227);
 	background-color: rgb(0, 90, 118);
 	font-size: 15px;
+	white-space: nowrap;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 .mf-portal-footer p {
 	line-height: @footer-height;
@@ -86,6 +103,7 @@ html {
 	margin: 0;
 	padding: 0 10px;
 }
+
 
 ////////////////////////////////////////////////////////////////////
 // Navbar
@@ -96,27 +114,45 @@ html {
 .mf-portal-navbar {
 	margin: 0;
 	padding: 0;
-	padding-right: 94px;
 	height: @nav-bar-height;
 	color: @nav-bar-color;
 	background-color: rgb(0, 53, 70);
 	font-size: 15px;
 	font-weight: bold;
+	white-space: nowrap;
 }
 .mf-nav-list {
-	margin: 0;
+	max-width: @content-width;
+	margin: 0 auto;
 	padding: 0;
 	text-align: right;
 }
 .mf-nav-item {
 	display: inline-block;
 	line-height: @nav-bar-height;
-	padding: 0 13px;
+	padding: 0 0 0 26px;
 }
 .mf-nav-item a {
 	text-decoration: none;
 	color: inherit;
 }
+
+
+////////////////////////////////////////////////////////////////////
+// Content column
+////////////////////////////////////////////////////////////////////
+
+.mf-portal-content {
+	max-width: @content-width;
+	margin: 0 auto;
+
+	position: absolute;
+	top: (@header-height + @nav-bar-height);
+	bottom: @footer-height;
+	left: 0;
+	right: 0;
+}
+
 
 ////////////////////////////////////////////////////////////////////
 // Collection Toolbar
@@ -125,9 +161,11 @@ html {
 
 .mf-collection-bar {
 	margin: 0;
-	padding: 4px;
+	padding: 4px 0 4px 4px;
 	font-size: 20px;
 	height: @collection-bar-height;
+	background-color: @body-background-color;
+	white-space: nowrap;
 }
 .mf-collection-title {
 	float: left;
@@ -179,7 +217,6 @@ html {
 	font-size: 14px;
 }
 
-
 ////////////////////////////////////////////////////////////////////
 // Paging Toolbar
 ////////////////////////////////////////////////////////////////////
@@ -194,6 +231,8 @@ html {
 	padding: 0 4px;
 	font-size: 20px;
 	height: @paging-bar-height;
+	width: @notsidebar-width;
+	margin-left: (@content-width - @notsidebar-width);
 }
 .mf-button.mf-up-button {
 	margin-right: 10px;
@@ -207,6 +246,15 @@ html {
 	border-color: rgb(179,0,0);
 }
 
+// having two paging controls on a inner-scrolling screen means we
+// need to pin the "last" one to the bottom.
+.mf-page-actions:last-of-type {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 ////////////////////////////////////////////////////////////////////
 // Facet Sidebar
 ////////////////////////////////////////////////////////////////////
@@ -214,12 +262,12 @@ html {
 .mf-sidebar {
 	position: absolute;
 ////  debug / todo: adjust positioning when working on the broader page layout
-//	top: (@header-height + @nav-bar-height + @collection-bar-height);
-//	bottom: @footer-height;
-	top: 0;
-	bottom: 0;
+	top: (@collection-bar-height + 5px);
+	bottom: @footer-height;
+	// top: 0;
+	// bottom: 0;
 	left: 0;
-	width: 100px;
+	width: @sidebar-width;
 	padding: 4px 8px 0 0;
 }
 
@@ -253,23 +301,33 @@ html {
 @item-padding: 5px;
 @image-width: 160px;
 @image-height: @image-width;
+@scrollbar-spacing: 20px;
 
-/* - a list of items ---------- */
+// a list of items
 .mf-list-of-items {
 	padding: 0;
 	margin: 0;
-	margin-left: @item-padding;
-	width: 600px;
+	width: @notsidebar-width;
+	padding-right: @scrollbar-spacing;
+	margin-left: (@content-width - @notsidebar-width);
+
+	// for an internal scrolling list..
+	position: absolute;
+	top: (@collection-bar-height + @paging-bar-height + @item-padding);
+	bottom: (@footer-height + @item-padding);
+	left: 0;
+	margin-right: (-1 * @scrollbar-spacing);
+	overflow: auto;
 }
 
-/* -- an item in a list ---------- */
-
+// an item in a list
 .mf-list-item {
 	position: relative;
 	display: block;
 	list-style: none;
 	background: rgba(250,250,250, 1);
 	min-height: (@image-height + (4 * @item-padding) + 20px);
+	min-height: (@image-height + (5 * @item-padding));
 	margin: (2 * @item-padding) 0;
 	padding: @item-padding;
 	padding-left: (@item-padding + @image-width + @item-padding);

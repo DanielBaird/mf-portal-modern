@@ -455,17 +455,6 @@
 		font-size: 14px;
 	}
 	</style>
-	<style type="text/css">
-	.style_16 {
-		color: rgba(255, 0, 255, 1);
-		font-family: helvetica;
-		font-size: 20px;
-		padding-left: 0px;
-		padding-right: 5px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-	</style>
 
 <style>
 @styles.css
@@ -478,7 +467,7 @@
 <!-- to create a completely dynamic UI.        -->
 <!--                                           -->
 
-<body style="overflow: hidden; margin: 0px; font-family: sans-serif;">
+<body>
 	<!-- OPTIONAL: include this if you want history support -->
 	<!-- <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe> -->
 	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
@@ -486,118 +475,28 @@
 		&lt;div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif"&gt; Your web browser must have JavaScript enabled in order for this application to display correctly. &lt;/div&gt;
 	</noscript>
 	<iframe src="javascript:&#39;&#39;" id="mediafluxportalgwt" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none;" src="./cat-list_files/saved_resource.html"></iframe>
-	<div class="arc_11_base_widget_1" style="position: relative; overflow: hidden; width: 1143px; height: 889px;">
-		<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1 style_20" style="width: 1143px; height: 889px;">
-			<tbody>
-				<tr>
-					<td align="left" style="vertical-align: top;">
+
 
 @header.html
 
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="vertical-align: top;">
-
 @menubar.html
 
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="vertical-align: top;">
-						<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px; height: 719px; margin-left: 100px; margin-right: 100px;">
-							<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px; height: 719px;">
-								<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 943px; height: 719px;">
-									<tbody>
-										<tr>
-											<td align="left" style="vertical-align: top;">
-												<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px;">
+	<div class="mf-portal-content">
 
 @collection-actions.html
 
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td align="left" style="vertical-align: top;">
-												<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_17_CollectionGUI style_24" style="width: 943px; height: 687px;">
-													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1 style_26" style="width: 943px; height: 687px;">
-														<tbody>
-															<tr>
-																<td align="left" style="vertical-align: top;">
-																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 943px; height: 687px;">
-																		<tbody>
-																			<tr>
-																				<td align="left" style="vertical-align: top;">
-
 @facets.html
 
-																				</td>
-																				<td align="left" style="vertical-align: top;">
-																					<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 840px; height: 687px;">
-																						<tbody>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-
 @paging.html
-
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-																									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 2px;"></div>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-																									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 840px; height: 619px; overflow: auto;">
 
 @list-of-items.html
 
-																									</div>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-																									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 2px;"></div>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-
 @paging.html
 
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
-																				</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="vertical-align: top;">
+	</div>
 
 @footer.html
 
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
 </body>
 
 </html>

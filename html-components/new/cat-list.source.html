@@ -455,23 +455,16 @@
 		font-size: 14px;
 	}
 	</style>
-	<style type="text/css">
-	.style_16 {
-		color: rgba(255, 0, 255, 1);
-		font-family: helvetica;
-		font-size: 20px;
-		padding-left: 0px;
-		padding-right: 5px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-	</style>
 
 <style>
-html {
+html,
+body {
   font-family: Helvetica, sans-serif;
   color: black;
-  background: white;
+  background: #cde7e7;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
 .mf-button {
   border: 1px solid #969696;
@@ -484,6 +477,7 @@ html {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  text-align: center;
   padding: 0;
 }
 .mf-button:hover {
@@ -499,6 +493,7 @@ html {
 }
 .mf-portal-header {
   height: 100px;
+  white-space: nowrap;
 }
 .mf-portal-logo {
   float: left;
@@ -523,6 +518,11 @@ html {
   color: #ccdee3;
   background-color: #005a76;
   font-size: 15px;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .mf-portal-footer p {
   line-height: 30px;
@@ -533,32 +533,44 @@ html {
 .mf-portal-navbar {
   margin: 0;
   padding: 0;
-  padding-right: 94px;
   height: 40px;
   color: #ffffff;
   background-color: #003546;
   font-size: 15px;
   font-weight: bold;
+  white-space: nowrap;
 }
 .mf-nav-list {
-  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 0;
   text-align: right;
 }
 .mf-nav-item {
   display: inline-block;
   line-height: 40px;
-  padding: 0 13px;
+  padding: 0 0 0 26px;
 }
 .mf-nav-item a {
   text-decoration: none;
   color: inherit;
 }
+.mf-portal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 140px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
 .mf-collection-bar {
   margin: 0;
-  padding: 4px;
+  padding: 4px 0 4px 4px;
   font-size: 20px;
   height: 24px;
+  background-color: #cde7e7;
+  white-space: nowrap;
 }
 .mf-collection-title {
   float: left;
@@ -594,6 +606,7 @@ html {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  text-align: center;
   padding: 0;
   border-radius: 12px;
   position: relative;
@@ -624,6 +637,8 @@ html {
   padding: 0 4px;
   font-size: 20px;
   height: 30px;
+  width: 630px;
+  margin-left: 170px;
 }
 .mf-button.mf-up-button {
   margin-right: 10px;
@@ -636,12 +651,18 @@ html {
 .mf-button.mf-current-page-button {
   border-color: #b30000;
 }
-.mf-sidebar {
+.mf-page-actions:last-of-type {
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
-  width: 100px;
+  right: 0;
+}
+.mf-sidebar {
+  position: absolute;
+  top: 29px;
+  bottom: 30px;
+  left: 0;
+  width: 150px;
   padding: 4px 8px 0 0;
 }
 .mf-facet-selector {
@@ -664,20 +685,26 @@ html {
   padding-left: 2px;
   font-size: 10px;
 }
-/* - a list of items ---------- */
 .mf-list-of-items {
   padding: 0;
   margin: 0;
-  margin-left: 5px;
-  width: 600px;
+  width: 630px;
+  padding-right: 20px;
+  margin-left: 170px;
+  position: absolute;
+  top: 59px;
+  bottom: 35px;
+  left: 0;
+  margin-right: -20px;
+  overflow: auto;
 }
-/* -- an item in a list ---------- */
 .mf-list-item {
   position: relative;
   display: block;
   list-style: none;
   background: #fafafa;
   min-height: 200px;
+  min-height: 185px;
   margin: 10px 0;
   padding: 5px;
   padding-left: 170px;
@@ -736,7 +763,7 @@ html {
 <!-- to create a completely dynamic UI.        -->
 <!--                                           -->
 
-<body style="overflow: hidden; margin: 0px; font-family: sans-serif;">
+<body>
 	<!-- OPTIONAL: include this if you want history support -->
 	<!-- <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe> -->
 	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
@@ -744,11 +771,7 @@ html {
 		&lt;div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif"&gt; Your web browser must have JavaScript enabled in order for this application to display correctly. &lt;/div&gt;
 	</noscript>
 	<iframe src="javascript:&#39;&#39;" id="mediafluxportalgwt" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none;" src="./cat-list_files/saved_resource.html"></iframe>
-	<div class="arc_11_base_widget_1" style="position: relative; overflow: hidden; width: 1143px; height: 889px;">
-		<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1 style_20" style="width: 1143px; height: 889px;">
-			<tbody>
-				<tr>
-					<td align="left" style="vertical-align: top;">
+
 
 
 <header class="mf-portal-header">
@@ -757,11 +780,6 @@ html {
 		International Cat Breeds
 	</h1>
 </header>
-
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="vertical-align: top;">
 
 <nav class="mf-portal-navbar">
 	<ul class="mf-nav-list">
@@ -772,17 +790,7 @@ html {
 	</ul>
 </nav>
 
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="vertical-align: top;">
-						<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px; height: 719px; margin-left: 100px; margin-right: 100px;">
-							<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px; height: 719px;">
-								<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 943px; height: 719px;">
-									<tbody>
-										<tr>
-											<td align="left" style="vertical-align: top;">
-												<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 943px;">
+	<div class="mf-portal-content">
 
 
 <div class="mf-collection-bar">
@@ -800,21 +808,6 @@ html {
 		</li>
 	</ul>
 </div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td align="left" style="vertical-align: top;">
-												<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_17_CollectionGUI style_24" style="width: 943px; height: 687px;">
-													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1 style_26" style="width: 943px; height: 687px;">
-														<tbody>
-															<tr>
-																<td align="left" style="vertical-align: top;">
-																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 943px; height: 687px;">
-																		<tbody>
-																			<tr>
-																				<td align="left" style="vertical-align: top;">
-
 
 <!-- force a width while we're mixing old and new formats -->
 <div style="width: 103px"></div>
@@ -844,13 +837,6 @@ html {
 	</fieldset>
 </div>
 
-																				</td>
-																				<td align="left" style="vertical-align: top;">
-																					<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 840px; height: 687px;">
-																						<tbody>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-
 
 <ul class="mf-page-actions">
 	<li class="mf-action mf-action-button">
@@ -874,17 +860,6 @@ html {
 		</button>
 	</li>
 </ul>
-
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-																									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 2px;"></div>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-																									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 840px; height: 619px; overflow: auto;">
 
 <ul class="mf-list-of-items">
 
@@ -1262,17 +1237,6 @@ html {
 </li>
 
 </ul>
-																									</div>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-																									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 2px;"></div>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td align="left" style="vertical-align: top;">
-
 
 <ul class="mf-page-actions">
 	<li class="mf-action mf-action-button">
@@ -1297,29 +1261,7 @@ html {
 	</li>
 </ul>
 
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
-																				</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="vertical-align: top;">
+	</div>
 
 <footer class="mf-portal-footer">
 	<p>
@@ -1327,11 +1269,6 @@ html {
 	</p>
 </footer>
 
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
 </body>
 
 </html>
