@@ -273,7 +273,7 @@ html, body {
 // reuses the mf-action class from the collection toolbar.
 // TODO: clean up that re-use.
 
-@paging-bar-height: 30px;
+@paging-bar-height: 50px;
 
 .mf-page-actions {
 	margin: 0;
@@ -316,37 +316,57 @@ html, body {
 ////////////////////////////////////////////////////////////////////
 
 .mf-sidebar {
-	// position: absolute;
-	// top: (@collection-bar-height + 5px);
-	// bottom: @footer-height;
-	// // top: 0;
-	// // bottom: 0;
-	// left: 0;
-	width: @sidebar-width;
-	padding: 4px 8px 0 0;
+	min-height: 120px;
+	margin: 1em 0;
+	color: @sand;
+	padding: 30px 50px 30px 100px;
+	border-bottom: 5px dotted @grey;
+	text-align: center;
 }
 
 .mf-facet-selector {
-	border: 1px solid rgb(204,204,204);
-	border-radius: 4px;
-	padding: 4px;
+	text-align: left;
+	position: relative;
+	color: @grey;
+	display: inline-block;
+	border-radius: 25px;
+	border: 1px solid @grey;
+	border-width: 0 6px;
+	padding: 10px 40px;
+	transition: 1s;
 }
+.mf-facet-selector:before {
+	position: absolute;
+	left: -24px;
+	top: 40%;
+	font-weight: bold;
+	padding: 0;
+	font-size: 14px;
+	content: 'F I L T E R';
+	transform: rotate(-90deg);
+	color: @grey;
+}
+.mf-facet-selector:hover {
+	color: @sand;
+	border-color: @sand;
+	background-color: rgba(255,255,255,0.1);
+}
+
 // legend for the facet selector fieldset
 .mf-facet-selector legend {
 	float: left;
+	max-width: 80px;
 	font-weight: bold;
-	font-size: 12px;
-}
-.mf-facet-selector legend:after {
-	content: ':';
+	font-size: 16px;
 }
 
 .mf-facet {
-	clear: left; // coz the legend is float-left
 	margin: 0;
-	padding: 1px 0 0 0;
-	padding-left: 2px;
-	font-size: 10px;
+	font-size: 16px;
+	padding: 0 0 4px 90px;
+}
+.mf-facet-radio input {
+	margin-right: 1em;
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -499,16 +519,17 @@ html, body {
 	font-weight: inherit;
 	font-size: 12px;
 	font-family: inherit;
-	background: @brown;
-	color: @sand;
-	opacity: 0.66;
+	color: @brown;
+	background-color: transparent;
 	transition: 0.2s;
 	line-height: 0.9;
 	text-align: center;
+	border: 2px dotted;
 }
 .mf-download-asset:hover {
 	opacity: 1.0;
-	color: white;
+	color: @sand;
+	background: @brown;
 	transform: rotate(5deg);
 }
 
