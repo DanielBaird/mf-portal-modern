@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:8080/portal/?name=cats -->
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>New Cat Breeds</title>
+
+	<style type="text/css">
+		@import url("./font-awesome/css/font-awesome.min.css");
+	</style>
+	<style>
+
+html,
+body {
+  font-family: Helvetica, sans-serif;
+  color: black;
+  background: #40362e;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+.mf-button {
+  border: 1px solid #a3d9b0;
+  height: 32px;
+  line-height: 32px;
+  min-width: 32px;
+  background-color: #93bf9e;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0;
+  color: #40362e;
+}
+.mf-button:hover {
+  color: black;
+  border-color: white;
+}
+/* super tiny clearfix */
+.mf-list-item:after,
+.mf-metadata-properties:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.mf-portal-header {
+  height: 120px;
+  padding: 0;
+  margin: 0;
+  background-color: #8c8474;
+  white-space: nowrap;
+  border-bottom: 10px dotted #40362e;
+}
+.mf-portal-logo {
+  box-sizing: border-box;
+  float: left;
+  max-width: 70px;
+  max-height: 70px;
+  margin: 25px 25px 0;
+  background-color: #f2f0d5;
+  padding: 4px;
+  border-radius: 10px;
+}
+.mf-portal-heading {
+  font-family: 'Bodoni MT', 'Didot', serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #8c8474, 2px 2px 0 #8c8474, 3px 3px 0 #93bf9e, 4px 4px 0 #93bf9e, 5px 5px 0 #93bf9e, 6px 6px 0 #93bf9e, 7px 7px 0 #93bf9e, 8px 8px 0 #93bf9e, 9px 9px 0 #93bf9e, 10px 10px 0 #93bf9e;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  padding: 0 20px;
+  font-size: 79.2px;
+  line-height: 120px;
+  color: #40362e;
+  font-weight: inherit;
+  text-align: left;
+  background-color: #8c8474;
+}
+.mf-portal-footer {
+  height: 90px;
+  color: #40362e;
+  background-color: #93bf9e;
+  font-size: 15px;
+  white-space: nowrap;
+  text-align: center;
+  border-top: 10px dotted #40362e;
+}
+.mf-portal-footer p {
+  line-height: 90px;
+  padding: 0;
+  margin: 0;
+  padding: 0 10px;
+}
+.mf-portal-navbar {
+  margin: 0;
+  padding: 40px 2em 0;
+  height: 80px;
+  color: #40362e;
+  background-color: #a3d9b0;
+  font-size: 15px;
+  white-space: nowrap;
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  transform: rotate(-3deg);
+}
+.mf-nav-list {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0;
+  text-align: right;
+}
+.mf-nav-item {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 0 0 26px;
+}
+.mf-nav-item a {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  color: inherit;
+}
+.mf-portal-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mf-collection-bar {
+  color: #93bf9e;
+  margin: 0;
+  padding: 4px 0 4px 4px;
+  font-size: 20px;
+  height: 70px;
+  background-color: #40362e;
+  border-bottom: 10px dotted #a3d9b0;
+  white-space: nowrap;
+}
+.mf-collection-title {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 120%;
+  font-weight: inherit;
+  line-height: 70px;
+}
+.mf-collection-actions {
+  float: right;
+  margin: 19px 0 0;
+  padding: 0;
+  text-align: right;
+}
+.mf-action {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.mf-action i.fa {
+  font-size: 19.2px;
+  line-height: 32px;
+}
+.mf-action.mf-action-search {
+  border: 1px solid #a3d9b0;
+  height: 32px;
+  line-height: 32px;
+  min-width: 32px;
+  background-color: #93bf9e;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0;
+  color: #40362e;
+  border-radius: 35px;
+  position: relative;
+  background: white;
+  margin-right: 18px;
+}
+.mf-action.mf-action-search:before {
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  content: url(cat-list_files/Search.png);
+}
+.mf-search {
+  padding: 0 6px 0 32px;
+  display: inline-block;
+  border: none;
+  display: block;
+  background: none;
+  height: 32px;
+  width: 220px;
+  font-family: inherit;
+  font-size: 14px;
+}
+.mf-page-actions {
+  margin: 0;
+  padding: 1em 4px;
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+}
+.mf-page-actions:before,
+.mf-page-actions:after {
+  opacity: 0.7;
+  color: #93bf9e;
+  margin: 0 2em;
+}
+.mf-page-actions:before {
+  content: '\2724 \2756 \2770 \2770';
+}
+.mf-page-actions:after {
+  content: '\2771 \2771 \2756 \2724';
+}
+.mf-button.mf-up-button {
+  margin-right: 10px;
+}
+.mf-button.mf-goto-page-button {
+  min-width: 48px;
+  font-family: inherit;
+  font-size: 14px;
+}
+.mf-button.mf-current-page-button {
+  border-color: #b30000;
+}
+.mf-sidebar {
+  width: 150px;
+  padding: 4px 8px 0 0;
+}
+.mf-facet-selector {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 4px;
+}
+.mf-facet-selector legend {
+  float: left;
+  font-weight: bold;
+  font-size: 12px;
+}
+.mf-facet-selector legend:after {
+  content: ':';
+}
+.mf-facet {
+  clear: left;
+  margin: 0;
+  padding: 1px 0 0 0;
+  padding-left: 2px;
+  font-size: 10px;
+}
+.mf-list-of-items {
+  padding: 1em 0;
+  margin: 0;
+  padding-right: 20px;
+  text-align: center;
+}
+.mf-list-item {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  overflow: auto;
+  list-style: none;
+  background: #f2f0d5;
+  margin: 10px;
+  padding: 15px;
+  border-right: 45px double #a3d9b0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.mf-list-item:nth-of-type(4n + 0) {
+  transform: rotate(2deg);
+}
+.mf-list-item:nth-of-type(4n + 1) {
+  transform: rotate(-1deg);
+}
+.mf-list-item:nth-of-type(4n + 2) {
+  transform: rotate(-2deg);
+}
+.mf-list-item:nth-of-type(4n + 3) {
+  transform: rotate(1deg);
+}
+.mf-list-item-thumbnail {
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  background: radial-gradient(rgba(147, 191, 158, 0.66), rgba(147, 191, 158, 0.33));
+  width: 225px;
+  height: 235px;
+  object-fit: contain;
+  border: 4px solid #93bf9e;
+}
+.mf-list-item-heading {
+  margin: -1px 0 0 0;
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px;
+  color: #40362e;
+  background: #93bf9e;
+  font-weight: inherit;
+}
+.mf-metadata-properties {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  z-index: 2;
+  top: 0;
+  left: -15px;
+  margin: 0;
+  padding: 15px;
+  padding-left: 300px;
+  transition: 0.5s;
+  text-align: left;
+}
+.mf-metadata-properties:hover {
+  padding-left: 45px;
+}
+.mf-metadata-properties:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-left: 15px solid #a3d9b0;
+  top: -15px;
+  height: 330px;
+  width: 300px;
+  margin-left: -30px;
+  background-color: #f2f0d5;
+}
+.mf-metadata-properties dt {
+  text-align: right;
+  position: relative;
+  font-weight: bold;
+  float: left;
+  clear: left;
+  width: 7em;
+  color: #8c8474;
+  padding: 0.33em 0;
+  text-shadow: -1px 1px 0 #f2f0d5, -2px 2px 0 #a3d9b0, -3px 3px 0 #a3d9b0, -4px 4px 0 #a3d9b0, -5px 5px 0 #a3d9b0, -6px 6px 0 #a3d9b0, -7px 7px 0 #a3d9b0, -8px 8px 0 #a3d9b0, -9px 9px 0 #a3d9b0, -10px 10px 0 #a3d9b0, -11px 11px 0 #a3d9b0, -12px 12px 0 #a3d9b0;
+}
+.mf-metadata-properties dd {
+  position: relative;
+  float: left;
+  margin: 0;
+  color: #40362e;
+  padding: 0.33em 0 0 0.5em;
+}
+.mf-download-asset {
+  position: absolute;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(-10deg);
+  padding: 2px 0;
+  font-weight: inherit;
+  font-size: 12px;
+  font-family: inherit;
+  background: #40362e;
+  color: #f2f0d5;
+  opacity: 0.66;
+  transition: 0.2s;
+  line-height: 0.9;
+  text-align: center;
+}
+.mf-download-asset:hover {
+  opacity: 1.0;
+  color: white;
+  transform: rotate(5deg);
+}
+
+	</style>
+
+</head>
+
+<body>
+	<noscript>
+		&lt;div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif"&gt; Your web browser must have JavaScript enabled in order for this application to display correctly. &lt;/div&gt;
+	</noscript>
+	<iframe src="javascript:&#39;&#39;" id="mediafluxportalgwt" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none;" src="./cat-list_files/saved_resource.html"></iframe>
+
+
+<header class="mf-portal-header">
+	<img class="mf-portal-logo" src="./cat-list_files/cats-logo.png">
+	<h1 class="mf-portal-heading">
+		International Cat Breeds
+	</h1>
+</header>
+
+<nav class="mf-portal-navbar">
+	<ul class="mf-nav-list">
+		<li class="mf-nav-item"><a href="">Collections</a></li>
+		<li class="mf-nav-item"><a href="">Breeds</a></li>
+		<li class="mf-nav-item"><a href="">FAQ</a></li>
+		<li class="mf-nav-item"><a href="">About</a></li>
+	</ul>
+</nav>
+
+	<div class="mf-portal-content">
+
+
+<div class="mf-collection-bar">
+	<h2 class="mf-collection-title">
+		Short Haired Cats
+	</h2>
+	<ul class="mf-collection-actions">
+		<li class="mf-action mf-action-search">
+			<input type="search" class="mf-search" placeholder="search for cats..." title="search for cats..." />
+		</li>
+		<li class="mf-action mf-action-button">
+			<button class="mf-button mf-new-item-button" title="new item">
+				<i class="fa fa-plus"></i>
+			</button>
+		</li>
+	</ul>
+</div>
+
+<!-- force a width while we're mixing old and new formats -->
+<div style="width: 103px"></div>
+<div class="mf-sidebar">
+	<fieldset class="mf-facet-selector">
+		<legend class="mf-facet-title">Format</legend>
+		<p class="mf-facet mf-facet-radio">
+			<label>
+				<input type="radio" name="format"><span>Short Haired</span>
+			</label>
+		</p>
+		<p class="mf-facet mf-facet-radio">
+			<label>
+				<input type="radio" name="format"><span>Medium Hair</span>
+			</label>
+		</p>
+		<p class="mf-facet mf-facet-radio">
+			<label>
+				<input type="radio" name="format"><span>Long Haired</span>
+			</label>
+		</p>
+		<p class="mf-facet mf-facet-radio">
+			<label>
+				<input type="radio" name="format"><span>Hairless</span>
+			</label>
+		</p>
+	</fieldset>
+</div>
+
+
+<ul class="mf-page-actions">
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-up-button" title="new item">
+			<i class="fa fa-level-up"></i>
+		</button>
+	</li>
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-refresh-page-button" title="new item">
+			<i class="fa fa-refresh"></i>
+		</button>
+	</li>
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-goto-page-button mf-current-page-button" title="new item">
+			1
+		</button>
+	</li>
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-next-page-button" title="new item">
+			<i class="fa fa-arrow-right"></i>
+		</button>
+	</li>
+</ul>
+
+<ul class="mf-list-of-items">
+
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon.mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Abyssinian
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>Ethiopia</dd>
+
+		<dt>Source</dt>
+		<dd>Natural</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Ticked</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+<li class="mf-list-item">
+
+	<img class="mf-list-item-thumbnail" src="./cat-list_files/icon(6).mfjp">
+
+	<h3 class="mf-list-item-heading">
+		Bengal
+	</h3>
+
+	<dl class="mf-metadata-properties">
+		<dt>Origin</dt>
+		<dd>United States</dd>
+
+		<dt>Source</dt>
+		<dd>Hybrid</dd>
+
+		<dt>Body Shape</dt>
+		<dd>Unspecified</dd>
+
+		<dt>Coat</dt>
+		<dd>Short</dd>
+
+		<dt>Pattern</dt>
+		<dd>Spotted</dd>
+	</dl>
+
+	<button class="mf-button mf-download-asset">
+		Download
+	</button>
+
+</li>
+
+</ul>
+
+<ul class="mf-page-actions">
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-up-button" title="new item">
+			<i class="fa fa-level-up"></i>
+		</button>
+	</li>
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-refresh-page-button" title="new item">
+			<i class="fa fa-refresh"></i>
+		</button>
+	</li>
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-goto-page-button mf-current-page-button" title="new item">
+			1
+		</button>
+	</li>
+	<li class="mf-action mf-action-button">
+		<button class="mf-button mf-next-page-button" title="new item">
+			<i class="fa fa-arrow-right"></i>
+		</button>
+	</li>
+</ul>
+
+	</div>
+
+<footer class="mf-portal-footer">
+	<p>
+		Powered by Mediaflux®
+	</p>
+</footer>
+
+</body>
+
+</html>

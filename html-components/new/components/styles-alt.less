@@ -1,0 +1,515 @@
+
+////////////////////////////////////////////////////////////////////
+// General stuff
+////////////////////////////////////////////////////////////////////
+
+// theme colours
+@mint: #a3d9b0;
+@sage: #93bf9e;
+@sand: #f2f0d5;
+@grey: #8c8474;
+@brown: #40362e;
+
+@body-background-color: @brown;
+@content-width: 1200px;
+
+@sidebar-width: 150px;
+@notsidebar-width: (@content-width - @sidebar-width - 20px);
+
+// start with helvetica in black on a white page
+html, body {
+	font-family: Helvetica, sans-serif;
+	color: black;
+	background: @body-background-color;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+}
+
+// general class for button-like things
+@button-size: 32px;
+@button-background: @sage;
+@button-border: @mint;
+@button-color: @sand;
+
+.mf-button {
+	border: 1px solid @button-border;
+	height: @button-size;
+	line-height: @button-size;
+	min-width: @button-size;
+	background-color: @button-background;
+	border-radius: 4px;
+	font-family: inherit;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0;
+	color: @brown;
+}
+.mf-button:hover {
+	color: black;
+	border-color: white;
+}
+
+/* super tiny clearfix */
+.mf-list-item:after,
+.mf-metadata-properties:after
+{
+	content: " ";
+    display: table;
+    clear: both;
+}
+
+////////////////////////////////////////////////////////////////////
+// Header
+////////////////////////////////////////////////////////////////////
+@header-background-color: @grey;
+@main-heading-color: @brown;
+@header-height: 120px;
+@logo-size: 70px;
+
+.mf-portal-header {
+	height: @header-height;
+	padding: 0;
+	margin: 0;
+	background-color: @header-background-color;
+	white-space: nowrap;
+	border-bottom: 10px dotted @brown;
+}
+.mf-portal-logo {
+	box-sizing: border-box;
+	float: left;
+	max-width: @logo-size;
+	max-height: @logo-size;
+	margin: ((@header-height - @logo-size) / 2) ((@header-height - @logo-size) / 2) 0;
+	background-color: @sand;
+	padding: 4px;
+	border-radius: 10px;
+}
+.mf-portal-heading {
+	font-family: 'Bodoni MT', 'Didot', serif;
+	font-weight: bold;
+	text-shadow:
+		1px 1px 0 @grey,
+		2px 2px 0 @grey,
+		3px 3px 0 @sage,
+		4px 4px 0 @sage,
+		5px 5px 0 @sage,
+		6px 6px 0 @sage,
+		7px 7px 0 @sage,
+		8px 8px 0 @sage,
+		9px 9px 0 @sage,
+		10px 10px 0 @sage;
+	margin: 0;
+	padding: 0;
+	height: 100px;
+	padding: 0 20px;
+	font-size: (@header-height * 0.66);
+	line-height: @header-height;
+	color: @main-heading-color;
+	font-weight: inherit;
+	text-align: left;
+	background-color: @header-background-color;
+}
+
+////////////////////////////////////////////////////////////////////
+// Footer
+////////////////////////////////////////////////////////////////////
+@footer-color: @brown;
+@footer-background: @sage;
+@footer-height: 90px;
+
+.mf-portal-footer {
+	height: @footer-height;
+	color: @footer-color;
+	background-color: @footer-background;
+	font-size: 15px;
+	white-space: nowrap;
+	text-align: center;
+
+	border-top: 10px dotted @brown;
+}
+.mf-portal-footer p {
+	line-height: @footer-height;
+	padding: 0;
+	margin: 0;
+	padding: 0 10px;
+}
+
+
+////////////////////////////////////////////////////////////////////
+// Navbar
+////////////////////////////////////////////////////////////////////
+@nav-bar-background: @mint;
+@nav-bar-color: @brown;
+@nav-bar-height: 40px;
+@nav-bar-extra-height: 40px;
+
+.mf-portal-navbar {
+	margin: 0;
+	padding: @nav-bar-extra-height 2em 0;
+	height: (@nav-bar-height + @nav-bar-extra-height);
+	color: @nav-bar-color;
+	background-color: @nav-bar-background;
+	font-size: 15px;
+	white-space: nowrap;
+
+	position: absolute;
+	top: (-1 * @nav-bar-extra-height);
+	right: 20px;
+	transform: rotate(-3deg);
+}
+.mf-nav-list {
+	max-width: @content-width;
+	margin: @nav-bar-extra-height auto 0;
+	padding: 0;
+	text-align: right;
+}
+.mf-nav-item {
+	display: inline-block;
+	line-height: @nav-bar-height;
+	padding: 0 0 0 26px;
+}
+.mf-nav-item a {
+	border-bottom: 1px dotted;
+	text-decoration: none;
+	color: inherit;
+}
+
+
+////////////////////////////////////////////////////////////////////
+// Content column
+////////////////////////////////////////////////////////////////////
+
+.mf-portal-content {
+	max-width: @content-width;
+	margin: 0 auto;
+
+	// position: absolute;
+	// top: @header-height;
+	// bottom: @footer-height;
+	// left: 0;
+	// right: 0;
+}
+
+
+////////////////////////////////////////////////////////////////////
+// Collection Toolbar
+////////////////////////////////////////////////////////////////////
+@collection-bar-height: 70px;
+
+.mf-collection-bar {
+	color: @sage;
+	margin: 0;
+	padding: 4px 0 4px 4px;
+	font-size: 20px;
+	height: @collection-bar-height;
+	background-color: @body-background-color;
+	border-bottom: 10px dotted @mint;
+	white-space: nowrap;
+}
+.mf-collection-title {
+	float: left;
+	margin: 0;
+	padding: 0;
+	font-size: 120%;
+	font-weight: inherit;
+	line-height: @collection-bar-height;
+}
+// .mf-collection-title:first-letter {
+// 	font-family: fantasy;
+// 	font-style: italic;
+// 	float: left;
+// 	font-size: 400%;
+// 	padding-right: 2px;
+// 	position: relative;
+// 	margin-top: 0.1em;
+// }
+.mf-collection-actions {
+	float: right;
+	margin: ((@collection-bar-height - @button-size) / 2) 0 0;
+	padding: 0;
+	text-align: right;
+}
+.mf-action {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+.mf-action i.fa { // make font-awesome icons a bit larger..
+	font-size: (@button-size * 0.6);
+	line-height: @button-size;
+}
+.mf-action.mf-action-search {
+	.mf-button;
+	border-radius: (@collection-bar-height / 2);
+	position: relative;
+	background: white;
+	margin-right: 18px;
+}
+.mf-action.mf-action-search:before {
+	position: absolute;
+	left: 7px;
+	top: 3px;
+	content: url(./cat-list_files/Search.png);
+}
+.mf-search {
+	padding: 0 6px 0 @button-size;
+	display: inline-block;
+	border: none;
+	display: block;
+	background: none;
+	height: @button-size;
+	width: 220px;
+	font-family: inherit;
+	font-size: 14px;
+}
+
+////////////////////////////////////////////////////////////////////
+// Paging Toolbar
+////////////////////////////////////////////////////////////////////
+
+// reuses the mf-action class from the collection toolbar.
+// TODO: clean up that re-use.
+
+@paging-bar-height: 30px;
+
+.mf-page-actions {
+	margin: 0;
+	padding: 1em 4px;
+	font-size: 20px;
+	height: @paging-bar-height;
+	text-align: center;
+}
+.mf-page-actions:before, .mf-page-actions:after {
+	opacity: 0.7;
+	color: @sage;
+	margin: 0 2em;
+}
+.mf-page-actions:before { content: '\2724 \2756 \2770 \2770'; }
+.mf-page-actions:after  { content: '\2771 \2771 \2756 \2724'; }
+
+.mf-button.mf-up-button {
+	margin-right: 10px;
+}
+.mf-button.mf-goto-page-button {
+	min-width: (1.5 * @button-size);
+	font-family: inherit;
+	font-size: 14px;
+}
+.mf-button.mf-current-page-button {
+	border-color: rgb(179,0,0);
+}
+
+// having two paging controls on a inner-scrolling screen means we
+// need to pin the "last" one to the bottom.
+// .mf-page-actions:last-of-type {
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// }
+
+////////////////////////////////////////////////////////////////////
+// Facet Sidebar
+////////////////////////////////////////////////////////////////////
+
+.mf-sidebar {
+	// position: absolute;
+	// top: (@collection-bar-height + 5px);
+	// bottom: @footer-height;
+	// // top: 0;
+	// // bottom: 0;
+	// left: 0;
+	width: @sidebar-width;
+	padding: 4px 8px 0 0;
+}
+
+.mf-facet-selector {
+	border: 1px solid rgb(204,204,204);
+	border-radius: 4px;
+	padding: 4px;
+}
+// legend for the facet selector fieldset
+.mf-facet-selector legend {
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+}
+.mf-facet-selector legend:after {
+	content: ':';
+}
+
+.mf-facet {
+	clear: left; // coz the legend is float-left
+	margin: 0;
+	padding: 1px 0 0 0;
+	padding-left: 2px;
+	font-size: 10px;
+}
+
+////////////////////////////////////////////////////////////////////
+// Lists and Items
+////////////////////////////////////////////////////////////////////
+// variables used in lists and items
+@item-padding: 5px;
+@image-width: 160px;
+@image-height: @image-width;
+@scrollbar-spacing: 20px;
+
+// a list of items
+.mf-list-of-items {
+	padding: 1em 0;
+	margin: 0;
+	padding-right: @scrollbar-spacing;
+	text-align: center;
+
+	// // for an internal scrolling list..
+	// position: absolute;
+	// top: (@collection-bar-height + @paging-bar-height + @item-padding + @item-padding);
+	// bottom: (@footer-height + @item-padding);
+	// left: 0;
+	// margin-right: (-1 * @scrollbar-spacing);
+	// overflow: auto;
+}
+
+@item-width: 300px;
+@item-border-width: 15px;
+@mid-border-width: (3 * @item-border-width);
+@item-heading-height: 20px;
+
+// an item in a list
+.mf-list-item {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	height: @item-width;
+	width: @item-width;
+	overflow: auto;
+	list-style: none;
+	background: @sand;
+	margin: (2 * @item-padding);
+	padding: @item-border-width;
+	border-right: @mid-border-width double @mint;
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+@spin-mult: 1.0;
+.mf-list-item:nth-of-type(4n + 0) { transform: rotate(( 2deg * @spin-mult)) };
+.mf-list-item:nth-of-type(4n + 1) { transform: rotate((-1deg * @spin-mult)) };
+.mf-list-item:nth-of-type(4n + 2) { transform: rotate((-2deg * @spin-mult)) };
+.mf-list-item:nth-of-type(4n + 3) { transform: rotate(( 1deg * @spin-mult)) };
+
+
+.mf-list-item-thumbnail {
+	margin: 0;
+	display: block;
+	box-sizing: border-box;
+	background: radial-gradient(fade(@sage, 66%), fade(@sage, 33%));
+	width: (@item-width - (2 * @item-border-width) - @mid-border-width);
+	height: (@item-width - (3 * @item-border-width) - @item-heading-height);
+	object-fit: contain;
+	border: 4px solid @sage;
+}
+
+.mf-list-item-heading {
+	margin: -1px 0 0 0;
+	height: @item-heading-height;
+	font-size: (@item-heading-height * 0.8);
+	line-height: @item-heading-height;
+	padding: @item-padding;
+	color: @brown;
+	background: @sage;
+	font-weight: inherit;
+}
+
+.mf-metadata-properties {
+	position: absolute;
+	height: @item-width;
+	width: @item-width;
+	z-index: 2;
+	top: 0;
+	left: (-1 * @item-border-width);
+	margin: 0;
+	padding: @item-border-width;
+	padding-left: @item-width;
+	transition: 0.5s;
+	text-align: left;
+}
+.mf-metadata-properties:hover {
+	padding-left: (3 * @item-border-width);
+}
+.mf-metadata-properties:before {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	border-left: @item-border-width solid @mint;
+	top: (-1 * @item-border-width);
+	height: (@item-width + @item-border-width + @item-border-width);
+	width: @item-width;
+	margin-left: (-2 * @item-border-width);
+	background-color: @sand;
+}
+
+.mf-metadata-properties dt {
+	text-align: right;
+	position: relative;
+	font-weight: bold;
+	float: left;
+	clear: left;
+	width: 7em;
+	color: @grey;
+	padding: 0.33em 0;
+	text-shadow:
+		-1px 1px 0 @sand,
+		-2px 2px 0 @mint,
+		-3px 3px 0 @mint,
+		-4px 4px 0 @mint,
+		-5px 5px 0 @mint,
+		-6px 6px 0 @mint,
+		-7px 7px 0 @mint,
+		-8px 8px 0 @mint,
+		-9px 9px 0 @mint,
+		-10px 10px 0 @mint,
+		-11px 11px 0 @mint,
+		-12px 12px 0 @mint;
+}
+.mf-metadata-properties dd {
+	position: relative;
+	float: left;
+	margin: 0;
+	color: @brown;
+	padding: 0.33em 0 0 0.5em;
+}
+
+@dl-btn-radius: 30px;
+
+.mf-download-asset {
+	position: absolute;
+	z-index: 3;
+	width: (2 * @dl-btn-radius);
+	height: (2 * @dl-btn-radius);
+	border-radius: (2 * @dl-btn-radius);
+	right: 0;
+	bottom: 0;
+	transform: rotate(-10deg);
+	padding: 2px 0;
+	font-weight: inherit;
+	font-size: 12px;
+	font-family: inherit;
+	background: @brown;
+	color: @sand;
+	opacity: 0.66;
+	transition: 0.2s;
+	line-height: 0.9;
+	text-align: center;
+}
+.mf-download-asset:hover {
+	opacity: 1.0;
+	color: white;
+	transform: rotate(5deg);
+}
+
+

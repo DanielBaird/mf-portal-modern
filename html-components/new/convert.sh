@@ -3,6 +3,7 @@ echo 'compiling CSS'
 
 pushd components > /dev/null
 lessc styles.less > styles.css
+lessc styles-alt.less > styles-alt.css
 popd > /dev/null
 
 for SOURCE in *.source; do

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:8080/portal/?name=cats -->
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>New Cat Breeds</title>
+
+	<style type="text/css">
+		@import url("./font-awesome/css/font-awesome.min.css");
+	</style>
+	<style>
+
+@styles-alt.css
+
+	</style>
+
+</head>
+
+<body>
+	<noscript>
+		&lt;div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif"&gt; Your web browser must have JavaScript enabled in order for this application to display correctly. &lt;/div&gt;
+	</noscript>
+	<iframe src="javascript:&#39;&#39;" id="mediafluxportalgwt" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none;" src="./cat-list_files/saved_resource.html"></iframe>
+
+@header.html
+
+@menubar.html
+
+	<div class="mf-portal-content">
+
+@collection-actions.html
+
+@facets.html
+
+@paging.html
+
+@list-of-items.html
+
+@paging.html
+
+	</div>
+
+@footer.html
+
+</body>
+
+</html>
