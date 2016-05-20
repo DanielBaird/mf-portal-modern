@@ -120,6 +120,8 @@ page make everything a fixed pixel size, then uses JavaScript event
 handlers to run code when the page size changed, re-calculating and
 re-writing all the fixed sizes.
 
+[Source code for the old "list item" component](https://github.com/DanielBaird/mf-portal-modern/blob/master/html-components/old/components/list-item.html)
+
 ### [New Page](http://danielbaird.com/mf-portal-modern/html-components/new/cat-list.source.html) ###
 
 This is the page assembled from the same component files, but with
@@ -130,6 +132,9 @@ with CSS stylesheet rules.  This page has the CSS embedded.
 
 Here, the page resizes correctly just using normal web page behaviour
 without using any JavaScript event handlers.
+
+[Source code for the new "list item" component](https://github.com/DanielBaird/mf-portal-modern/blob/master/html-components/new/components/list-item.html)
+
 
 ### [New Page with alternate styling](http://danielbaird.com/mf-portal-modern/html-components/new/cat-list.source.html) ###
 
