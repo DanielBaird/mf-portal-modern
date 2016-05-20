@@ -21,7 +21,7 @@
     line-height: 1.1;
     margin: 0 0 1rem;
     padding: 1em 0;
-    box-shadow: -50rem 0 #357, 50rem 0 #357;
+    box-shadow: -49.9rem 0 #357, 49.9rem 0 #357;
   }
 
 h1, h2 {
