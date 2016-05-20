@@ -44,11 +44,11 @@ h1, h2 {
 
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
-    border-bottom: 1px dotted;
+    border-bottom: 2px dotted;
     text-decoration: inherit;
   }
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
   }
 
   p {
