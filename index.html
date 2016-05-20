@@ -46,6 +46,9 @@ h1, h2 {
     color: inherit;
     text-decoration: inherit;
   }
+  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    text-decoration: underline;
+  }
 
   p {
     margin: 0;
