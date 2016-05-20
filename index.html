@@ -1,12 +1,17 @@
 <style>
-  html {padding: 0;}
-  body {
+  html {
     font-family: lato, sans-serif;
     font-size: 14pt;
     line-height: 1.5;
     background: white;
     padding: 0;
     margin: 0;
+  }
+
+  body {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1rem 1rem;
   }
 
   h1 {
@@ -86,11 +91,6 @@ h1, h2 {
     padding: 0;
   }
 
-  .wrapper {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 0 1rem 1rem;
-  }
 
   /* ToC management */
   #tocHeading { cursor: pointer; }
