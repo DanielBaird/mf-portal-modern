@@ -11,7 +11,7 @@
   body {
     max-width: 50rem;
     margin: 0 auto;
-    padding: 0 1rem 3rem;
+    padding: 0 1rem 5rem;
   }
 
   h1 {
