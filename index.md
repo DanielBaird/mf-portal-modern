@@ -136,7 +136,7 @@ without using any JavaScript event handlers.
 [Source code for the new "list item" component](https://github.com/DanielBaird/mf-portal-modern/blob/master/html-components/new/components/list-item.html)
 
 
-### [New page with alternate styling](http://danielbaird.com/mf-portal-modern/html-components/new/cat-list.source.html) ###
+### [New page with alternate styling](http://danielbaird.com/mf-portal-modern/html-components/new/cat-list-alt.source.html) ###
 
 This rather silly example is the identical page -- HTML unchanged --
 as the New Page above, but with an alternative CSS stylesheet.
