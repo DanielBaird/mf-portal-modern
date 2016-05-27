@@ -25,7 +25,7 @@
   }
 
 h1, h2 {
-  font-weight: 100;
+  font-weight: 200;
   letter-spacing: -0.025em;
 }
 
