@@ -166,35 +166,35 @@ New HTML for each component is in the
 E.g here is the HTML built by GWT for the menu bar:
 
 <pre class="language-markup"><code>
-<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1  style_22" style="height: 40px; width: 1143px;">
-    <tbody>
-        <tr>
-            <td align="left" style="vertical-align: top;">
-                <div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 722px;"></div>
-            </td>
-            <td align="left" style="vertical-align: top;">
-                <table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="height: 40px; margin-right: 94px;">
-                    <tbody>
-                        <tr>
-                            <td align="left" style="vertical-align: middle;">
-                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Collections</div>
-                            </td>
-                            <td align="left" style="vertical-align: middle;">
-                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Breeds</div>
-                            </td>
-                            <td align="left" style="vertical-align: middle;">
-                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">FAQ</div>
-                            </td>
-                            <td align="left" style="vertical-align: middle;">
-                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">About</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
+&lt;table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1  style_22" style="height: 40px; width: 1143px;">
+    &lt;tbody>
+        &lt;tr>
+            &lt;td align="left" style="vertical-align: top;">
+                &lt;div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 722px;">&lt;/div>
+            &lt;/td>
+            &lt;td align="left" style="vertical-align: top;">
+                &lt;table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="height: 40px; margin-right: 94px;">
+                    &lt;tbody>
+                        &lt;tr>
+                            &lt;td align="left" style="vertical-align: middle;">
+                                &lt;div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Collections&lt;/div>
+                            &lt;/td>
+                            &lt;td align="left" style="vertical-align: middle;">
+                                &lt;div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Breeds&lt;/div>
+                            &lt;/td>
+                            &lt;td align="left" style="vertical-align: middle;">
+                                &lt;div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">FAQ&lt;/div>
+                            &lt;/td>
+                            &lt;td align="left" style="vertical-align: middle;">
+                                &lt;div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">About&lt;/div>
+                            &lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/table>
+            &lt;/td>
+        &lt;/tr>
+    &lt;/tbody>
+&lt;/table>
 </code></pre>
 
 
