@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/prism/1.4.1/themes/prism.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/prism/1.4.1/themes/prism.css" />
+
 <style>
   html {
     font-family: lato, sans-serif;
