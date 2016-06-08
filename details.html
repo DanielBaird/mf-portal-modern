@@ -110,7 +110,7 @@ h1, h2 {
   .closed #tocContent { height: 0; }
 
 </style>
-<h1>Portal Pages</h1>
+<h1>Revising MediaFlux Portal output</h1>
 <h2>What's in this repo</h2>
 <h3>original HTML</h3>
 <p><a href="original-gwt-html"><code>original-gwt-html</code></a> directory contains raw
@@ -243,3 +243,39 @@ wall-mounted dashboards.</p>
   })
 </script>
 <script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
+<h2>What to do next</h2>
+<p>Here are some steps for getting the portal plugin producing this
+theoretical better output.</p>
+<ul>
+<li>Make an <strong>index of components</strong> -- rather than me guessing the set
+of components, an Architecta person can go through the existing
+portal page description code and make a list.  Roughly each
+component's use / operating context / edge cases.</li>
+<li>For each component in the index, <strong>work out the HTML</strong> that should
+be generated to represent that component.  Handle any special cases.
+Be clear enough that users can write JavaScript interactions finding
+and manipulating page elements.</li>
+<li>Work out a predictible way to include JavaScript-discoverable data
+in the page.  <code>data-*</code> attributes, <code>template</code> or
+<a href="https://developer.mozilla.org/en/docs/Using_XML_Data_Islands_in_Mozilla"><code>script</code></a>
+tags..</li>
+<li>Over the set of components, work out a consistent and useful list
+of CSS classes.  The simplest arrangement would be a single unique
+class for every component, but it may be worth using category
+labels like &quot;mediaflux-button&quot; so CSS authors can address all
+buttons.</li>
+<li>Work out how much of the current portal XML definition can just
+be deleted, and if anything that remains needs to be changed.</li>
+<li>Work out how to get GWT to generate the imagined HTML, e.g. switch
+to FlowPanel instead of Horizontal/VerticalPanel.  Pragmatically
+adjust to suit -- if there's no way to get a <code>nav</code> tag, it's fine to
+use a <code>div</code>.</li>
+<li>Create a CSS stylesheet that makes a reasonable default portal
+layout. This <em>could</em> look like the cats portal if that's deemed
+desirable. Potentially MediaFlux could ship with a couple of options
+for portal styling (which would also help get users started with
+writing their own CSS).</li>
+<li>Work out how to deliver user-defined CSS and JavaScript for a
+given portal. Assets in a special namespace?  Assets from anywhere,
+identified via direct paths in the portal xml?</li>
+</ul>

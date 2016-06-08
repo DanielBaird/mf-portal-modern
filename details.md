@@ -112,7 +112,7 @@ h1, h2 {
 
 </style>
 
-# Portal Pages
+# Revising MediaFlux Portal output
 
 
 ## What's in this repo
@@ -283,9 +283,42 @@ wall-mounted dashboards.
 <script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
 
 
+## What to do next
 
+Here are some steps for getting the portal plugin producing this
+theoretical better output.
 
-
+- Make an **index of components** -- rather than me guessing the set
+of components, an Architecta person can go through the existing
+portal page description code and make a list.  Roughly each
+component's use / operating context / edge cases.
+- For each component in the index, **work out the HTML** that should
+be generated to represent that component.  Handle any special cases.
+Be clear enough that users can write JavaScript interactions finding
+and manipulating page elements.
+- Work out a predictible way to include JavaScript-discoverable data
+in the page.  `data-*` attributes, `template` or
+[`script`](https://developer.mozilla.org/en/docs/Using_XML_Data_Islands_in_Mozilla)
+tags..
+- Over the set of components, work out a consistent and useful list
+of CSS classes.  The simplest arrangement would be a single unique
+class for every component, but it may be worth using category
+labels like "mediaflux-button" so CSS authors can address all
+buttons.
+- Work out how much of the current portal XML definition can just
+be deleted, and if anything that remains needs to be changed.
+- Work out how to get GWT to generate the imagined HTML, e.g. switch
+to FlowPanel instead of Horizontal/VerticalPanel.  Pragmatically
+adjust to suit -- if there's no way to get a `nav` tag, it's fine to
+use a `div`.
+- Create a CSS stylesheet that makes a reasonable default portal
+layout. This *could* look like the cats portal if that's deemed
+desirable. Potentially MediaFlux could ship with a couple of options
+for portal styling (which would also help get users started with
+writing their own CSS).
+- Work out how to deliver user-defined CSS and JavaScript for a
+given portal. Assets in a special namespace?  Assets from anywhere,
+identified via direct paths in the portal xml?
 
 
 
