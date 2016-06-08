@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/prism/1.4.1/themes/prism.css">
 <style>
   html {
     font-family: lato, sans-serif;
@@ -194,6 +195,11 @@ E.g here is the HTML built by GWT for the menu bar:
     </tbody>
 </table>
 ```
+
+
+
+
+<script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
 
 
 

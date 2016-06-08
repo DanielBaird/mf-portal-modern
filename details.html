@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/prism/1.4.1/themes/prism.css">
 <style>
   html {
     font-family: lato, sans-serif;
@@ -7,107 +8,90 @@
     padding: 0;
     margin: 0;
   }
-
-  body {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 0 1rem 5rem;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  h1 {
-    color: #f3f9ff;
-    color; white;
-    background: #357;
-    line-height: 1.1;
-    margin: 0 0 1rem;
-    padding: 1em 0;
-    box-shadow: -49.9rem 0 #357, 49.9rem 0 #357;
-  }
-
-h1, h2 {
-  font-weight: 200;
-  letter-spacing: -0.025em;
+<p>body {
+max-width: 50rem;
+margin: 0 auto;
+padding: 0 1rem 5rem;
+}</p>
+<p>img {
+max-width: 100%;
+}</p>
+<p>h1 {
+color: #f3f9ff;
+color; white;
+background: #357;
+line-height: 1.1;
+margin: 0 0 1rem;
+padding: 1em 0;
+box-shadow: -49.9rem 0 #357, 49.9rem 0 #357;
+}</p>
+<p>h1, h2 {
+font-weight: 200;
+letter-spacing: -0.025em;
+}</p>
+<p>h2, h3, h4, h5, h6 {
+color: #357;
+margin: 0 0 0 -0.1em;
+padding: 1.5em 0 0.5em;
 }
-
-  h2, h3, h4, h5, h6 {
-    color: #357;
-    margin: 0 0 0 -0.1em;
-    padding: 1.5em 0 0.5em;
-  }
-  h1 { font-size: 2.827rem; opacity: 1.00 }
-  h2 { font-size: 3.998rem; opacity: 0.85 }
-  /* not using 2.827rem */
-  h3 { font-size: 1.999rem; opacity: 0.90 }
-  h4 { font-size: 1.414rem; opacity: 0.95 }
-  h5 { font-size: 1.000rem; opacity: 1.00 }
-  h6 { font-size: 0.707rem; opacity: 1.00 }
-
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: inherit;
-    border-bottom: 2px dotted;
-    text-decoration: inherit;
-  }
-  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    border-bottom: 2px solid;
-  }
-
-  p {
-    margin: 0;
-    padding: 0.33em 0;
-  }
-
-  code {
-    font-size: smaller;
-  }
-
-  p > code {
-    background: #f3f9ff;
-    padding: 0.3em;
-    border-radius: 0.3em;
-  }
-
-  pre {
-    padding: 0.5em;
-    background: #f3f9ff;
-    border-left: 1px solid #eef0ff;
-    box-shadow: -50rem 0 #f3f9ff, 50rem 0 #f3f9ff;
-  }
-
-  pre.small { font-size: 75%; color: rgba(0,0,0, 0.8) }
-
-  /* override some Prism sourcecode highlight styles */
-  pre[class*="language-"] {
-    line-height: 1.2;
-    overflow: visible;
-    background: #f3f9ff;
-  }
-  :not(pre) > code[class*="language-"] {
-    background: #f3f9ff;
-    padding: 0.3em;
-    border-radius: 0.3em;
-  }
-
-  code[class*="language-"] {
-    line-height: 1.2;
-  }
-
-  pre p {
-    padding: 0;
-  }
-
-
-  /* ToC management */
-  #tocHeading { cursor: pointer; }
-  #tocContent { overflow: hidden; font-size: smaller; }
-  .open   #tocHeading:after { content: ' \25be' }
-  .closed #tocHeading:after { content: ' \25b8' }
-  .open   #tocContent { height: auto; }
-  .closed #tocContent { height: 0; }
-
+h1 { font-size: 2.827rem; opacity: 1.00 }
+h2 { font-size: 3.998rem; opacity: 0.85 }
+/* not using 2.827rem */
+h3 { font-size: 1.999rem; opacity: 0.90 }
+h4 { font-size: 1.414rem; opacity: 0.95 }
+h5 { font-size: 1.000rem; opacity: 1.00 }
+h6 { font-size: 0.707rem; opacity: 1.00 }</p>
+<p>h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+color: inherit;
+border-bottom: 2px dotted;
+text-decoration: inherit;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+border-bottom: 2px solid;
+}</p>
+<p>p {
+margin: 0;
+padding: 0.33em 0;
+}</p>
+<p>code {
+font-size: smaller;
+}</p>
+<p>p &gt; code {
+background: #f3f9ff;
+padding: 0.3em;
+border-radius: 0.3em;
+}</p>
+<p>pre {
+padding: 0.5em;
+background: #f3f9ff;
+border-left: 1px solid #eef0ff;
+box-shadow: -50rem 0 #f3f9ff, 50rem 0 #f3f9ff;
+}</p>
+<p>pre.small { font-size: 75%; color: rgba(0,0,0, 0.8) }</p>
+<p>/* override some Prism sourcecode highlight styles <em>/
+pre[class</em>=&quot;language-&quot;] {
+line-height: 1.2;
+overflow: visible;
+background: #f3f9ff;
+}
+:not(pre) &gt; code[class*=&quot;language-&quot;] {
+background: #f3f9ff;
+padding: 0.3em;
+border-radius: 0.3em;
+}</p>
+<p>code[class*=&quot;language-&quot;] {
+line-height: 1.2;
+}</p>
+<p>pre p {
+padding: 0;
+}</p>
+<p>/* ToC management */
+#tocHeading { cursor: pointer; }
+#tocContent { overflow: hidden; font-size: smaller; }
+.open   #tocHeading:after { content: ' \25be' }
+.closed #tocHeading:after { content: ' \25b8' }
+.open   #tocContent { height: auto; }
+.closed #tocContent { height: 0; }</p>
 </style>
 <h2>Repo Structure</h2>
 <h3>original HTML</h3>
@@ -172,3 +156,4 @@ files as the componentised original version, but with new content.</p>
     &lt;/tbody&gt;
 &lt;/table&gt;
 </code></pre>
+<script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
