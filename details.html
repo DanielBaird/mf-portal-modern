@@ -14,7 +14,7 @@
     padding: 0 1rem 5rem;
   }
 
-  image {
+  img {
   	max-width: 100%;
   }
 
