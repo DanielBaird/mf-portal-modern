@@ -115,7 +115,7 @@ h1, h2 {
 # Revising MediaFlux Portal output
 
 
-## What's in this repo
+## Demonstrating the principle
 
 
 ### original HTML
@@ -253,36 +253,6 @@ build portal layouts that work properly on tiny screens, or giant
 wall-mounted dashboards.
 
 
-
-<script src="https://rawgit.com/gajus/contents/master/dist/browser/contents.js"></script>
-<script>
-  // make a ToC with all the headings
-  var c = gajus.Contents({
-    articles: document.querySelectorAll('h2, h3, h4, h5, h6')
-  });
-
-  // put the ToC into a open-close container
-  var toc = document.createElement('div')
-  toc.className = 'closed'
-  toc.innerHTML = '<h3 id="tocHeading" title="click to show/hide">Contents</h3><div id="tocContent"></div>'
-
-  // find the first h2 and put the ToC right before it
-  var firstHeading2 = document.querySelector('h2')
-  firstHeading2.parentNode.insertBefore(toc, firstHeading2)
-  document.getElementById('tocContent').insertBefore(c.list(), null)
-
-  // rig the heading to show/hide the ToC by switching classes
-  document.getElementById('tocHeading').addEventListener("click", function() {
-    if (toc.className === 'closed') {
-      toc.className = 'open'
-    } else {
-      toc.className = 'closed'
-    }
-  })
-</script>
-<script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
-
-
 ## What to do next
 
 Here are some steps for getting the portal plugin producing this
@@ -324,6 +294,34 @@ identified via direct paths in the portal xml?
 
 
 
+
+<script src="https://rawgit.com/gajus/contents/master/dist/browser/contents.js"></script>
+<script>
+  // make a ToC with all the headings
+  var c = gajus.Contents({
+    articles: document.querySelectorAll('h2, h3, h4, h5, h6')
+  });
+
+  // put the ToC into a open-close container
+  var toc = document.createElement('div')
+  toc.className = 'closed'
+  toc.innerHTML = '<h3 id="tocHeading" title="click to show/hide">Contents</h3><div id="tocContent"></div>'
+
+  // find the first h2 and put the ToC right before it
+  var firstHeading2 = document.querySelector('h2')
+  firstHeading2.parentNode.insertBefore(toc, firstHeading2)
+  document.getElementById('tocContent').insertBefore(c.list(), null)
+
+  // rig the heading to show/hide the ToC by switching classes
+  document.getElementById('tocHeading').addEventListener("click", function() {
+    if (toc.className === 'closed') {
+      toc.className = 'open'
+    } else {
+      toc.className = 'closed'
+    }
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
 
 
 
