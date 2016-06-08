@@ -165,7 +165,7 @@ New HTML for each component is in the
 
 E.g here is the HTML built by GWT for the menu bar:
 
-```
+<pre class="language-markup"><code>
 <table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1  style_22" style="height: 40px; width: 1143px;">
     <tbody>
         <tr>
@@ -195,8 +195,7 @@ E.g here is the HTML built by GWT for the menu bar:
         </tr>
     </tbody>
 </table>
-```
-
+</code></pre>
 
 
 
