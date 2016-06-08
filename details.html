@@ -15,7 +15,7 @@
   }
 
   img {
-  	max-width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -141,10 +141,34 @@ it continues to work without a MF server.</p>
 files as the componentised original version, but with new content.</p>
 <p>New HTML for each component is in the
 <a href="html-components/new/components"><code>./components</code></a> directory.</p>
-<p>Here's a side-by-side comparison of the menubar component:</p>
-<iframe style="width: 40%; height: 300px; float: left;"
-	src="https://raw.githubusercontent.com/DanielBaird/mf-portal-modern/gh-pages/html-components/old/components/menubar.html"
-></iframe>
-<iframe style="width: 40%; height: 300px; float: right;"
-	src="https://raw.githubusercontent.com/DanielBaird/mf-portal-modern/gh-pages/html-components/new/components/menubar.html"
-></iframe>
+<p>E.g here is the HTML built by GWT for the menu bar:</p>
+<pre><code>&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;arc_11_base_widget_1  style_22&quot; style=&quot;height: 40px; width: 1143px;&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td align=&quot;left&quot; style=&quot;vertical-align: top;&quot;&gt;
+                &lt;div class=&quot;arc_11_base_widget_1 arc_12_SimplePanel&quot; style=&quot;width: 722px;&quot;&gt;&lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td align=&quot;left&quot; style=&quot;vertical-align: top;&quot;&gt;
+                &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;arc_11_base_widget_1&quot; style=&quot;height: 40px; margin-right: 94px;&quot;&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td align=&quot;left&quot; style=&quot;vertical-align: middle;&quot;&gt;
+                                &lt;div class=&quot;arc_11_base_widget_1 arc_15_PortalGUI_MenuItem&quot; style=&quot;cursor: default;&quot;&gt;Collections&lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td align=&quot;left&quot; style=&quot;vertical-align: middle;&quot;&gt;
+                                &lt;div class=&quot;arc_11_base_widget_1 arc_15_PortalGUI_MenuItem&quot; style=&quot;cursor: default;&quot;&gt;Breeds&lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td align=&quot;left&quot; style=&quot;vertical-align: middle;&quot;&gt;
+                                &lt;div class=&quot;arc_11_base_widget_1 arc_15_PortalGUI_MenuItem&quot; style=&quot;cursor: default;&quot;&gt;FAQ&lt;/div&gt;
+                            &lt;/td&gt;
+                            &lt;td align=&quot;left&quot; style=&quot;vertical-align: middle;&quot;&gt;
+                                &lt;div class=&quot;arc_11_base_widget_1 arc_15_PortalGUI_MenuItem&quot; style=&quot;cursor: default;&quot;&gt;About&lt;/div&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>

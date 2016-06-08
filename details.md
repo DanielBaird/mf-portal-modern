@@ -15,7 +15,7 @@
   }
 
   img {
-  	max-width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -161,14 +161,51 @@ files as the componentised original version, but with new content.
 New HTML for each component is in the
 [```./components```](html-components/new/components) directory.
 
-Here's a side-by-side comparison of the menubar component:
+E.g here is the HTML built by GWT for the menu bar:
 
-<iframe style="width: 40%; height: 300px; float: left;"
-	src="https://raw.githubusercontent.com/DanielBaird/mf-portal-modern/gh-pages/html-components/old/components/menubar.html"
-></iframe>
-<iframe style="width: 40%; height: 300px; float: right;"
-	src="https://raw.githubusercontent.com/DanielBaird/mf-portal-modern/gh-pages/html-components/new/components/menubar.html"
-></iframe>
+```
+<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1  style_22" style="height: 40px; width: 1143px;">
+    <tbody>
+        <tr>
+            <td align="left" style="vertical-align: top;">
+                <div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 722px;"></div>
+            </td>
+            <td align="left" style="vertical-align: top;">
+                <table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="height: 40px; margin-right: 94px;">
+                    <tbody>
+                        <tr>
+                            <td align="left" style="vertical-align: middle;">
+                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Collections</div>
+                            </td>
+                            <td align="left" style="vertical-align: middle;">
+                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">Breeds</div>
+                            </td>
+                            <td align="left" style="vertical-align: middle;">
+                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">FAQ</div>
+                            </td>
+                            <td align="left" style="vertical-align: middle;">
+                                <div class="arc_11_base_widget_1 arc_15_PortalGUI_MenuItem" style="cursor: default;">About</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
