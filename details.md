@@ -114,9 +114,13 @@ h1, h2 {
 
 # Revising MediaFlux Portal output
 
+There's two parts to this page: a rehash of the demo, and a set of
+steps for revising the Portal plugin.  If you remember the demos,
+you should skip to the second section, "What to do next".
 
 ## Demonstrating the principle
 
+This page is attached to
 
 ### original HTML
 
@@ -266,27 +270,27 @@ component's use / operating context / edge cases.
 be generated to represent that component.  Handle any special cases.
 Be clear enough that users can write JavaScript interactions finding
 and manipulating page elements.
-- Work out a predictible way to include JavaScript-discoverable data
-in the page.  `data-*` attributes, `template` or
+- Work out a predictible way to **include JavaScript-discoverable
+data** in the page.  `data-*` attributes, `template` or
 [`script`](https://developer.mozilla.org/en/docs/Using_XML_Data_Islands_in_Mozilla)
 tags..
-- Over the set of components, work out a consistent and useful list
-of CSS classes.  The simplest arrangement would be a single unique
+- Over the set of components, work out a **consistent and useful list
+of CSS classes**.  The simplest arrangement would be a single unique
 class for every component, but it may be worth using category
 labels like "mediaflux-button" so CSS authors can address all
 buttons.
-- Work out how much of the current portal XML definition can just
+- Work out how much of the current **portal XML definition** can just
 be deleted, and if anything that remains needs to be changed.
-- Work out how to get GWT to generate the imagined HTML, e.g. switch
-to FlowPanel instead of Horizontal/VerticalPanel.  Pragmatically
-adjust to suit -- if there's no way to get a `nav` tag, it's fine to
-use a `div`.
-- Create a CSS stylesheet that makes a reasonable default portal
+- Work out how to **get GWT to generate the imagined HTML**, e.g.
+switch to FlowPanel instead of Horizontal/VerticalPanel.
+Pragmatically adjust the goals to suit -- if there's genuinely no way
+to get a `nav` tag, it's not so bad to use a `div`.
+- **Create a CSS stylesheet** that makes a reasonable default portal
 layout. This *could* look like the cats portal if that's deemed
 desirable. Potentially MediaFlux could ship with a couple of options
 for portal styling (which would also help get users started with
 writing their own CSS).
-- Work out how to deliver user-defined CSS and JavaScript for a
+- Work out how to **deliver user-defined CSS and JavaScript** for a
 given portal. Assets in a special namespace?  Assets from anywhere,
 identified via direct paths in the portal xml?
 
