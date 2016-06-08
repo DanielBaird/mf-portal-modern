@@ -145,6 +145,8 @@ result).
 
 #### Original version, split into components
 
+[Original version demo](http://danielbaird.com/mf-portal-modern/html-components/old/cat-list.source.html)
+
 [`html-components/old`](html-components/old) contains the
 original GWT generated HTML, split across several files.  The HTML
 is not changed from GWT's generated code, aside from splitting out
@@ -156,6 +158,8 @@ HTML for each component is in the
 
 
 #### New version, revising component structure
+
+[New version demo](http://danielbaird.com/mf-portal-modern/html-components/new/cat-list.source.html)
 
 [`html-components/new`](html-components/new) contains the same
 files as the componentised original version, but with new content.
@@ -221,12 +225,29 @@ Compared to the old source, this uses:
 
 - **semantically accurate tags**: `nav` for navigation, `ul` and
   `li` for a list of items
-- **no fixed widths** so the client browser can adjust content size
+- **no fixed sizes** so the client browser can adjust content size
   to fit the viewport without using JavaScript size-change detectors
-- **sensible CSS class names** so MF nodes can supply their own
-  presentation settings via CSS
+- **sensible CSS class names** so MediaFlux nodes can supply their
+  own presentation settings via CSS, and interrogate the page with
+  their own JavaScript
 - **no hard-coded styles** such as `style="vertical-align: middle;"`
   which cannot be overridden by CSS
+
+
+#### New version, alternate styling
+
+[Alternate version demo](http://danielbaird.com/mf-portal-modern/html-components/new/cat-list-alt.source.html)
+
+The utility of this more semantically correct document structure is
+the ability for MediaFlux nodes to apply their own styling.  To
+demonstrate this, I've used the indentical HTML from the new version,
+and replaced the CSS.
+
+This new CSS styling took less than a day to write, and it allows a
+substantially different look.  For maximum impact I focussed on a
+dramatic visual change, but this same technique will allow nodes to
+build portal layouts that work properly on tiny screens, or giant
+wall-mounted dashboards.
 
 
 <script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
