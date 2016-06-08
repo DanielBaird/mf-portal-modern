@@ -1,3 +1,5 @@
+## [Live Demo](http://danielbaird.com/mf-portal-modern/)
+
 # Modernisation of MediaFlux Portals functionality
 
 [MediaFlux](http://www.arcitecta.com/Products) includes a Portals
