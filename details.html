@@ -174,4 +174,31 @@ files as the componentised original version, but with new content.</p>
     &lt;/tbody>
 &lt;/table>
 </code></pre>
+<p>It's a single row table with two cells; empty space in the left cell,
+and the right cell contains another single row table that has a cell
+for each menu item.</p>
+<p>Here's the revised HTML for the menu component:</p>
+<pre class="language-markup"><code>
+&lt;nav class="mf-portal-navbar">
+    &lt;ul class="mf-nav-list">
+        &lt;li class="mf-nav-item">&lt;a href="">Collections&lt;/a>&lt;/li>
+        &lt;li class="mf-nav-item">&lt;a href="">Breeds&lt;/a>&lt;/li>
+        &lt;li class="mf-nav-item">&lt;a href="">FAQ&lt;/a>&lt;/li>
+        &lt;li class="mf-nav-item">&lt;a href="">About&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/nav>
+</code></pre>
+<p>It's a nav element containing an unordered list, and each thing in
+the list is a menu item.</p>
+<p>Compared to the old source, this uses:</p>
+<ul>
+<li><strong>semantically accurate tags</strong>: <code>nav</code> for navigation, <code>ul</code> and
+<code>li</code> for a list of items</li>
+<li><strong>no fixed widths</strong> so the client browser can adjust content size
+to fit the viewport without using JavaScript size-change detectors</li>
+<li><strong>sensible CSS class names</strong> so MF nodes can supply their own
+presentation settings via CSS</li>
+<li><strong>no hard-coded styles</strong> such as <code>style=&quot;vertical-align: middle;&quot;</code>
+which cannot be overridden by CSS</li>
+</ul>
 <script src="https://cdn.jsdelivr.net/prism/1.4.1/prism.js"></script>
