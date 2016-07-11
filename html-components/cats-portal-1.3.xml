@@ -33,18 +33,6 @@
 		</vertical>
 		<xelement xpath="arc.test:cat">
 			<vertical>
-				<style>
-					<border>
-						<width>1</width>
-						<colour>
-							<r>100</r>
-							<g>100</g>
-							<b>100</b>
-						</colour>
-						<radius>4</radius>
-					</border>
-					<padding>2</padding>
-				</style>
 				<horizontal>
 					<label width="100">Breed:</label>
 					<field width="200">
@@ -61,43 +49,15 @@
 		</xelement>
 	</form>
 	<layout>
-		<style>
-			<font-family>helvetica</font-family>
-			<font-size>20</font-size>
-			<background-colour>
-				<r>205</r>
-				<g>231</g>
-				<b>231</b>
-			</background-colour>
-		</style>
 		<header height="100">
-			<style>
-				<font-family>helvetica</font-family>
-				<font-size>20</font-size>
-				<background-colour>
-					<r>0</r>
-					<g>90</g>
-					<b>118</b>
-				</background-colour>
-				<padding>10</padding>
-			</style>
 			<content>
 				<div>
-					<img style="width:90x;height:90px;vertical-align:middle" src="https://dl.dropboxusercontent.com/u/9300009/cats-logo.png"/>
-					<span style="color: #ffffff;font-size:40px;">International Cat Breeds</span>
+					<img src="https://dl.dropboxusercontent.com/u/9300009/cats-logo.png"/>
+					<span>International Cat Breeds</span>
 				</div>
 			</content>
 		</header>
 		<menu>
-			<style>
-				<font-family>helvetica</font-family>
-				<font-size>14</font-size>
-				<background-colour>
-					<r>0</r>
-					<g>53</g>
-					<b>70</b>
-				</background-colour>
-			</style>
 			<entry label="FAQ">
 				<title>Frequently Asked Questions</title>
 				<content>
@@ -137,21 +97,6 @@
 			</entry>
 		</menu>
 		<footer height="30">
-			<style>
-				<font-family>helvetica</font-family>
-				<font-size>15</font-size>
-				<foreground-colour>
-					<r>204</r>
-					<g>222</g>
-					<b>227</b>
-				</foreground-colour>
-				<background-colour>
-					<r>0</r>
-					<g>90</g>
-					<b>118</b>
-				</background-colour>
-				<padding>10</padding>
-			</style>
 			<content>
 				<span>Powered by Mediaflux&#xAE;</span>
 			</content>
@@ -162,16 +107,6 @@
 		<restricted>
 			<role>system-administrator</role>
 		</restricted>
-		<style>
-			<!--
-			<padding>20</padding>
-			<background-colour>
-				<r>23</r>
-				<g>238</g>
-				<b>238</b>
-			</background-colour>
-		-->
-		</style>
 		<search>
 			<!--			<query>type='arc/test/animal/collection'</query> -->
 			<facets>
@@ -181,10 +116,6 @@
 			</facets>
 			<cursor-size>10</cursor-size>
 			<layout>
-				<style>
-					<font-family>helvetica</font-family>
-					<font-size>14</font-size>
-				</style>
 				<results>
 					<result width="500" height="180">
 						<icon>
@@ -237,10 +168,6 @@
 				</facets>
 				<cursor-size>20</cursor-size>
 				<layout>
-					<style>
-						<font-family>helvetica</font-family>
-						<font-size>14</font-size>
-					</style>
 					<results>
 						<result width="600" height="180">
 							<icon>
@@ -336,10 +263,6 @@
 			</facets>
 			<cursor-size>20</cursor-size>
 			<layout>
-				<style>
-					<font-family>helvetica</font-family>
-					<font-size>14</font-size>
-				</style>
 				<results>
 					<result width="600" height="180">
 						<icon>
