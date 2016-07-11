@@ -22,11 +22,11 @@
 
 	<!-- Forms are used for creating and/or updating assets. They are unique named and can be referred  -->
 	<!-- to via one of the operations.                                                                  -->
-	<form name="breed" width="400" height="300">
-		<vertical spacing="10">
+	<form name="breed">
+		<vertical>
 			<horizontal>
-				<label width="100">Breed:</label>
-				<field width="200">
+				<label>Breed:</label>
+				<field>
 					<xelement xpath="arc.test:cat/breed"/>
 				</field>
 			</horizontal>
@@ -34,14 +34,14 @@
 		<xelement xpath="arc.test:cat">
 			<vertical>
 				<horizontal>
-					<label width="100">Breed:</label>
-					<field width="200">
+					<label>Breed:</label>
+					<field>
 						<xelement xpath="breed"/>
 					</field>
 				</horizontal>
 				<horizontal>
-					<label width="100">Origin:</label>
-					<field width="200">
+					<label>Origin:</label>
+					<field>
 						<xelement xpath="origin"/>
 					</field>
 				</horizontal>
@@ -49,7 +49,7 @@
 		</xelement>
 	</form>
 	<layout>
-		<header height="100">
+		<header>
 			<content>
 				<div>
 					<img src="https://dl.dropboxusercontent.com/u/9300009/cats-logo.png"/>
@@ -96,7 +96,7 @@
 				</content>
 			</entry>
 		</menu>
-		<footer height="30">
+		<footer>
 			<content>
 				<span>Powered by Mediaflux&#xAE;</span>
 			</content>
@@ -117,10 +117,8 @@
 			<cursor-size>10</cursor-size>
 			<layout>
 				<results>
-					<result width="500" height="180">
-						<icon>
-							<size>150</size>
-						</icon>
+					<result>
+						<icon />
 						<title>
 							<xpath>name</xpath>
 						</title>
@@ -169,9 +167,8 @@
 				<cursor-size>20</cursor-size>
 				<layout>
 					<results>
-						<result width="600" height="180">
+						<result>
 							<icon>
-								<size>150</size>
 							</icon>
 							<title>
 								<xpath>name</xpath>
@@ -264,10 +261,8 @@
 			<cursor-size>20</cursor-size>
 			<layout>
 				<results>
-					<result width="600" height="180">
-						<icon>
-							<size>150</size>
-						</icon>
+					<result>
+						<icon />
 						<title>
 							<xpath>name</xpath>
 						</title>
