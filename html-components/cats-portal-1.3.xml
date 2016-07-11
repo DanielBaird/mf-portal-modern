@@ -19,115 +19,7 @@
 		<message>Please don't leave!</message>
 	</leave>
 	<query>namespace&gt;='/arcitecta/test-data/animals'</query>
-	<style name="collection-result">
-		<font-family>helvetica</font-family>
-		<font-size>20</font-size>
-		<background-colour>
-			<r>255</r>
-			<g>255</g>
-			<b>255</b>
-		</background-colour>
-		<border>
-			<width>1</width>
-			<style>solid</style>
-			<colour>
-				<r>200</r>
-				<g>200</g>
-				<b>200</b>
-			</colour>
-			<radius>4</radius>
-		</border>
-		<padding>10</padding>
-	</style>
-	<style name="result">
-		<font-family>helvetica</font-family>
-		<font-size>14</font-size>
-		<background-colour>
-			<r>250</r>
-			<g>250</g>
-			<b>250</b>
-		</background-colour>
-		<border>
-			<width>1</width>
-			<style>solid</style>
-			<colour>
-				<r>150</r>
-				<g>150</g>
-				<b>150</b>
-			</colour>
-			<radius>4</radius>
-		</border>
-	</style>
-	<style name="icon">
-		<background-colour>
-			<r>255</r>
-			<g>255</g>
-			<b>255</b>
-		</background-colour>
-		<border>
-			<width>3</width>
-			<style>solid</style>
-			<colour>
-				<r>50</r>
-				<g>50</g>
-				<b>50</b>
-			</colour>
-			<radius>0</radius>
-		</border>
-		<padding>0</padding>
-	</style>
-	<style name="heading">
-		<font-family>helvetica</font-family>
-		<font-size>20</font-size>
-		<foreground-colour>
-			<r>255</r>
-			<g>0</g>
-			<b>255</b>
-		</foreground-colour>
-		<padding>5</padding>
-		<padding-left>0</padding-left>
-	</style>
-	<style name="static-page-title">
-		<font-family>helvetica</font-family>
-		<font-size>20</font-size>
-		<font-weight>bold</font-weight>
-		<foreground-colour>
-			<r>0</r>
-			<g>53</g>
-			<b>70</b>
-		</foreground-colour>
-		<padding>10</padding>
-	</style>
-	<style name="static-page-content">
-		<font-family>helvetica</font-family>
-		<font-size>16</font-size>
-		<foreground-colour>
-			<r>0</r>
-			<g>53</g>
-			<b>70</b>
-		</foreground-colour>
-		<padding>10</padding>
-	</style>
-	<style name="description">
-		<font-family>helvetica</font-family>
-		<font-size>14</font-size>
-		<background-colour>
-			<r>250</r>
-			<g>250</g>
-			<b>250</b>
-		</background-colour>
-		<border>
-			<width>1</width>
-			<style>solid</style>
-			<colour>
-				<r>200</r>
-				<g>200</g>
-				<b>200</b>
-			</colour>
-			<radius>4</radius>
-		</border>
-		<padding>10</padding>
-	</style>
+
 	<!-- Forms are used for creating and/or updating assets. They are unique named and can be referred  -->
 	<!-- to via one of the operations.                                                                  -->
 	<form name="breed" width="400" height="300">
@@ -207,8 +99,8 @@
 				</background-colour>
 			</style>
 			<entry label="FAQ">
-				<title style="static-page-title">Frequently Asked Questions</title>
-				<content style="static-page-content">
+				<title>Frequently Asked Questions</title>
+				<content>
 					<div>
 						<p>The domestic cat (Felis catus or Felis silvestris catus) is a small, usually furry, domesticated, and carnivorous mammal. They are often called a housecat when kept as an indoor pet, or simply a cat when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship, and their ability to hunt vermin and household pests.</p>
 						<p>Cats are similar in anatomy to the other felids, with strong, flexible bodies, quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness. Like most other mammals, cats have poorer color vision and a better sense of smell than humans.</p>
@@ -231,8 +123,8 @@
 				</content>
 			</entry>
 			<entry label="About" default="true">
-				<title style="static-page-title">Welcome to the International Cat Breeds Database</title>
-				<content style="static-page-content">
+				<title>Welcome to the International Cat Breeds Database</title>
+				<content>
 					<div>
 						<p>This database of cat breeds includes domestic cat breeds and domestic/wild hybrids. The list includes established breeds recognized by various cat registries, new and experimental breeds, distinct domestic populations not being actively developed and lapsed breeds.</p>
 						<p>Inconsistency in breed classification among registries means that an individual animal may be considered different breeds by different registries. For example, The International Cat Association's Himalayan is considered a colorpoint version of the Persian by the Cat Fanciers' Association while the CFA's Javanese is considered a color variation of the Balinese by TICA.</p>
@@ -294,8 +186,8 @@
 					<font-size>14</font-size>
 				</style>
 				<results>
-					<result style="result" width="500" height="180">
-						<icon style="icon">
+					<result width="500" height="180">
+						<icon>
 							<size>150</size>
 						</icon>
 						<title>
@@ -316,7 +208,7 @@
 		</search>
 		<!-- Alternate display for the collection members -->
 		<member min-level="1" max-level="1">
-			<description style="description">
+			<description>
 				<!-- The following xpath must have been declared in the search/layout/results section above. -->
 				<!-- This may include xpaths that were denoted as non-visible.                               -->
 				<xpath>description</xpath>
@@ -350,11 +242,11 @@
 						<font-size>14</font-size>
 					</style>
 					<results>
-						<result style="result" width="600" height="180">
-							<icon style="icon">
+						<result width="600" height="180">
+							<icon>
 								<size>150</size>
 							</icon>
-							<title style="heading">
+							<title>
 								<xpath>name</xpath>
 							</title>
 							<detail label="Origin">
@@ -449,11 +341,11 @@
 					<font-size>14</font-size>
 				</style>
 				<results>
-					<result style="result" width="600" height="180">
-						<icon style="icon">
+					<result width="600" height="180">
+						<icon>
 							<size>150</size>
 						</icon>
-						<title style="heading">
+						<title>
 							<xpath>name</xpath>
 						</title>
 						<detail label="Origin">
