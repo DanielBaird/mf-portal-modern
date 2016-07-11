@@ -1,1 +1,491 @@
-<?xml version="1.0"?><portal>	<title>Cat Breeds</title>	<authentication>		<domain>system</domain>		<user>manager</user>		<password>change_me</password>		<!--		<domain>portal</domain>		<user>anonymous</user>		<password>password1</password>		-->		<!--		<token>DbVXGhATACT7jQnaLwBPfetRleoXLFlbNfLM6Jvo2cdSLxtGN9w8EDhbRATgPQLcOARNRX75zlsJsNaY4e21tYXnxK81Yq3Q9EEtbzEURPeRDvNRkIqaSQ6Bj494V1014361</token>		-->	</authentication>	<leave>		<check>false</check>		<message>Please don't leave!</message>	</leave>	<query>namespace&gt;='/arcitecta/test-data/animals'</query>	<style name="collection-result">		<font-family>helvetica</font-family>		<font-size>20</font-size>		<background-colour>			<r>255</r>			<g>255</g>			<b>255</b>		</background-colour>		<border>			<width>1</width>			<style>solid</style>			<colour>				<r>200</r>				<g>200</g>				<b>200</b>			</colour>			<radius>4</radius>		</border>		<padding>10</padding>	</style>	<style name="result">		<font-family>helvetica</font-family>		<font-size>14</font-size>		<background-colour>			<r>250</r>			<g>250</g>			<b>250</b>		</background-colour>		<border>			<width>1</width>			<style>solid</style>			<colour>				<r>150</r>				<g>150</g>				<b>150</b>			</colour>			<radius>4</radius>		</border>	</style>	<style name="icon">		<background-colour>			<r>255</r>			<g>255</g>			<b>255</b>		</background-colour>		<border>			<width>3</width>			<style>solid</style>			<colour>				<r>50</r>				<g>50</g>				<b>50</b>			</colour>			<radius>0</radius>		</border>		<padding>0</padding>	</style>	<style name="heading">		<font-family>helvetica</font-family>		<font-size>20</font-size>		<foreground-colour>			<r>255</r>			<g>0</g>			<b>255</b>		</foreground-colour>		<padding>5</padding>		<padding-left>0</padding-left>	</style>	<style name="static-page-title">		<font-family>helvetica</font-family>		<font-size>20</font-size>		<font-weight>bold</font-weight>		<foreground-colour>			<r>0</r>			<g>53</g>			<b>70</b>		</foreground-colour>		<padding>10</padding>	</style>	<style name="static-page-content">		<font-family>helvetica</font-family>		<font-size>16</font-size>		<foreground-colour>			<r>0</r>			<g>53</g>			<b>70</b>		</foreground-colour>		<padding>10</padding>	</style>	<style name="description">		<font-family>helvetica</font-family>		<font-size>14</font-size>		<background-colour>			<r>250</r>			<g>250</g>			<b>250</b>		</background-colour>		<border>			<width>1</width>			<style>solid</style>			<colour>				<r>200</r>				<g>200</g>				<b>200</b>			</colour>			<radius>4</radius>		</border>		<padding>10</padding>	</style>	<!-- Forms are used for creating and/or updating assets. They are unique named and can be referred  -->	<!-- to via one of the operations.                                                                  -->	<form name="breed" width="400" height="300">		<vertical spacing="10">			<horizontal>				<label width="100">Breed:</label>				<field width="200">					<xelement xpath="arc.test:cat/breed"/>				</field>			</horizontal>		</vertical>		<xelement xpath="arc.test:cat">			<vertical>				<style>					<border>						<width>1</width>						<colour>							<r>100</r>							<g>100</g>							<b>100</b>						</colour>						<radius>4</radius>					</border>					<padding>2</padding>				</style>				<horizontal>					<label width="100">Breed:</label>					<field width="200">						<xelement xpath="breed"/>					</field>				</horizontal>				<horizontal>					<label width="100">Origin:</label>					<field width="200">						<xelement xpath="origin"/>					</field>				</horizontal>			</vertical>		</xelement>	</form>	<layout>		<style>			<font-family>helvetica</font-family>			<font-size>20</font-size>			<background-colour>				<r>205</r>				<g>231</g>				<b>231</b>			</background-colour>		</style>		<header height="100">			<style>				<font-family>helvetica</font-family>				<font-size>20</font-size>				<background-colour>					<r>0</r>					<g>90</g>					<b>118</b>				</background-colour>				<padding>10</padding>			</style>			<content>				<div>					<img style="width:90x;height:90px;vertical-align:middle" src="https://dl.dropboxusercontent.com/u/9300009/cats-logo.png"/>					<span style="color: #ffffff;font-size:40px;">International Cat Breeds</span>				</div>			</content>		</header>		<menu>			<style>				<font-family>helvetica</font-family>				<font-size>14</font-size>				<background-colour>					<r>0</r>					<g>53</g>					<b>70</b>				</background-colour>			</style>			<entry label="FAQ">				<title style="static-page-title">Frequently Asked Questions</title>				<content style="static-page-content">					<div>						<p>The domestic cat (Felis catus or Felis silvestris catus) is a small, usually furry, domesticated, and carnivorous mammal. They are often called a housecat when kept as an indoor pet, or simply a cat when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship, and their ability to hunt vermin and household pests.</p>						<p>Cats are similar in anatomy to the other felids, with strong, flexible bodies, quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness. Like most other mammals, cats have poorer color vision and a better sense of smell than humans.</p>						<p>Despite being solitary hunters, cats are a social species, and cat communication includes the use of a variety of vocalizations (mewing, purring, trilling, hissing, growling, and grunting), as well as cat pheromones, and types of cat-specific body language.</p>						<p>Cats have a high breeding rate. Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as cat fancy. Failure to control the breeding of pet cats by neutering, and the abandonment of former household pets, has resulted in large numbers of feral cats worldwide, requiring population control.</p>						<p>Since cats were cult animals in ancient Egypt, they were commonly believed to have been domesticated there, but there may have been instances of domestication as early as the Neolithic from around 9500 years ago (7500 BC). A genetic study in 2007 concluded that domestic cats are descended from African wildcats (Felis silvestris lybica), having diverged around 8000 BC in West Asia. Cats are the most popular pet in the world, and are now found in almost every place where humans live.</p>						<h3>Nomenclature and etymology</h3>						<p>The English word 'cat' (Old English catt) is in origin a loanword, introduced to many languages of Europe from Latin cattus and Byzantine Greek &#x3BA;&#x3AC;&#x3C4;&#x3C4;&#x3B1;, including Portuguese and Spanish gato, French chat, German Katze, Lithuanian kat&#x117; and Old Church Slavonic kotka, among others. The ultimate source of the word is Afroasiatic, presumably from Late Egyptian &#x10D;aute, the feminine of &#x10D;aus "wildcat". The word was introduced, together with the domestic animal itself, to the Roman Republic by the first century BC. An alternative word with cognates in many languages is English 'puss' ('pussycat'). Attested only from the 16th century, it may have been introduced from Dutch poes or from Low German puuskatte, related to Swedish kattepus, or Norwegian pus, pusekatt. Similar forms exist in Lithuanian pui&#x17E;&#x117; and Irish puisc&#xED;n. The etymology of this word is unknown, but it may have simply arisen from a sound used to attract a cat.</p>						<p>A group of cats is referred to as a "clowder" or a "glaring", a male cat is called a "tom" or "tomcat" (or a "gib", if neutered), an unaltered female is called a "queen", and a prepubescent juvenile is referred to as a "kitten". Although spayed females have no commonly used name, in some rare instances, an immature or spayed female is referred to as a "molly". The male progenitor of a cat, especially a pedigreed cat, is its "sire", and its female progenitor is its "dam". In Early Modern English, the word 'kitten' was interchangeable with the now-obsolete word 'catling'.</p>						<p>A pedigreed cat is one whose ancestry is recorded by a cat fancier organization. A purebred cat is one whose ancestry contains only individuals of the same breed. Many pedigreed and especially purebred cats are exhibited as show cats. Cats of unrecorded, mixed ancestry are referred to as domestic short-haired or domestic long-haired cats, by coat type, or commonly as random-bred, moggies (chiefly British), or (using terms borrowed from dog breeding) mongrels or mutt-cats.</p>						<p>While the African wildcat is the ancestral subspecies from which domestic cats are descended, and wildcats and domestic cats can completely interbreed, several intermediate stages occur between domestic pet and pedigree cats on one hand and those entirely wild animals on the other. The semiferal cat, a mostly outdoor cat, is not owned by any one individual, but is generally friendly to people and may be fed by several households. Feral cats are associated with human habitation areas and may be fed by people or forage in rubbish, but are typically wary of human interaction.</p>						<h3>Taxonomy and evolution</h3>						<p>The African wildcat, Felis silvestris lybica, is the ancestor of the domestic cat.</p>						<p>The felids are a rapidly evolving family of mammals that share a common ancestor only 10&#x2013;15 million years ago and include lions, tigers, cougars and many others. Within this family, domestic cats (Felis catus) are part of the genus Felis, which is a group of small cats containing about seven species (depending upon classification scheme). Members of the genus are found worldwide and include the jungle cat (Felis chaus) of southeast Asia, European wildcat (F. silvestris silvestris), African wildcat (F. s. lybica), the Chinese mountain cat (F. bieti), and the Arabian sand cat (F. margarita), among others.</p>						<p>The domestic cat was first classified as Felis catus by Carolus Linnaeus in the 10th edition of his Systema Naturae in 1758. Because of modern phylogenetics, domestic cats are usually regarded as another subspecies of the wildcat, F. silvestris. This has resulted in mixed usage of the terms, as the domestic cat can be called by its subspecies name, Felis silvestris catus. Wildcats have also been referred to as various subspecies of F. catus, but in 2003, the International Commission on Zoological Nomenclature fixed the name for wildcats as F. silvestris. The most common name in use for the domestic cat remains F. catus, following a convention for domesticated animals of using the earliest (the senior) synonym proposed. Sometimes, the domestic cat has been called Felis domesticus or Felis domestica, as proposed by German naturalist J. C. P. Erxleben in 1777 but these are not valid taxonomic names and have been used only rarely in scientific literature, because Linnaeus's binomial takes precedence. A population of Transcaucasian black feral cats was once classified as Felis daemon (Satunin 1904) but now this population is considered to be a part of domestic cat.</p>						<p>All the cats in this genus share a common ancestor that probably lived around 6&#x2013;7 million years ago in Asia. The exact relationships within the Felidae are close but still uncertain, e.g. the Chinese mountain cat is sometimes classified (under the name Felis silvestris bieti) as a subspecies of the wildcat, like the North African variety F. s. lybica.</p>						<p>In comparison to dogs cats have not undergone major changes during the domestication process, as the form and behavior of the domestic cat is not radically different from those of wildcats and domestic cats are perfectly capable of surviving in the wild. Fully domesticated house cats often interbreed with feral F. catus populations. This limited evolution during domestication, means that hybridisation can occur with many other felids notably the Asian leopard cat. Several natural behaviors and characteristics of wildcats may have preadapted them for domestication as pets. These traits include their small size, social nature, obvious body language, love of play and relatively high intelligence;:12&#x2013;17 they may also have an inborn tendency towards tameness.</p>						<p>Cats have either a mutualistic or commensal relationship with humans. Two main theories are given about how cats were domesticated. In one, people deliberately tamed cats in a process of artificial selection, as they were useful predators of vermin. This has been criticized as implausible, because the reward for such an effort may have been too little; cats generally do not carry out commands and although they do eat rodents, other species such as ferrets or terriers may be better at controlling these pests. The alternative idea is that cats were simply tolerated by people and gradually diverged from their wild relatives through natural selection, as they adapted to hunting the vermin found around humans in towns and villages.</p>					</div>				</content>			</entry>			<entry label="About" default="true">				<title style="static-page-title">Welcome to the International Cat Breeds Database</title>				<content style="static-page-content">					<div>						<p>This database of cat breeds includes domestic cat breeds and domestic/wild hybrids. The list includes established breeds recognized by various cat registries, new and experimental breeds, distinct domestic populations not being actively developed and lapsed breeds.</p>						<p>Inconsistency in breed classification among registries means that an individual animal may be considered different breeds by different registries. For example, The International Cat Association's Himalayan is considered a colorpoint version of the Persian by the Cat Fanciers' Association while the CFA's Javanese is considered a color variation of the Balinese by TICA.</p>						<p>The domestic shorthair and domestic longhair are not breeds but terms used in cat fancy to describe cats that do not belong to a particular breed.</p>						<h3>What are breeds</h3>						<p>A breed is a specific group of domestic animals having homogeneous appearance (phenotype), homogeneous behavior, and/or other characteristics that distinguish it from other organisms of the same species and that were arrived at through selective breeding. Despite the centrality of the idea of "breeds" to animal husbandry and agriculture, no single, scientifically accepted definition of the term exists.[1] A breed is therefore not an objective or biologically verifiable classification but is instead a term of art amongst groups of breeders who share a consensus around what qualities make some members of a given species members of a nameable subset.</p>						<p>When bred together, individuals of the same breed pass on these predictable traits to their offspring, and this ability&#x2014;known as "breeding true"&#x2014;is a requirement for a breed. Plant breeds are more commonly known as cultivars. The offspring produced as a result of breeding animals of one breed with other animals of another breed are known as crossbreeds or mixed breeds. Crosses between animal or plant variants above the level of breed/cultivar (i.e. between species, subspecies, botanical variety, even different genera) are referred to as hybrids.</p>					</div>				</content>			</entry>		</menu>		<footer height="30">			<style>				<font-family>helvetica</font-family>				<font-size>15</font-size>				<foreground-colour>					<r>204</r>					<g>222</g>					<b>227</b>				</foreground-colour>				<background-colour>					<r>0</r>					<g>90</g>					<b>118</b>				</background-colour>				<padding>10</padding>			</style>			<content>				<span>Powered by Mediaflux&#xAE;</span>			</content>		</footer>	</layout>	<collection label="Collections" of="collections">		<title>Cats by Coat</title>		<restricted>			<role>system-administrator</role>		</restricted>		<style>			<!--			<padding>20</padding>			<background-colour>				<r>23</r>				<g>238</g>				<b>238</b>			</background-colour>		-->		</style>		<search>			<!--			<query>type='arc/test/animal/collection'</query> -->			<facets>				<text>					<description>Search for animal collections..</description>				</text>			</facets>			<cursor-size>10</cursor-size>			<layout>				<style>					<font-family>helvetica</font-family>					<font-size>14</font-size>				</style>				<results>					<result style="result" width="500" height="180">						<icon style="icon">							<size>150</size>						</icon>						<title>							<xpath>name</xpath>						</title>						<description>							<xpath>description</xpath>						</description>						<!-- You can retrieve other details that are not displayed. Those details -->						<!-- can be used in the description when displaying the members of a      -->						<!-- collection                                                           -->						<detail visible="false">							<xpath>meta/mf-note/note</xpath>						</detail>					</result>				</results>			</layout>		</search>		<!-- Alternate display for the collection members -->		<member min-level="1" max-level="1">			<description style="description">				<!-- The following xpath must have been declared in the search/layout/results section above. -->				<!-- This may include xpaths that were denoted as non-visible.                               -->				<xpath>description</xpath>			</description>			<search>				<facets>					<text>						<description>Search for cats...</description>					</text>					<filters label="Format">						<mode>single</mode>						<description>The type of cat</description>						<filter label="Short Haired">							<query>(xpath(arc.test:cat/coat) = 'Short')</query>						</filter>						<filter label="Medium Hair">							<query>(xpath(arc.test:cat/coat) = 'Medium')</query>						</filter>						<filter label="Long Haired">							<query>(xpath(arc.test:cat/coat) = 'Long')</query>						</filter>						<filter label="Hairless">							<query>(xpath(arc.test:cat/coat) = 'Hairless')</query>						</filter>					</filters>				</facets>				<cursor-size>20</cursor-size>				<layout>					<style>						<font-family>helvetica</font-family>						<font-size>14</font-size>					</style>					<results>						<result style="result" width="600" height="180">							<icon style="icon">								<size>150</size>							</icon>							<title style="heading">								<xpath>name</xpath>							</title>							<detail label="Origin">								<xpath>meta/arc.test:cat/origin</xpath>							</detail>							<detail label="Source">								<xpath>meta/arc.test:cat/source</xpath>							</detail>							<detail label="Body Shape">								<xpath>meta/arc.test:cat/body</xpath>							</detail>							<detail label="Coat">								<xpath>meta/arc.test:cat/coat</xpath>							</detail>							<detail label="Pattern">								<xpath>meta/arc.test:cat/pattern</xpath>							</detail>						</result>						<action label="Do Something"/>					</results>				</layout>			</search>			<egest>				<restricted>					<role>user</role>				</restricted>			</egest>			<create>				<restricted>					<role>user</role>				</restricted>				<namespace>/test</namespace>				<name/>				<description/>				<geometry/>				<metadata>					<form-name>breed</form-name>				</metadata>				<content>					<extension>jpg</extension>					<extension>png</extension>					<max-number>1</max-number>					<max-size>40000</max-size>				</content>			</create>		</member>		<create>			<restricted>				<role>user</role>			</restricted>			<namespace>/test</namespace>		</create>		<egest>			<restricted>				<role>user</role>			</restricted>		</egest>	</collection>	<collection label="Breeds" of="assets">		<title>Cat Breeds</title>		<!--		<restricted>			<role>standard-user</role>		</restricted>		-->		<search>			<query>(xpath(arc.test:cat) has value)</query>			<facets>				<text>					<description>Search...</description>				</text>				<filters label="Format">					<mode>single</mode>					<filter label="Short Haired">						<query>(xpath(arc.test:cat/coat) = 'Short')</query>					</filter>					<filter label="Medium Hair">						<query>(xpath(arc.test:cat/coat) = 'Medium')</query>					</filter>					<filter label="Long Haired">						<query>(xpath(arc.test:cat/coat) = 'Long')</query>					</filter>					<filter label="Hairless">						<query>(xpath(arc.test:cat/coat) = 'Hairless')</query>					</filter>				</filters>			</facets>			<cursor-size>20</cursor-size>			<layout>				<style>					<font-family>helvetica</font-family>					<font-size>14</font-size>				</style>				<results>					<result style="result" width="600" height="180">						<icon style="icon">							<size>150</size>						</icon>						<title style="heading">							<xpath>name</xpath>						</title>						<detail label="Origin">							<xpath>meta/arc.test:cat/origin</xpath>						</detail>						<detail label="Source">							<xpath>meta/arc.test:cat/source</xpath>						</detail>						<detail label="Body Shape">							<xpath>meta/arc.test:cat/body</xpath>						</detail>						<detail label="Coat">							<xpath>meta/arc.test:cat/coat</xpath>						</detail>						<detail label="Pattern">							<xpath>meta/arc.test:cat/pattern</xpath>						</detail>					</result>					<action label="Do Something"/>				</results>			</layout>		</search>		<create>			<restricted>				<role>user</role>			</restricted>			<namespace>/test</namespace>		</create>		<egest>			<restricted>				<role>user</role>			</restricted>		</egest>	</collection></portal>
+<?xml version="1.0"?>
+<portal>
+	<title>Cat Breeds</title>
+	<authentication>
+		<domain>system</domain>
+		<user>manager</user>
+		<password>change_me</password>
+		<!--
+		<domain>portal</domain>
+		<user>anonymous</user>
+		<password>password1</password>
+		-->
+		<!--
+		<token>DbVXGhATACT7jQnaLwBPfetRleoXLFlbNfLM6Jvo2cdSLxtGN9w8EDhbRATgPQLcOARNRX75zlsJsNaY4e21tYXnxK81Yq3Q9EEtbzEURPeRDvNRkIqaSQ6Bj494V1014361</token>
+		-->
+	</authentication>
+	<leave>
+		<check>false</check>
+		<message>Please don't leave!</message>
+	</leave>
+	<query>namespace&gt;='/arcitecta/test-data/animals'</query>
+	<style name="collection-result">
+		<font-family>helvetica</font-family>
+		<font-size>20</font-size>
+		<background-colour>
+			<r>255</r>
+			<g>255</g>
+			<b>255</b>
+		</background-colour>
+		<border>
+			<width>1</width>
+			<style>solid</style>
+			<colour>
+				<r>200</r>
+				<g>200</g>
+				<b>200</b>
+			</colour>
+			<radius>4</radius>
+		</border>
+		<padding>10</padding>
+	</style>
+	<style name="result">
+		<font-family>helvetica</font-family>
+		<font-size>14</font-size>
+		<background-colour>
+			<r>250</r>
+			<g>250</g>
+			<b>250</b>
+		</background-colour>
+		<border>
+			<width>1</width>
+			<style>solid</style>
+			<colour>
+				<r>150</r>
+				<g>150</g>
+				<b>150</b>
+			</colour>
+			<radius>4</radius>
+		</border>
+	</style>
+	<style name="icon">
+		<background-colour>
+			<r>255</r>
+			<g>255</g>
+			<b>255</b>
+		</background-colour>
+		<border>
+			<width>3</width>
+			<style>solid</style>
+			<colour>
+				<r>50</r>
+				<g>50</g>
+				<b>50</b>
+			</colour>
+			<radius>0</radius>
+		</border>
+		<padding>0</padding>
+	</style>
+	<style name="heading">
+		<font-family>helvetica</font-family>
+		<font-size>20</font-size>
+		<foreground-colour>
+			<r>255</r>
+			<g>0</g>
+			<b>255</b>
+		</foreground-colour>
+		<padding>5</padding>
+		<padding-left>0</padding-left>
+	</style>
+	<style name="static-page-title">
+		<font-family>helvetica</font-family>
+		<font-size>20</font-size>
+		<font-weight>bold</font-weight>
+		<foreground-colour>
+			<r>0</r>
+			<g>53</g>
+			<b>70</b>
+		</foreground-colour>
+		<padding>10</padding>
+	</style>
+	<style name="static-page-content">
+		<font-family>helvetica</font-family>
+		<font-size>16</font-size>
+		<foreground-colour>
+			<r>0</r>
+			<g>53</g>
+			<b>70</b>
+		</foreground-colour>
+		<padding>10</padding>
+	</style>
+	<style name="description">
+		<font-family>helvetica</font-family>
+		<font-size>14</font-size>
+		<background-colour>
+			<r>250</r>
+			<g>250</g>
+			<b>250</b>
+		</background-colour>
+		<border>
+			<width>1</width>
+			<style>solid</style>
+			<colour>
+				<r>200</r>
+				<g>200</g>
+				<b>200</b>
+			</colour>
+			<radius>4</radius>
+		</border>
+		<padding>10</padding>
+	</style>
+	<!-- Forms are used for creating and/or updating assets. They are unique named and can be referred  -->
+	<!-- to via one of the operations.                                                                  -->
+	<form name="breed" width="400" height="300">
+		<vertical spacing="10">
+			<horizontal>
+				<label width="100">Breed:</label>
+				<field width="200">
+					<xelement xpath="arc.test:cat/breed"/>
+				</field>
+			</horizontal>
+		</vertical>
+		<xelement xpath="arc.test:cat">
+			<vertical>
+				<style>
+					<border>
+						<width>1</width>
+						<colour>
+							<r>100</r>
+							<g>100</g>
+							<b>100</b>
+						</colour>
+						<radius>4</radius>
+					</border>
+					<padding>2</padding>
+				</style>
+				<horizontal>
+					<label width="100">Breed:</label>
+					<field width="200">
+						<xelement xpath="breed"/>
+					</field>
+				</horizontal>
+				<horizontal>
+					<label width="100">Origin:</label>
+					<field width="200">
+						<xelement xpath="origin"/>
+					</field>
+				</horizontal>
+			</vertical>
+		</xelement>
+	</form>
+	<layout>
+		<style>
+			<font-family>helvetica</font-family>
+			<font-size>20</font-size>
+			<background-colour>
+				<r>205</r>
+				<g>231</g>
+				<b>231</b>
+			</background-colour>
+		</style>
+		<header height="100">
+			<style>
+				<font-family>helvetica</font-family>
+				<font-size>20</font-size>
+				<background-colour>
+					<r>0</r>
+					<g>90</g>
+					<b>118</b>
+				</background-colour>
+				<padding>10</padding>
+			</style>
+			<content>
+				<div>
+					<img style="width:90x;height:90px;vertical-align:middle" src="https://dl.dropboxusercontent.com/u/9300009/cats-logo.png"/>
+					<span style="color: #ffffff;font-size:40px;">International Cat Breeds</span>
+				</div>
+			</content>
+		</header>
+		<menu>
+			<style>
+				<font-family>helvetica</font-family>
+				<font-size>14</font-size>
+				<background-colour>
+					<r>0</r>
+					<g>53</g>
+					<b>70</b>
+				</background-colour>
+			</style>
+			<entry label="FAQ">
+				<title style="static-page-title">Frequently Asked Questions</title>
+				<content style="static-page-content">
+					<div>
+						<p>The domestic cat (Felis catus or Felis silvestris catus) is a small, usually furry, domesticated, and carnivorous mammal. They are often called a housecat when kept as an indoor pet, or simply a cat when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship, and their ability to hunt vermin and household pests.</p>
+						<p>Cats are similar in anatomy to the other felids, with strong, flexible bodies, quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness. Like most other mammals, cats have poorer color vision and a better sense of smell than humans.</p>
+						<p>Despite being solitary hunters, cats are a social species, and cat communication includes the use of a variety of vocalizations (mewing, purring, trilling, hissing, growling, and grunting), as well as cat pheromones, and types of cat-specific body language.</p>
+						<p>Cats have a high breeding rate. Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as cat fancy. Failure to control the breeding of pet cats by neutering, and the abandonment of former household pets, has resulted in large numbers of feral cats worldwide, requiring population control.</p>
+						<p>Since cats were cult animals in ancient Egypt, they were commonly believed to have been domesticated there, but there may have been instances of domestication as early as the Neolithic from around 9500 years ago (7500 BC). A genetic study in 2007 concluded that domestic cats are descended from African wildcats (Felis silvestris lybica), having diverged around 8000 BC in West Asia. Cats are the most popular pet in the world, and are now found in almost every place where humans live.</p>
+						<h3>Nomenclature and etymology</h3>
+						<p>The English word 'cat' (Old English catt) is in origin a loanword, introduced to many languages of Europe from Latin cattus and Byzantine Greek &#x3BA;&#x3AC;&#x3C4;&#x3C4;&#x3B1;, including Portuguese and Spanish gato, French chat, German Katze, Lithuanian kat&#x117; and Old Church Slavonic kotka, among others. The ultimate source of the word is Afroasiatic, presumably from Late Egyptian &#x10D;aute, the feminine of &#x10D;aus "wildcat". The word was introduced, together with the domestic animal itself, to the Roman Republic by the first century BC. An alternative word with cognates in many languages is English 'puss' ('pussycat'). Attested only from the 16th century, it may have been introduced from Dutch poes or from Low German puuskatte, related to Swedish kattepus, or Norwegian pus, pusekatt. Similar forms exist in Lithuanian pui&#x17E;&#x117; and Irish puisc&#xED;n. The etymology of this word is unknown, but it may have simply arisen from a sound used to attract a cat.</p>
+						<p>A group of cats is referred to as a "clowder" or a "glaring", a male cat is called a "tom" or "tomcat" (or a "gib", if neutered), an unaltered female is called a "queen", and a prepubescent juvenile is referred to as a "kitten". Although spayed females have no commonly used name, in some rare instances, an immature or spayed female is referred to as a "molly". The male progenitor of a cat, especially a pedigreed cat, is its "sire", and its female progenitor is its "dam". In Early Modern English, the word 'kitten' was interchangeable with the now-obsolete word 'catling'.</p>
+						<p>A pedigreed cat is one whose ancestry is recorded by a cat fancier organization. A purebred cat is one whose ancestry contains only individuals of the same breed. Many pedigreed and especially purebred cats are exhibited as show cats. Cats of unrecorded, mixed ancestry are referred to as domestic short-haired or domestic long-haired cats, by coat type, or commonly as random-bred, moggies (chiefly British), or (using terms borrowed from dog breeding) mongrels or mutt-cats.</p>
+						<p>While the African wildcat is the ancestral subspecies from which domestic cats are descended, and wildcats and domestic cats can completely interbreed, several intermediate stages occur between domestic pet and pedigree cats on one hand and those entirely wild animals on the other. The semiferal cat, a mostly outdoor cat, is not owned by any one individual, but is generally friendly to people and may be fed by several households. Feral cats are associated with human habitation areas and may be fed by people or forage in rubbish, but are typically wary of human interaction.</p>
+						<h3>Taxonomy and evolution</h3>
+						<p>The African wildcat, Felis silvestris lybica, is the ancestor of the domestic cat.</p>
+						<p>The felids are a rapidly evolving family of mammals that share a common ancestor only 10&#x2013;15 million years ago and include lions, tigers, cougars and many others. Within this family, domestic cats (Felis catus) are part of the genus Felis, which is a group of small cats containing about seven species (depending upon classification scheme). Members of the genus are found worldwide and include the jungle cat (Felis chaus) of southeast Asia, European wildcat (F. silvestris silvestris), African wildcat (F. s. lybica), the Chinese mountain cat (F. bieti), and the Arabian sand cat (F. margarita), among others.</p>
+						<p>The domestic cat was first classified as Felis catus by Carolus Linnaeus in the 10th edition of his Systema Naturae in 1758. Because of modern phylogenetics, domestic cats are usually regarded as another subspecies of the wildcat, F. silvestris. This has resulted in mixed usage of the terms, as the domestic cat can be called by its subspecies name, Felis silvestris catus. Wildcats have also been referred to as various subspecies of F. catus, but in 2003, the International Commission on Zoological Nomenclature fixed the name for wildcats as F. silvestris. The most common name in use for the domestic cat remains F. catus, following a convention for domesticated animals of using the earliest (the senior) synonym proposed. Sometimes, the domestic cat has been called Felis domesticus or Felis domestica, as proposed by German naturalist J. C. P. Erxleben in 1777 but these are not valid taxonomic names and have been used only rarely in scientific literature, because Linnaeus's binomial takes precedence. A population of Transcaucasian black feral cats was once classified as Felis daemon (Satunin 1904) but now this population is considered to be a part of domestic cat.</p>
+						<p>All the cats in this genus share a common ancestor that probably lived around 6&#x2013;7 million years ago in Asia. The exact relationships within the Felidae are close but still uncertain, e.g. the Chinese mountain cat is sometimes classified (under the name Felis silvestris bieti) as a subspecies of the wildcat, like the North African variety F. s. lybica.</p>
+						<p>In comparison to dogs cats have not undergone major changes during the domestication process, as the form and behavior of the domestic cat is not radically different from those of wildcats and domestic cats are perfectly capable of surviving in the wild. Fully domesticated house cats often interbreed with feral F. catus populations. This limited evolution during domestication, means that hybridisation can occur with many other felids notably the Asian leopard cat. Several natural behaviors and characteristics of wildcats may have preadapted them for domestication as pets. These traits include their small size, social nature, obvious body language, love of play and relatively high intelligence;:12&#x2013;17 they may also have an inborn tendency towards tameness.</p>
+						<p>Cats have either a mutualistic or commensal relationship with humans. Two main theories are given about how cats were domesticated. In one, people deliberately tamed cats in a process of artificial selection, as they were useful predators of vermin. This has been criticized as implausible, because the reward for such an effort may have been too little; cats generally do not carry out commands and although they do eat rodents, other species such as ferrets or terriers may be better at controlling these pests. The alternative idea is that cats were simply tolerated by people and gradually diverged from their wild relatives through natural selection, as they adapted to hunting the vermin found around humans in towns and villages.</p>
+					</div>
+				</content>
+			</entry>
+			<entry label="About" default="true">
+				<title style="static-page-title">Welcome to the International Cat Breeds Database</title>
+				<content style="static-page-content">
+					<div>
+						<p>This database of cat breeds includes domestic cat breeds and domestic/wild hybrids. The list includes established breeds recognized by various cat registries, new and experimental breeds, distinct domestic populations not being actively developed and lapsed breeds.</p>
+						<p>Inconsistency in breed classification among registries means that an individual animal may be considered different breeds by different registries. For example, The International Cat Association's Himalayan is considered a colorpoint version of the Persian by the Cat Fanciers' Association while the CFA's Javanese is considered a color variation of the Balinese by TICA.</p>
+						<p>The domestic shorthair and domestic longhair are not breeds but terms used in cat fancy to describe cats that do not belong to a particular breed.</p>
+						<h3>What are breeds</h3>
+						<p>A breed is a specific group of domestic animals having homogeneous appearance (phenotype), homogeneous behavior, and/or other characteristics that distinguish it from other organisms of the same species and that were arrived at through selective breeding. Despite the centrality of the idea of "breeds" to animal husbandry and agriculture, no single, scientifically accepted definition of the term exists.[1] A breed is therefore not an objective or biologically verifiable classification but is instead a term of art amongst groups of breeders who share a consensus around what qualities make some members of a given species members of a nameable subset.</p>
+						<p>When bred together, individuals of the same breed pass on these predictable traits to their offspring, and this ability&#x2014;known as "breeding true"&#x2014;is a requirement for a breed. Plant breeds are more commonly known as cultivars. The offspring produced as a result of breeding animals of one breed with other animals of another breed are known as crossbreeds or mixed breeds. Crosses between animal or plant variants above the level of breed/cultivar (i.e. between species, subspecies, botanical variety, even different genera) are referred to as hybrids.</p>
+					</div>
+				</content>
+			</entry>
+		</menu>
+		<footer height="30">
+			<style>
+				<font-family>helvetica</font-family>
+				<font-size>15</font-size>
+				<foreground-colour>
+					<r>204</r>
+					<g>222</g>
+					<b>227</b>
+				</foreground-colour>
+				<background-colour>
+					<r>0</r>
+					<g>90</g>
+					<b>118</b>
+				</background-colour>
+				<padding>10</padding>
+			</style>
+			<content>
+				<span>Powered by Mediaflux&#xAE;</span>
+			</content>
+		</footer>
+	</layout>
+	<collection label="Collections" of="collections">
+		<title>Cats by Coat</title>
+		<restricted>
+			<role>system-administrator</role>
+		</restricted>
+		<style>
+			<!--
+			<padding>20</padding>
+			<background-colour>
+				<r>23</r>
+				<g>238</g>
+				<b>238</b>
+			</background-colour>
+		-->
+		</style>
+		<search>
+			<!--			<query>type='arc/test/animal/collection'</query> -->
+			<facets>
+				<text>
+					<description>Search for animal collections..</description>
+				</text>
+			</facets>
+			<cursor-size>10</cursor-size>
+			<layout>
+				<style>
+					<font-family>helvetica</font-family>
+					<font-size>14</font-size>
+				</style>
+				<results>
+					<result style="result" width="500" height="180">
+						<icon style="icon">
+							<size>150</size>
+						</icon>
+						<title>
+							<xpath>name</xpath>
+						</title>
+						<description>
+							<xpath>description</xpath>
+						</description>
+						<!-- You can retrieve other details that are not displayed. Those details -->
+						<!-- can be used in the description when displaying the members of a      -->
+						<!-- collection                                                           -->
+						<detail visible="false">
+							<xpath>meta/mf-note/note</xpath>
+						</detail>
+					</result>
+				</results>
+			</layout>
+		</search>
+		<!-- Alternate display for the collection members -->
+		<member min-level="1" max-level="1">
+			<description style="description">
+				<!-- The following xpath must have been declared in the search/layout/results section above. -->
+				<!-- This may include xpaths that were denoted as non-visible.                               -->
+				<xpath>description</xpath>
+			</description>
+			<search>
+				<facets>
+					<text>
+						<description>Search for cats...</description>
+					</text>
+					<filters label="Format">
+						<mode>single</mode>
+						<description>The type of cat</description>
+						<filter label="Short Haired">
+							<query>(xpath(arc.test:cat/coat) = 'Short')</query>
+						</filter>
+						<filter label="Medium Hair">
+							<query>(xpath(arc.test:cat/coat) = 'Medium')</query>
+						</filter>
+						<filter label="Long Haired">
+							<query>(xpath(arc.test:cat/coat) = 'Long')</query>
+						</filter>
+						<filter label="Hairless">
+							<query>(xpath(arc.test:cat/coat) = 'Hairless')</query>
+						</filter>
+					</filters>
+				</facets>
+				<cursor-size>20</cursor-size>
+				<layout>
+					<style>
+						<font-family>helvetica</font-family>
+						<font-size>14</font-size>
+					</style>
+					<results>
+						<result style="result" width="600" height="180">
+							<icon style="icon">
+								<size>150</size>
+							</icon>
+							<title style="heading">
+								<xpath>name</xpath>
+							</title>
+							<detail label="Origin">
+								<xpath>meta/arc.test:cat/origin</xpath>
+							</detail>
+							<detail label="Source">
+								<xpath>meta/arc.test:cat/source</xpath>
+							</detail>
+							<detail label="Body Shape">
+								<xpath>meta/arc.test:cat/body</xpath>
+							</detail>
+							<detail label="Coat">
+								<xpath>meta/arc.test:cat/coat</xpath>
+							</detail>
+							<detail label="Pattern">
+								<xpath>meta/arc.test:cat/pattern</xpath>
+							</detail>
+						</result>
+						<action label="Do Something"/>
+					</results>
+				</layout>
+			</search>
+			<egest>
+				<restricted>
+					<role>user</role>
+				</restricted>
+			</egest>
+			<create>
+				<restricted>
+					<role>user</role>
+				</restricted>
+				<namespace>/test</namespace>
+				<name/>
+				<description/>
+				<geometry/>
+				<metadata>
+					<form-name>breed</form-name>
+				</metadata>
+				<content>
+					<extension>jpg</extension>
+					<extension>png</extension>
+					<max-number>1</max-number>
+					<max-size>40000</max-size>
+				</content>
+			</create>
+		</member>
+		<create>
+			<restricted>
+				<role>user</role>
+			</restricted>
+			<namespace>/test</namespace>
+		</create>
+		<egest>
+			<restricted>
+				<role>user</role>
+			</restricted>
+		</egest>
+	</collection>
+	<collection label="Breeds" of="assets">
+		<title>Cat Breeds</title>
+		<!--
+		<restricted>
+			<role>standard-user</role>
+		</restricted>
+		-->
+		<search>
+			<query>(xpath(arc.test:cat) has value)</query>
+			<facets>
+				<text>
+					<description>Search...</description>
+				</text>
+				<filters label="Format">
+					<mode>single</mode>
+					<filter label="Short Haired">
+						<query>(xpath(arc.test:cat/coat) = 'Short')</query>
+					</filter>
+					<filter label="Medium Hair">
+						<query>(xpath(arc.test:cat/coat) = 'Medium')</query>
+					</filter>
+					<filter label="Long Haired">
+						<query>(xpath(arc.test:cat/coat) = 'Long')</query>
+					</filter>
+					<filter label="Hairless">
+						<query>(xpath(arc.test:cat/coat) = 'Hairless')</query>
+					</filter>
+				</filters>
+			</facets>
+			<cursor-size>20</cursor-size>
+			<layout>
+				<style>
+					<font-family>helvetica</font-family>
+					<font-size>14</font-size>
+				</style>
+				<results>
+					<result style="result" width="600" height="180">
+						<icon style="icon">
+							<size>150</size>
+						</icon>
+						<title style="heading">
+							<xpath>name</xpath>
+						</title>
+						<detail label="Origin">
+							<xpath>meta/arc.test:cat/origin</xpath>
+						</detail>
+						<detail label="Source">
+							<xpath>meta/arc.test:cat/source</xpath>
+						</detail>
+						<detail label="Body Shape">
+							<xpath>meta/arc.test:cat/body</xpath>
+						</detail>
+						<detail label="Coat">
+							<xpath>meta/arc.test:cat/coat</xpath>
+						</detail>
+						<detail label="Pattern">
+							<xpath>meta/arc.test:cat/pattern</xpath>
+						</detail>
+					</result>
+					<action label="Do Something"/>
+				</results>
+			</layout>
+		</search>
+		<create>
+			<restricted>
+				<role>user</role>
+			</restricted>
+			<namespace>/test</namespace>
+		</create>
+		<egest>
+			<restricted>
+				<role>user</role>
+			</restricted>
+		</egest>
+	</collection>
+</portal>
