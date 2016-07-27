@@ -147,6 +147,10 @@
 	}
 
 	.mf-modal-wrapper {
+		display: hidden;
+	}
+
+	body.showing-modal .mf-modal-wrapper {
 		display: block;
 		position: fixed;
 		top: 0;
@@ -323,8 +327,8 @@
 			<fieldset class="mf-form-fieldset mf-actions-fieldset">
 
 				<fieldset class="mf-form-item mf-form-actions-item">
-					<button class="mf-button mf-cancel-button" onclick="hide()">cancel</button>
-					<button class="mf-button mf-create-button" onclick="hide()">create</button>
+					<button class="mf-button mf-cancel-button" onclick="hide(); return false">cancel</button>
+					<button class="mf-button mf-create-button" onclick="hide(); return false">create</button>
 				</fieldset>
 
 			</fieldset>
