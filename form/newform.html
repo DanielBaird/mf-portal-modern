@@ -309,7 +309,7 @@
 				<fieldset class="mf-form-item mf-file-upload-item">
 					<label class="mf-form-item-label-wrap">
 						<span class="mf-form-item-prompt">Files to upload</span>
-						<div class="mf-field mf-file-upload">
+						<div id="filetable" class="mf-field mf-file-upload">
 							<table class="mf-table mf-file-upload-table">
 								<tbody>
 									<tr>
@@ -320,7 +320,7 @@
 							</table>
 						</div>
 					</label>
-					<button class="mf-button mf-clear-files-button">clear files</button>
+					<button class="mf-button mf-clear-files-button" onclick="cleartable(); return false">clear files</button>
 				</fieldset>
 
 			</fieldset>
@@ -346,6 +346,9 @@ function show() {
 function hide() {
 	document.body.className = '';
 	document.getElementById('modal').className = 'mf-modal-wrapper hide';
+}
+function cleartable() {
+	document.getElementById('filetable').innerHTML = '';
 }
 show()
 </script>
