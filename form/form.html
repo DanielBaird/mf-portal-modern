@@ -1,0 +1,1036 @@
+<style type="text/css">
+	.arc_11_base_widget_1 {
+		-webkit-box-sizing: border-box;
+	}
+
+	.arc_12_SimplePanel {
+		vertical-align: middle;
+		position: RELATIVE;
+	}
+
+	.arc_13_Image {
+		display: inline-block;
+	}
+
+	.arc_16_SectionPanel {
+		overflow: hidden;
+	}
+
+	.style_21 {
+		background-color: rgba(0, 90, 118, 1);
+		font-family: helvetica;
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	.arc_14_PortalGUI_MenuBar {
+		background-color: rgb(0, 93, 122);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.style_22 {
+		background-color: rgba(0, 53, 70, 1);
+		font-family: helvetica;
+		font-size: 14px;
+	}
+
+	.arc_110_TextBox {
+		padding: 1px;
+		border-left: 1px solid rgb(136, 136, 136);
+		border-right: 1px solid rgb(136, 136, 136);
+		border-top: 1px solid rgb(136, 136, 136);
+		border-bottom: 1px solid rgb(136, 136, 136);
+	}
+
+	.arc_110_TextBox:disabled {
+		background-color: rgb(238, 238, 238);
+	}
+
+	.arc_113_CenteringPanel {
+		display: table;
+	}
+
+	.arc_114_CenteringPanel_ContainerPanel {
+		display: table-cell;
+	}
+
+	.arc_114_CenteringPanel_ContainerPanel.both {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.arc_114_CenteringPanel_ContainerPanel.horizontal {
+		text-align: center;
+	}
+
+	.arc_114_CenteringPanel_ContainerPanel.vertical {
+		vertical-align: middle;
+	}
+
+	.arc_115_CenteringPanel_ContainedPanel {
+		display: inline-block;
+	}
+
+	.arc_112_PictureFrame {
+		overflow: hidden;
+		display: block;
+	}
+
+	@import url("/portal/mediafluxportalgwt/resources/font-awesome/css/font-awesome.min.css");
+	.arc_116_FontAwesomeIcon {
+		text-align: center;
+	}
+
+	.arc_17_CollectionGUI {}
+
+	.arc_18_CollectionGUI_FacetsAndFilters {
+		margin-right: 5px;
+		padding-right: 5px;
+		cursor: default;
+	}
+
+	.arc_19_CollectionGUI_CreateButton {}
+
+	.arc_19_CollectionGUI_CreateButton:hover {
+		color: rgb(100, 149, 237);
+	}
+
+	.arc_120_PagingControlGUI {
+		color: rgb(17, 17, 17);
+		margin-bottom: 2px;
+		padding: 4px;
+	}
+
+	.arc_121_PagingControlGUI_PagingButton {
+		font-weight: normal;
+		padding: 3px;
+		border-left: 1px solid rgb(170, 170, 170);
+		border-right: 1px solid rgb(170, 170, 170);
+		border-top: 1px solid rgb(170, 170, 170);
+		border-bottom: 1px solid rgb(170, 170, 170);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	.arc_121_PagingControlGUI_PagingButton:hover {
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.arc_122_PagingControlGUI_PageNumberButton {
+		font-weight: normal;
+		font-size: 12px;
+		padding: 3px;
+		border-left: 1px solid rgb(170, 170, 170);
+		border-right: 1px solid rgb(170, 170, 170);
+		border-top: 1px solid rgb(170, 170, 170);
+		border-bottom: 1px solid rgb(170, 170, 170);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		text-align: center;
+	}
+
+	.arc_122_PagingControlGUI_PageNumberButton:hover {
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.arc_123_PagingControlGUI_CurrentPageButton {
+		font-weight: normal;
+		font-size: 12px;
+		padding: 3px;
+		border-left: 1px solid rgb(179, -76, -76);
+		border-right: 1px solid rgb(179, -76, -76);
+		border-top: 1px solid rgb(179, -76, -76);
+		border-bottom: 1px solid rgb(179, -76, -76);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		text-align: center;
+	}
+
+	.style_25 {
+		font-family: helvetica;
+		font-size: 14px;
+	}
+
+	.style_24 {}
+
+	.arc_15_PortalGUI_MenuItem {
+		color: rgb(255, 255, 255);
+		font-family: helvetica;
+		font-weight: bold;
+		font-size: 15px;
+		margin: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		white-space: nowrap;
+	}
+
+	.arc_15_PortalGUI_MenuItem:hover {
+		background-color: rgb(-38, 55, 84);
+	}
+
+	.arc_128_Label {
+		font-family: sans-serif;
+		font-size: 10px;
+		white-space: nowrap;
+		cursor: default;
+	}
+
+	.arc_126_CheckBox {}
+
+	.arc_127_CheckBox_ContainingDiv {
+		color: rgb(51, 51, 51);
+		vertical-align: top;
+	}
+
+	.arc_124_FilterGroupGUI {
+		margin-left: 2px;
+		margin-right: 4px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+		padding: 4px;
+		border-left: 1px solid rgb(204, 204, 204);
+		border-right: 1px solid rgb(204, 204, 204);
+		border-top: 1px solid rgb(204, 204, 204);
+		border-bottom: 1px solid rgb(204, 204, 204);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	.arc_125_FilterGroupGUI_FilterGroupLabel {
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 12px;
+		white-space: nowrap;
+		cursor: default;
+	}
+
+	.style_27 {
+		font-family: helvetica;
+		font-size: 14px;
+	}
+
+	.style_17 {
+		color: rgba(0, 53, 70, 1);
+		font-family: helvetica;
+		font-weight: bold;
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	.style_18 {
+		color: rgba(0, 53, 70, 1);
+		font-family: helvetica;
+		font-size: 16px;
+		padding: 10px;
+	}
+
+	.style_23 {
+		color: rgba(204, 222, 227, 1);
+		background-color: rgba(0, 90, 118, 1);
+		font-family: helvetica;
+		font-size: 15px;
+		padding: 10px;
+	}
+
+	.style_20 {
+		background-color: rgba(205, 231, 231, 1);
+		font-family: helvetica;
+		font-size: 20px;
+	}
+
+	.style_20.title {
+		background-color: rgb(255, 255, 255);
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+	.arc_117_Button {
+		color: rgb(51, 51, 51);
+		font-size: 12px;
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
+		border-bottom-left-radius: 1em;
+		border-bottom-right-radius: 1em;
+		overflow: hidden;
+		display: inline-block;
+	}
+
+	.arc_117_Button.non-gradient {}
+
+	.arc_117_Button.non-gradient:hover {
+		background-color: rgb(153, 153, 153);
+	}
+
+	.arc_117_Button.non-gradient-highlight {
+		background-color: rgb(68, 68, 68);
+	}
+
+	.arc_117_Button.gradient {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(170, 170, 170)));
+		border-left: 1px solid rgb(85, 85, 85);
+		border-right: 1px solid rgb(85, 85, 85);
+		border-top: 1px solid rgb(85, 85, 85);
+		border-bottom: 1px solid rgb(85, 85, 85);
+	}
+
+	.arc_117_Button.gradient:hover {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(238, 238, 238)), to(rgb(153, 153, 153)));
+		border-left: 1px solid rgb(34, 34, 34);
+		border-right: 1px solid rgb(34, 34, 34);
+		border-top: 1px solid rgb(34, 34, 34);
+		border-bottom: 1px solid rgb(34, 34, 34);
+	}
+
+	.arc_117_Button.gradient-highlight {
+		background-color: rgb(68, 68, 68);
+		border-top: 1px solid rgb(34, 34, 34);
+	}
+
+	.arc_117_Button.padding {
+		padding-top: 4px;
+		padding-bottom: 2px;
+	}
+
+	.arc_118_Button_ButtonLabel {
+		font-family: Helvetica;
+		font-weight: bold;
+		line-height: 100%;
+		margin-left: 5px;
+		margin-right: 5px;
+		text-shadow: 0px 1px 1px rgb(255, 255, 255);
+	}
+
+	.arc_118_Button_ButtonLabel.highlight {
+		color: rgb(255, 255, 255);
+		text-shadow: 0px 1px 1px rgb(0, 0, 0);
+	}
+
+	.arc_119_Button_ImageVerticalAlignHelper {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.arc_129_SearchResultGUI {
+		margin: 5px;
+		padding: 5px;
+	}
+
+	.arc_130_SearchResultGUI_Title {
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.arc_131_SearchResultGUI_Description {
+		font-style: italic;
+	}
+
+	.arc_132_SearchResultGUI_DetailLabel {
+		font-weight: bold;
+		margin-right: 10px;
+	}
+
+	.arc_133_SearchResultGUI_DetailValue {
+		font-weight: normal;
+	}
+
+	.arc_134_SearchResultGUI_DownloadButton {
+		font-weight: normal;
+		font-size: 12px;
+		padding: 3px;
+		border-left: 1px solid rgb(187, 187, 187);
+		border-right: 1px solid rgb(187, 187, 187);
+		border-top: 1px solid rgb(187, 187, 187);
+		border-bottom: 1px solid rgb(187, 187, 187);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		text-align: center;
+	}
+
+	.arc_134_SearchResultGUI_DownloadButton:hover {
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.style_15 {
+		background-color: rgba(255, 255, 255, 1);
+		padding: 0px;
+		border-left: 3px solid rgba(50, 50, 50, 1);
+		border-right: 3px solid rgba(50, 50, 50, 1);
+		border-top: 3px solid rgba(50, 50, 50, 1);
+		border-bottom: 3px solid rgba(50, 50, 50, 1);
+	}
+
+	.style_14 {
+		background-color: rgba(250, 250, 250, 1);
+		font-family: helvetica;
+		font-size: 14px;
+		border-left: 1px solid rgba(150, 150, 150, 1);
+		border-right: 1px solid rgba(150, 150, 150, 1);
+		border-top: 1px solid rgba(150, 150, 150, 1);
+		border-bottom: 1px solid rgba(150, 150, 150, 1);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	.arc_135_CreateDialog {}
+
+	.arc_136_CreateDialog_Dialog {
+		background-color: rgb(255, 255, 255);
+		padding: 4px;
+		border-left: 1px solid rgb(136, 136, 136);
+		border-right: 1px solid rgb(136, 136, 136);
+		border-top: 1px solid rgb(136, 136, 136);
+		border-bottom: 1px solid rgb(136, 136, 136);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		box-shadow: 2px 2px 2px 4px rgba(102, 102, 102, 0.3);
+	}
+
+	.arc_137_CreateDialog_CreateButton {
+		background-color: rgb(255, 255, 255);
+		font-size: 12px;
+		padding: 4px;
+		border-left: 1px solid rgba(0, 0, 0, 0);
+		border-right: 1px solid rgba(0, 0, 0, 0);
+		border-top: 1px solid rgba(0, 0, 0, 0);
+		border-bottom: 1px solid rgba(0, 0, 0, 0);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		display: inline-block;
+	}
+
+	.arc_137_CreateDialog_CreateButton:hover {
+		color: rgb(0, 128, 0);
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.arc_138_CreateDialog_CancelButton {
+		background-color: rgb(255, 255, 255);
+		font-size: 12px;
+		padding: 4px;
+		border-left: 1px solid rgba(0, 0, 0, 0);
+		border-right: 1px solid rgba(0, 0, 0, 0);
+		border-top: 1px solid rgba(0, 0, 0, 0);
+		border-bottom: 1px solid rgba(0, 0, 0, 0);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		display: inline-block;
+	}
+
+	.arc_138_CreateDialog_CancelButton:hover {
+		color: rgb(255, 0, 0);
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.arc_139_CreateDialog_ChooseFileButton {
+		background-color: rgb(255, 255, 255);
+		padding: 4px;
+		border-left: 1px solid rgba(0, 0, 0, 0);
+		border-right: 1px solid rgba(0, 0, 0, 0);
+		border-top: 1px solid rgba(0, 0, 0, 0);
+		border-bottom: 1px solid rgba(0, 0, 0, 0);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		display: inline-block;
+	}
+
+	.arc_139_CreateDialog_ChooseFileButton:hover {
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.arc_140_CreateDialog_ClearFilesButton {
+		background-color: rgb(255, 255, 255);
+		font-size: 9px;
+		padding: 2px;
+		border-left: 1px solid rgba(0, 0, 0, 0);
+		border-right: 1px solid rgba(0, 0, 0, 0);
+		border-top: 1px solid rgba(0, 0, 0, 0);
+		border-bottom: 1px solid rgba(0, 0, 0, 0);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		display: inline-block;
+	}
+
+	.arc_140_CreateDialog_ClearFilesButton:hover {
+		border-left: 1px solid rgb(100, 149, 237);
+		border-right: 1px solid rgb(100, 149, 237);
+		border-top: 1px solid rgb(100, 149, 237);
+		border-bottom: 1px solid rgb(100, 149, 237);
+	}
+
+	.arc_141_CreateDialog_FileDropArea {
+		padding: 5px;
+		border-left: 3px dashed rgb(170, 170, 170);
+		border-right: 3px dashed rgb(170, 170, 170);
+		border-top: 3px dashed rgb(170, 170, 170);
+		border-bottom: 3px dashed rgb(170, 170, 170);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	.arc_142_CreateDialog_DropFileHere {
+		color: rgb(187, 187, 187);
+		font-family: serif;
+		font-size: 20px;
+	}
+
+	.arc_143_CreateDialog_DropError {
+		color: rgb(255, 0, 0);
+		background-color: rgb(255, 255, 255);
+		font-family: serif;
+		font-style: italic;
+		font-size: 18px;
+	}
+
+	.arc_144_CreateDialog_DroppedFileInfo {
+		font-family: serif;
+		font-size: 16px;
+	}
+
+	.arc_145_PopupPanel {
+		background-color: rgba(0, 0, 0, 0);
+		padding: 0px;
+		display: inline-block;
+	}
+
+	.arc_111_ToolTipController_ToolTipPanel {
+		color: rgb(255, 255, 255);
+		background-color: rgba(17, 17, 17, 0.9);
+		font-family: sans-serif;
+		font-size: 11px;
+		padding: 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	.style_26 {
+		font-family: helvetica;
+		font-size: 14px;
+	}
+
+	.style_16 {
+		color: rgba(255, 0, 255, 1);
+		font-family: helvetica;
+		font-size: 20px;
+		padding-left: 0px;
+		padding-right: 5px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.style_29 {
+		color: rgba(255, 0, 255, 1);
+		font-family: helvetica;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.style_30 {
+		font-family: helvetica;
+		font-size: 16px;
+		border-left: 1px dotted rgba(200, 200, 200, 1);
+		border-right: 1px dotted rgba(200, 200, 200, 1);
+		border-top: 1px dotted rgba(200, 200, 200, 1);
+		border-bottom: 1px dotted rgba(200, 200, 200, 1);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	.style_28 {
+		font-family: helvetica;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.style_31 {
+		padding: 2px;
+		border-left: 1px solid rgba(100, 100, 100, 1);
+		border-right: 1px solid rgba(100, 100, 100, 1);
+		border-top: 1px solid rgba(100, 100, 100, 1);
+		border-bottom: 1px solid rgba(100, 100, 100, 1);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	.arc_151_ScrollButton {
+		color: rgb(68, 68, 68);
+		line-height: 0%;
+		border-left: 1px solid rgb(170, 170, 170);
+		border-right: 1px solid rgb(170, 170, 170);
+		border-top: 1px solid rgb(170, 170, 170);
+		border-bottom: 1px solid rgb(170, 170, 170);
+		text-shadow: 0px 1px 1px rgb(255, 255, 255);
+	}
+
+	.arc_151_ScrollButton.vertical {
+		background-image: -webkit-gradient(linear, left top, right top, from(rgb(187, 187, 187)), color-stop(0.5, rgb(221, 221, 221)), to(rgb(204, 204, 204)));
+	}
+
+	.arc_151_ScrollButton.vertical:hover {
+		background-image: -webkit-gradient(linear, left top, right top, from(rgb(204, 204, 204)), color-stop(0.5, rgb(238, 238, 238)), to(rgb(221, 221, 221)));
+	}
+
+	.arc_151_ScrollButton.horizontal {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(204, 204, 204)), color-stop(0.5, rgb(221, 221, 221)), to(rgb(187, 187, 187)));
+	}
+
+	.arc_151_ScrollButton.horizontal:hover {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(221, 221, 221)), color-stop(0.5, rgb(238, 238, 238)), to(rgb(204, 204, 204)));
+	}
+
+	.arc_149_VerticalScrollBar {
+		background-color: rgb(238, 238, 238);
+		box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+	}
+
+	.arc_150_VerticalScrollBar_Handle {
+		background-image: -webkit-gradient(linear, left top, right top, from(rgb(187, 187, 187)), color-stop(0.5, rgb(238, 238, 238)), to(rgb(204, 204, 204)));
+		margin-left: 1px;
+		margin-right: 1px;
+		border-left: 1px solid rgb(136, 136, 136);
+		border-right: 1px solid rgb(136, 136, 136);
+		border-top: 1px solid rgb(136, 136, 136);
+		border-bottom: 1px solid rgb(136, 136, 136);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+
+	.arc_152_HorizontalScrollBar {
+		background-color: rgb(238, 238, 238);
+		box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
+	}
+
+	.arc_153_HorizontalScrollBar_Handle {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(204, 204, 204)), color-stop(0.5, rgb(238, 238, 238)), to(rgb(187, 187, 187)));
+		margin-top: 1px;
+		margin-bottom: 1px;
+		border-left: 1px solid rgb(136, 136, 136);
+		border-right: 1px solid rgb(136, 136, 136);
+		border-top: 1px solid rgb(136, 136, 136);
+		border-bottom: 1px solid rgb(136, 136, 136);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+
+	.arc_147_ScrollPanel {}
+
+	.arc_148_ScrollPanel_Corner {
+		background-color: rgb(238, 238, 238);
+		border-left: 1px solid rgb(204, 204, 204);
+		border-right: 1px solid rgb(204, 204, 204);
+		border-top: 1px solid rgb(204, 204, 204);
+		border-bottom: 1px solid rgb(204, 204, 204);
+		position: ABSOLUTE;
+	}
+
+	.arc_146_ListGrid {}
+
+	.arc_146_ListGrid:focus {
+		outline: 0px none;
+	}
+
+	.arc_158_list_message {
+		font-style: italic;
+	}
+
+	.arc_164_PagingStatus {}
+
+	.candrag {
+		padding-left: 2px;
+		padding-right: 9px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		border-left: 1px solid rgb(68, 68, 68);
+		border-right: 1px solid rgb(68, 68, 68);
+		border-top: 1px solid rgb(68, 68, 68);
+		border-bottom: 1px solid rgb(68, 68, 68);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+
+	.arc_166_PagingStatus_Info {
+		font-family: courier;
+		font-size: 11px;
+		margin-top: 1px;
+		white-space: nowrap;
+		display: block;
+	}
+
+	.arc_165_PagingStatus_InfoPanel {
+		margin-top: 1px;
+		margin-bottom: 1px;
+		display: inline-block;
+		position: ABSOLUTE;
+	}
+
+	.arc_165_PagingStatus_InfoPanel.candrag {
+		padding-left: 2px;
+		padding-right: 9px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		border-left: 1px solid rgb(68, 68, 68);
+		border-right: 1px solid rgb(68, 68, 68);
+		border-top: 1px solid rgb(68, 68, 68);
+		border-bottom: 1px solid rgb(68, 68, 68);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+
+	.arc_162_PagingControl {
+		line-height: 100%;
+		overflow: hidden;
+	}
+
+	.arc_162_PagingControl.background {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(170, 170, 170)), to(rgb(119, 119, 119)));
+	}
+
+	.arc_163_PagingControl_PagingImage {
+		display: block;
+		vertical-align: middle;
+	}
+	</style>
+	<style>
+	.arc_list_grid_header {
+		padding-left: 3px;
+		padding-top: 3px;
+		font-size: 10px;
+		font-style: italic;
+		cursor: default;
+	}
+
+	.arc_list_grid_message {
+		padding-left: 3px;
+		padding-top: 3px;
+		font-size: 10px;
+		font-style: italic;
+		cursor: default;
+	}
+
+	.arc_list_grid_cell {
+		padding-left: 5px;
+		padding-right: 5px;
+		overflow: hidden;
+		font-size: 10px;
+		cursor: default;
+	}
+
+	.arc_156_list_rollover {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(187, 187, 187)), color-stop(0.5, rgb(212, 212, 212)), to(rgb(187, 187, 187)));
+	}
+
+	.arc_157_action_highlight {
+		color: rgb(255, 255, 255);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(50, 119, 223)), color-stop(0.5, rgb(75, 144, 248)), to(rgb(50, 119, 223)));
+	}
+</style>
+
+
+
+
+
+
+
+<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_113_CenteringPanel" style="width: 1658px; height: 754px; position: absolute; left: 0px; top: 0px; z-index: 1000003">
+	<div class="arc_11_base_widget_1 arc_114_CenteringPanel_ContainerPanel both" style="width: 1658px; height: 754px;">
+		<div class="arc_11_base_widget_1 arc_115_CenteringPanel_ContainedPanel">
+			<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_145_PopupPanel" style="z-index: 1000004; border-radius: 3px">
+				<div class="arc_11_base_widget_1 arc_136_CreateDialog_Dialog" style="; background-color: #eee">
+
+					<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1 arc_135_CreateDialog" style="">
+						<tbody>
+							<tr>
+								<td align="left" style="vertical-align: top;">
+
+
+
+
+									<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1 style_31" style="border: 1px solid blue">
+										<tbody>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1">
+														<tbody>
+															<tr>
+																<td align="left" style="vertical-align: top;">
+																	<div class="gwt-Label arc_11_base_widget_1  style_29" style="width: 100px;">Breed:</div>
+																</td>
+																<td align="left" style="vertical-align: top;">
+																	<input type="text" class="gwt-TextBox arc_11_base_widget_1  style_30" style="outline: none 0px; height: 20px; width: 200px;">
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1">
+														<tbody>
+															<tr>
+																<td align="left" style="vertical-align: top;">
+																	<div class="gwt-Label arc_11_base_widget_1  style_28" style="width: 100px;">Origin:</div>
+																</td>
+																<td align="left" style="vertical-align: top;">
+																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 200px; height: 20px; background-color: rgba(0, 0, 0, 0);">
+																		<tbody>
+																			<tr>
+																				<td align="left" style="vertical-align: top;">
+																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 100%; width: 100%; font-size: 11px; border: 1px solid rgb(204, 204, 204); -webkit-user-select: text;">
+																				</td>
+																				<td align="left" style="vertical-align: top;">
+																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 1px;"></div>
+																				</td>
+																				<td align="left" style="vertical-align: top;"><img src="/portal/mediafluxportalgwt/resources/images/Down.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 17px; height: 17px; display: block; margin-top: 2px;"></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1">
+														<tbody>
+															<tr>
+																<td align="left" style="vertical-align: top;">
+																	<div class="gwt-Label arc_11_base_widget_1  style_28" style="width: 100px;">Source:</div>
+																</td>
+																<td align="left" style="vertical-align: top;">
+																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 200px; height: 20px; background-color: rgba(0, 0, 0, 0);">
+																		<tbody>
+																			<tr>
+																				<td align="left" style="vertical-align: top;">
+																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 100%; width: 100%; font-size: 11px; border: 1px solid rgb(204, 204, 204); -webkit-user-select: text;">
+																				</td>
+																				<td align="left" style="vertical-align: top;">
+																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 1px;"></div>
+																				</td>
+																				<td align="left" style="vertical-align: top;"><img src="/portal/mediafluxportalgwt/resources/images/Down.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 17px; height: 17px; display: block; margin-top: 2px;"></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1">
+														<tbody>
+															<tr>
+																<td align="left" style="vertical-align: top;">
+																	<div class="gwt-Label arc_11_base_widget_1  style_28" style="width: 100px;">Body Shape:</div>
+																</td>
+																<td align="left" style="vertical-align: top;">
+																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 200px; height: 20px; background-color: rgba(0, 0, 0, 0);">
+																		<tbody>
+																			<tr>
+																				<td align="left" style="vertical-align: top;">
+																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 100%; width: 100%; font-size: 11px; border: 1px solid rgb(204, 204, 204); -webkit-user-select: text;">
+																				</td>
+																				<td align="left" style="vertical-align: top;">
+																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 1px;"></div>
+																				</td>
+																				<td align="left" style="vertical-align: top;"><img src="/portal/mediafluxportalgwt/resources/images/Down.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 17px; height: 17px; display: block; margin-top: 2px;"></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1">
+														<tbody>
+															<tr>
+																<td align="left" style="vertical-align: top;">
+																	<div class="gwt-Label arc_11_base_widget_1  style_28" style="width: 100px;">Coat:</div>
+																</td>
+																<td align="left" style="vertical-align: top;">
+																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 200px; height: 20px; background-color: rgba(0, 0, 0, 0);">
+																		<tbody>
+																			<tr>
+																				<td align="left" style="vertical-align: top;">
+																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 100%; width: 100%; font-size: 11px; border: 1px solid rgb(204, 204, 204); -webkit-user-select: text;">
+																				</td>
+																				<td align="left" style="vertical-align: top;">
+																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 1px;"></div>
+																				</td>
+																				<td align="left" style="vertical-align: top;"><img src="/portal/mediafluxportalgwt/resources/images/Down.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 17px; height: 17px; display: block; margin-top: 2px;"></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1">
+														<tbody>
+															<tr>
+																<td align="left" style="vertical-align: top;">
+																	<div class="gwt-Label arc_11_base_widget_1  style_28" style="width: 100px;">Pattern:</div>
+																</td>
+																<td align="left" style="vertical-align: top;">
+																	<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 200px; height: 20px; background-color: rgba(0, 0, 0, 0);">
+																		<tbody>
+																			<tr>
+																				<td align="left" style="vertical-align: top;">
+																					<input type="text" class="gwt-TextBox arc_11_base_widget_1 arc_110_TextBox" style="outline: none 0px; height: 100%; width: 100%; font-size: 11px; border: 1px solid rgb(204, 204, 204); -webkit-user-select: text;">
+																				</td>
+																				<td align="left" style="vertical-align: top;">
+																					<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 1px;"></div>
+																				</td>
+																				<td align="left" style="vertical-align: top;"><img src="/portal/mediafluxportalgwt/resources/images/Down.png" class="arc_11_base_widget_1 arc_13_Image" style="width: 17px; height: 17px; display: block; margin-top: 2px;"></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+
+									<hr style="border: 3px dotted pink" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ >
+
+
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="vertical-align: top;">
+									<div class="arc_11_base_widget_1 arc_141_CreateDialog_FileDropArea" style="position: relative; overflow: hidden; width: 360px; height: 100px;">
+										<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_142_CreateDialog_DropFileHere" style="width: 344px; height: 84px;">
+											<div class="arc_11_base_widget_1 arc_114_CenteringPanel_ContainerPanel both" style="width: 344px; height: 84px;">
+												<div class="arc_11_base_widget_1 arc_115_CenteringPanel_ContainedPanel">
+													<div class="arc_11_base_widget_1" style="cursor: default;">Drop File Here</div>
+
+
+<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1"><tbody><tr><td align="left" style="vertical-align: top;"><div class="arc_11_base_widget_1 arc_144_CreateDialog_DroppedFileInfo" style="cursor: default;"><b>terranova.png</b> 9.26 KB</div></td></tr></tbody></table>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="vertical-align: top;">
+									<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_140_CreateDialog_ClearFilesButton" style="text-align: center; opacity: 0.5;">
+										<div class="arc_11_base_widget_1 arc_118_Button_ButtonLabel" style="cursor: default;">Clear Files</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="vertical-align: top;">
+									<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 1px; height: 5px;"></div>
+								</td>
+							</tr>
+							<tr>
+								<td align="left" style="vertical-align: top;">
+									<table cellspacing="0" cellpadding="0" class="arc_11_base_widget_1" style="width: 360px;">
+										<tbody>
+											<tr>
+												<td align="left" style="vertical-align: top;">
+													<div class="arc_11_base_widget_1 arc_12_SimplePanel" style="width: 244px;"></div>
+												</td>
+												<td align="left" style="vertical-align: top;">
+													<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_138_CreateDialog_CancelButton" style="text-align: center;">
+														<div class="arc_11_base_widget_1 arc_118_Button_ButtonLabel" style="cursor: default;">Cancel</div>
+													</div>
+												</td>
+												<td align="left" style="vertical-align: top;">
+													<div class="arc_11_base_widget_1 arc_12_SimplePanel arc_137_CreateDialog_CreateButton" style="text-align: center; opacity: 0.5;">
+														<div class="arc_11_base_widget_1 arc_118_Button_ButtonLabel" style="cursor: default;">Create</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

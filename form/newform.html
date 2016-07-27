@@ -1,0 +1,351 @@
+
+<style>
+	.mf-form-fieldset {
+		border: none;
+		margin: 0;
+		padding: 0.25em 0;
+	}
+	.mf-form-fieldset + .mf-form-fieldset {
+		border-top: 1px solid #cef;
+	}
+	.mf-asset-metadata-fieldset {
+	}
+	.mf-form-item {
+		border: none;
+		margin: 0;
+		padding: 0;
+		clear: both;
+
+		display: block;
+		background-color: white;
+		border: 1px solid #cef;
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+		margin: 0.5em 0;
+		font-size: 110%;
+
+		/*margin: 3em 0;*/
+	}
+	.mf-form-item.mf-title-item .mf-form-item-prompt {
+		font-size: 110%;
+	}
+	.mf-form-actions-item {
+		background-color: transparent;
+		border: none;
+		padding-right: 0;
+		text-align: right;
+	}
+	.mf-form-item-label-wrap {
+		padding: 0;
+		margin: 0;
+	}
+	.mf-form-item-label-wrap:after {
+		/* clear fix.. */
+		content: " "; display: block; clear: both;
+		/* ..end of clear fix */
+	}
+	.mf-form-item-prompt {
+		float: left;
+		font-size: 70%;
+		color: #999;
+	}
+	.mf-field {
+		min-width: 75%;
+		max-width: min-content;
+		float: right;
+		margin: 0.2em 0;
+		padding: 0.3em;
+		border: none;
+		/*border-bottom: 1px solid #eee;*/
+		font-size: inherit;
+		background-image: linear-gradient(#f6fcff, #fff, #f6fcff);
+		background-image: linear-gradient(#fff, #f6fcff);
+		background-image: linear-gradient(#fff, #f6fcff 80%, #fff);
+		background: #fff;
+	}
+	.mf-text-input {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+	}
+	.mf-title-item .mf-text-input {
+		font-weight: bold;
+	}
+	.mf-select {
+	}
+	.mf-file-upload {
+		min-height: 4em;
+		margin-top: 1em;
+		float: none;
+		clear: both;
+		display: block;
+		border-radius: 9px;
+		max-width: 100%;
+		border: 3px dotted #ccc;
+		padding: 0.5em;
+	}
+	.mf-file-upload:empty:before {
+		opacity: 0.1;
+		font-weight: bold;
+		font-size: 150%;
+		content: '\2b46  drag files here \2b45';
+		line-height: 2.5em;
+		display: block;
+		text-align: center;
+		transform: rotate(-5deg);
+	}
+	.mf-table {
+		border-collapse: collapse;
+		padding: 0;
+		margin: 0;
+	}
+	.mf-table td, .mf-table th {
+		padding: 0.33em 0.66em;
+		border: 1px solid #eee;
+		border-width: 1px 0;
+	}
+	.mf-file-upload-table {
+		width: 100%;
+	}
+	.mf-file-upload-table .mf-file-name {
+
+	}
+
+
+
+
+	.mf-button {
+		border: 1px solid #969696;
+		height: 23px;
+		line-height: 23px;
+		min-width: 23px;
+		border-radius: 4px;
+		background: inherit;
+		font-family: inherit;
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		padding: 0 0.33em;
+	}
+	.mf-button:hover {
+		color: #6495ed;
+		border-color: #6495ed;
+	}
+
+
+
+
+	/* modal dialog */
+
+	body {
+		font-family: sans-serif;
+	}
+
+	body.showing-modal {
+		overflow: hidden;
+	}
+
+	.mf-modal-wrapper {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: repeating-linear-gradient(315deg,
+			rgba(190,190,190,0.75),
+			rgba(190,190,190,0.75) 5px,
+			rgba(255,255,255,0.75) 5px,
+			rgba(255,255,255,0.75) 10px
+		);
+		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		z-index: 10000000;
+
+	}
+	.mf-modal-container {
+		box-sizing: border-box;
+		background: #ddf6ff;
+		width: min-content;
+		min-width: 30em;
+		max-width: 80vw;
+		/*max-height: 90vh;*/
+		/*overflow: scroll;*/
+		margin: 5vh auto;
+		padding: 1em;
+		border: 1px solid #999;
+		border-radius: 0.5em;
+		box-shadow: 0 1em 3em -0.5em #000;
+	}
+
+	.hide { display: none; }
+	.top { position: relative; z-index: 1000000000; }
+
+</style>
+
+<button class="top" onclick="show()">show</button>
+<button class="top" onclick="hide()">hide</button>
+
+<div>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sapien ultrices, faucibus est elementum, fermentum urna. Pellentesque eu est commodo, bibendum quam a, tincidunt ante. Pellentesque ut turpis risus. Aenean congue luctus quam sed tincidunt. In dapibus lorem in nunc rhoncus dictum. Quisque aliquam fermentum molestie. Morbi in elementum justo. Pellentesque ultricies dui eu vestibulum vehicula. Cras sapien leo, volutpat a blandit ac, mattis nec sem.
+	</p><p>
+	Pellentesque commodo turpis erat, nec dapibus ante luctus non. In hac habitasse platea dictumst. Proin sit amet enim a odio tincidunt convallis. Cras sit amet nibh nec nibh cursus vestibulum vel et nulla. Proin euismod nunc magna, a tristique sem consectetur sed. Morbi rhoncus ut nulla vitae finibus. Praesent nec tincidunt magna. Quisque non magna tortor.
+	</p><p>
+	Aliquam erat volutpat. Sed dapibus mauris vitae nunc sollicitudin faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam ultricies id leo at tempus. Ut sodales hendrerit lectus in lobortis. Proin quis pretium tellus, vitae finibus nisl. Etiam a eleifend arcu. Donec porttitor sagittis massa ut aliquam. Morbi non purus a nisl ullamcorper faucibus. Donec sit amet placerat arcu, nec viverra urna. In venenatis neque vel eros volutpat commodo. Aliquam luctus augue at est porta, vitae viverra orci aliquam. Vivamus ut nibh at nisl ultricies semper. Nulla at vehicula ipsum. Curabitur nisl tortor, egestas et sapien non, vestibulum commodo leo.
+	</p><p>
+	Etiam semper at dolor at imperdiet. Donec dolor nunc, aliquet quis mi sed, vulputate posuere ante. Vivamus a neque imperdiet ipsum interdum aliquam. Cras tristique dui nec elementum consequat. Cras at odio vehicula, rutrum tellus ac, laoreet elit. Nam tincidunt tellus tristique dui dictum, ut maximus neque viverra. Cras pellentesque felis sit amet congue venenatis. Nunc velit nulla, luctus et urna nec, pretium bibendum orci. Aenean cursus sed leo in cursus. Donec felis magna, vehicula vitae euismod non, elementum pharetra metus. Mauris in tincidunt ex.
+	</p><p>
+	Vivamus bibendum tortor euismod arcu pulvinar, eget gravida dolor feugiat. Proin dictum placerat molestie. Duis augue neque, elementum congue ex ac, sagittis mollis orci. Fusce sit amet dolor orci. Pellentesque viverra nulla non euismod porttitor. Morbi ante tortor, laoreet id nisl convallis, interdum interdum leo. Sed ut risus eget ante rhoncus accumsan non at nibh. Vestibulum tortor justo, facilisis eget augue vitae, imperdiet maximus ante.
+	</p><p>
+	Integer consequat at elit et posuere. Ut posuere fringilla tellus, ut vestibulum erat convallis eu. Integer interdum aliquet pharetra. Morbi at odio a nisl semper suscipit at in mi. Curabitur gravida sem sed felis lobortis, nec viverra dolor sodales. Nulla id orci sem. Praesent et magna suscipit, iaculis dolor ut, suscipit leo. Vestibulum luctus ultrices ex, in volutpat felis gravida eget. Mauris ultricies, dui id faucibus blandit, arcu lectus euismod ante, condimentum semper justo nisi tincidunt nibh. Donec vehicula vulputate nisi, vitae laoreet ante. Duis accumsan dui nec velit tincidunt, vel fermentum enim sagittis. Donec vestibulum imperdiet massa, at cursus tortor pretium sed. Vestibulum consectetur ullamcorper magna ut euismod.
+	</p><p>
+	Cras sed est in elit maximus dapibus. Fusce in dui quam. Ut molestie vestibulum nunc vel molestie. Nulla dapibus mi eget iaculis lacinia. In sodales sapien non nisi maximus iaculis. Nunc vulputate odio et orci dignissim, non sodales augue maximus. Nunc ut tristique metus. Pellentesque fermentum orci libero, non mattis est mollis a. In fringilla dolor vitae rutrum bibendum. Pellentesque ornare urna sed ipsum dignissim porta. Nunc id auctor massa. Quisque molestie facilisis lorem in porta. Fusce nec varius urna, hendrerit volutpat neque. Ut vitae sagittis nisl, pellentesque dictum magna.
+	</p><p>
+	Maecenas non mollis urna. Nunc et mollis tellus, vitae scelerisque neque. Proin eu massa a lorem varius molestie vel eget nibh. Curabitur convallis suscipit metus, nec tempus ipsum tincidunt in. Nullam at turpis a tellus ultricies dictum. Maecenas eu lacinia ex. Vestibulum viverra bibendum tellus eget commodo. Nulla et risus ut nibh sodales laoreet. Nullam sed erat vel magna sagittis mollis ultricies sit amet ex. Pellentesque ullamcorper a metus ut volutpat. Aliquam lacinia sapien quis tortor scelerisque, at dictum eros bibendum.
+	</p><p>
+	Quisque sodales tortor sed velit mollis, et sodales urna varius. Aenean tincidunt sed enim et dapibus. Vestibulum et purus vulputate, interdum lacus quis, viverra nisi. Cras porta ornare massa eu commodo. Fusce tempus, sem nec convallis malesuada, lectus sem euismod eros, sed mattis arcu turpis sed ipsum. Praesent ut efficitur purus. Phasellus non vulputate lectus. Cras ut elit vitae felis lacinia aliquet vitae ac ante. Curabitur tincidunt augue lectus, sed iaculis mauris molestie sed.
+	</p><p>
+	Donec urna eros, vehicula vel ultricies at, egestas at erat. Vestibulum vehicula eros interdum, tempus ex eget, ullamcorper purus. Suspendisse odio neque, porta non pretium vel, egestas sit amet sem. Morbi dictum, massa vel maximus fermentum, lorem felis scelerisque tellus, vel tristique elit tellus non massa. Nunc at convallis odio. Praesent mi velit, venenatis et semper tincidunt, vestibulum a massa. Vestibulum nec leo dignissim, consectetur neque sed, maximus ex. Pellentesque sed quam sit amet sem scelerisque molestie. Donec quis eros fermentum, interdum enim sit amet, egestas ipsum. Sed cursus lectus non nulla suscipit, a laoreet est molestie. Morbi porttitor rutrum leo, nec pellentesque est pulvinar eget. Mauris id ligula auctor, laoreet ligula sed, tempor nisi. Nam at luctus ipsum, tempus luctus justo. Etiam tempor augue libero, a pretium ligula feugiat ac. In eget tellus sit amet magna suscipit suscipit. Nam non mollis purus.
+	</p><p>
+	Vestibulum dui tellus, laoreet sit amet diam vitae, condimentum blandit urna. In hac habitasse platea dictumst. Morbi hendrerit purus quis pellentesque mollis. In efficitur a velit quis fringilla. Vestibulum at lectus at justo pretium dignissim ac vel eros. Sed id faucibus ligula. Proin varius nibh ut ex molestie cursus. Aenean non consectetur eros. Integer sed nunc metus. Sed tempus nunc eu faucibus sollicitudin. Aliquam rutrum cursus orci. Donec a sem eu arcu varius feugiat. Etiam mattis, lectus nec pellentesque gravida, nibh ipsum dictum lorem, sed interdum purus augue in mi. In hac habitasse platea dictumst. In aliquet nunc purus, quis convallis lorem blandit commodo. In at efficitur massa, sit amet vestibulum mauris.
+	</p><p>
+	Fusce vel elementum lorem. Vestibulum mollis turpis nec nisl malesuada laoreet. Nullam eleifend, purus sed feugiat consequat, lorem turpis molestie arcu, sodales euismod dui lorem vel erat. Nunc sit amet ante quis urna faucibus semper id nec nibh. Donec nec elementum nunc. Donec tempus lorem id lectus iaculis tempus. Maecenas eget porttitor odio, at faucibus ipsum.
+	</p><p>
+	Suspendisse lobortis risus id ante lobortis, in gravida felis ultrices. Etiam tincidunt, enim non hendrerit aliquam, justo ante hendrerit urna, euismod tristique dolor ipsum vitae eros. Nulla et scelerisque lorem. Quisque commodo viverra odio, convallis vulputate augue scelerisque vitae. Etiam semper, enim vel efficitur luctus, magna enim commodo dui, at pharetra libero sapien ut lacus. In semper, sem sit amet maximus malesuada, nunc tellus ullamcorper ipsum, vitae ultricies leo sem at lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae risus commodo, imperdiet leo sit amet, tempor eros. Nunc rhoncus vestibulum turpis eget suscipit. Aliquam fermentum eros magna, lobortis venenatis ante cursus eget. Nulla lacus massa, elementum a neque id, rhoncus volutpat lacus. Praesent at enim in tortor lobortis molestie vitae a libero.
+	</p><p>
+	Donec dictum quam ut nisi elementum, sed convallis dui luctus. Donec est leo, iaculis eu ipsum eu, feugiat condimentum nunc. Sed vel felis felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla sed luctus massa. Ut eu facilisis lectus, vel eleifend metus. Aenean vel blandit libero.
+	</p><p>
+	Proin molestie, arcu non lacinia aliquet, turpis metus interdum nunc, ac iaculis metus felis eget tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus vel nisl dolor. Etiam eu interdum neque. Sed a posuere mi. Integer dignissim mattis sodales. Nam ac sem luctus, bibendum mi convallis, dignissim est. Vivamus ut tempus ipsum. Nulla ultricies bibendum ullamcorper. Vivamus semper vel urna at mattis. Donec rhoncus mattis tincidunt.
+	</p>
+</div>
+
+<button class="top" onclick="show()">show</button>
+<button class="top" onclick="hide()">hide</button>
+
+<div id="modal" class="mf-modal-wrapper">
+	<div class="mf-modal-container">
+
+		<form class="mf-form">
+
+			<fieldset class="mf-form-fieldset mf-asset-metadata-fieldset">
+
+				<fieldset class="mf-form-item mf-text-item mf-title-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Breed</span>
+						<input class="mf-field mf-text-input" type="text">
+					</label>
+				</fieldset>
+
+				<fieldset class="mf-form-item mf-select-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Origin</span>
+						<select class="mf-field mf-select">
+							<option></option>
+							<option>America</option>
+							<option>Greece</option>
+							<option>Western Russia</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset class="mf-form-item mf-select-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Source</span>
+						<select class="mf-field mf-select">
+							<option></option>
+							<option>America</option>
+							<option>Greece</option>
+							<option>Western Russia 1 Western Russia 2 Western Russia 3</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset class="mf-form-item mf-select-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Body shape of the cat with a long label</span>
+						<select class="mf-field mf-select">
+							<option></option>
+							<option>America</option>
+							<option>Greece</option>
+							<option>Western Russia</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset class="mf-form-item mf-select-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Coat</span>
+						<select class="mf-field mf-select">
+							<option></option>
+							<option>America</option>
+							<option>Greece</option>
+							<option>Western Russia</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<fieldset class="mf-form-item mf-select-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Pattern</span>
+						<select class="mf-field mf-select">
+							<option></option>
+							<option>America</option>
+							<option>Greece</option>
+							<option>Western Russia</option>
+						</select>
+					</label>
+				</fieldset>
+
+			</fieldset>
+			<fieldset class="mf-form-fieldset mf-asset-files-fieldset">
+
+				<fieldset class="mf-form-item mf-file-upload-item">
+					<label class="mf-form-item-label-wrap">
+						<span class="mf-form-item-prompt">Files to upload</span>
+						<div class="mf-field mf-file-upload">
+							<table class="mf-table mf-file-upload-table">
+								<tbody>
+									<tr>
+										<td class="mf-file-name">filename goes here.ext</td>
+										<td class="mf-file-size">1.23kb</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</label>
+					<button class="mf-button mf-clear-files-button">clear files</button>
+				</fieldset>
+
+			</fieldset>
+			<fieldset class="mf-form-fieldset mf-actions-fieldset">
+
+				<fieldset class="mf-form-item mf-form-actions-item">
+					<button class="mf-button mf-cancel-button" onclick="hide()">cancel</button>
+					<button class="mf-button mf-create-button" onclick="hide()">create</button>
+				</fieldset>
+
+			</fieldset>
+
+		</form>
+	</div>
+</div>
+
+
+<script>
+function show() {
+	document.body.className = 'showing-modal';
+	document.getElementById('modal').className = 'mf-modal-wrapper';
+}
+function hide() {
+	document.body.className = '';
+	document.getElementById('modal').className = 'mf-modal-wrapper hide';
+}
+show()
+</script>
+
+
+
+
