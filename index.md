@@ -106,8 +106,10 @@ h1, h2 {
 
 </style>
 
-MF Portal Semantic Source Demos
-===============================
+Mediaflux Portal Semantic Source
+================================
+
+## Proposal and Demonstration
 
 ### [Original page](http://danielbaird.com/mf-portal-modern/html-components/old/cat-list.source.html) ###
 
@@ -143,3 +145,13 @@ as the New Page above, but with an alternative CSS stylesheet.
 Having a comprehensible page structure allows us to target page
 elements with CSS and produce a very different feel without altering
 the page content at all.
+
+
+## Outcomes
+
+In August 2016 JCU and Architecta agreed to begin a semantic 
+source project described by a jointly written specification.
+
+The primary spec document is a shared document in Google Drive,
+for reference [a PDF version](MFPortalsComponentsSpec.pdf) is 
+available.
